@@ -1,6 +1,6 @@
 ﻿namespace village_management
 {
-    partial class home
+    partial class login
     {
         /// <summary>
         /// Required designer variable.
@@ -162,6 +162,7 @@
             linkLabel10.TabIndex = 10;
             linkLabel10.TabStop = true;
             linkLabel10.Text = "Login ";
+            linkLabel10.LinkClicked += linkLabel10_LinkClicked;
             // 
             // button7
             // 
@@ -286,6 +287,7 @@
             linkLabel5.TabIndex = 9;
             linkLabel5.TabStop = true;
             linkLabel5.Text = "ADMIN";
+            linkLabel5.LinkClicked += linkLabel5_LinkClicked;
             // 
             // label5
             // 
@@ -308,6 +310,7 @@
             linkLabel1.TabIndex = 3;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Forgot Password";
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
             // 
             // linkLabel2
             // 
@@ -320,6 +323,7 @@
             linkLabel2.TabIndex = 4;
             linkLabel2.TabStop = true;
             linkLabel2.Text = "Create new  Account";
+            linkLabel2.LinkClicked += linkLabel2_LinkClicked;
             // 
             // button2
             // 
@@ -414,6 +418,7 @@
             linkLabel6.TabIndex = 9;
             linkLabel6.TabStop = true;
             linkLabel6.Text = "USER";
+            linkLabel6.LinkClicked += linkLabel6_LinkClicked;
             // 
             // label18
             // 
@@ -538,6 +543,7 @@
             linkLabel9.TabIndex = 16;
             linkLabel9.TabStop = true;
             linkLabel9.Text = "Login here";
+            linkLabel9.LinkClicked += linkLabel9_LinkClicked;
             // 
             // label16
             // 
@@ -601,16 +607,16 @@
             label12.TabIndex = 9;
             label12.Text = "Forgot Password";
             // 
-            // home
+            // login
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1019, 697);
-            Controls.Add(panel7);
+            ClientSize = new Size(1016, 697);
             Controls.Add(panel2);
             Controls.Add(panel5);
             Controls.Add(panel4);
-            Name = "home";
+            Controls.Add(panel7);
+            Name = "login";
             Text = "home";
             panel7.ResumeLayout(false);
             panel7.PerformLayout();
