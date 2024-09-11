@@ -39,11 +39,14 @@
             linkLabel5 = new LinkLabel();
             label1 = new Label();
             button1 = new Button();
+            label2 = new Label();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.Snow;
+            panel1.Controls.Add(label2);
             panel1.Location = new Point(204, 12);
             panel1.Name = "panel1";
             panel1.Size = new Size(793, 574);
@@ -144,6 +147,16 @@
             button1.Text = "Logout";
             button1.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(54, 59);
+            label2.Name = "label2";
+            label2.Size = new Size(186, 28);
+            label2.TabIndex = 0;
+            label2.Text = "Welcome User!";
+            // 
             // UserPanel
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -162,6 +175,8 @@
             Name = "UserPanel";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "UserPanel";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -178,5 +193,6 @@
         private LinkLabel linkLabel2;
         private LinkLabel linkLabel1;
         private Button button1;
+        private Label label2;
     }
 }
