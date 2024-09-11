@@ -85,12 +85,12 @@
             // percentageLbl
             // 
             percentageLbl.AutoSize = true;
-            percentageLbl.Font = new Font("MV Boli", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            percentageLbl.Font = new Font("MV Boli", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
             percentageLbl.ForeColor = SystemColors.ActiveCaptionText;
-            percentageLbl.Location = new Point(264, 122);
+            percentageLbl.Location = new Point(279, 127);
             percentageLbl.Margin = new Padding(6, 0, 6, 0);
             percentageLbl.Name = "percentageLbl";
-            percentageLbl.Size = new Size(48, 31);
+            percentageLbl.Size = new Size(62, 41);
             percentageLbl.TabIndex = 15;
             percentageLbl.Text = "%%";
             // 

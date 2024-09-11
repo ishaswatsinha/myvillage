@@ -76,7 +76,7 @@
             label16 = new Label();
             label15 = new Label();
             button4 = new Button();
-            textBox8 = new TextBox();
+            txtTo = new TextBox();
             label14 = new Label();
             label12 = new Label();
             panel7.SuspendLayout();
@@ -150,10 +150,11 @@
             // 
             // textBox9
             // 
+            textBox9.BorderStyle = BorderStyle.None;
             textBox9.Font = new Font("Myanmar Text", 8F);
             textBox9.Location = new Point(173, 338);
             textBox9.Name = "textBox9";
-            textBox9.Size = new Size(202, 37);
+            textBox9.Size = new Size(202, 30);
             textBox9.TabIndex = 15;
             // 
             // label26
@@ -168,10 +169,11 @@
             // 
             // textBox7
             // 
+            textBox7.BorderStyle = BorderStyle.None;
             textBox7.Font = new Font("Myanmar Text", 8F);
             textBox7.Location = new Point(172, 287);
             textBox7.Name = "textBox7";
-            textBox7.Size = new Size(202, 37);
+            textBox7.Size = new Size(202, 30);
             textBox7.TabIndex = 13;
             // 
             // label27
@@ -209,7 +211,7 @@
             // button7
             // 
             button7.Font = new Font("MV Boli", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button7.Location = new Point(172, 459);
+            button7.Location = new Point(172, 447);
             button7.Name = "button7";
             button7.Size = new Size(112, 34);
             button7.TabIndex = 9;
@@ -219,34 +221,38 @@
             // 
             // textBox6
             // 
+            textBox6.BorderStyle = BorderStyle.None;
             textBox6.Font = new Font("Myanmar Text", 8F);
             textBox6.Location = new Point(172, 232);
             textBox6.Name = "textBox6";
-            textBox6.Size = new Size(202, 37);
+            textBox6.Size = new Size(202, 30);
             textBox6.TabIndex = 8;
             // 
             // textBox5
             // 
+            textBox5.BorderStyle = BorderStyle.None;
             textBox5.Font = new Font("Myanmar Text", 8F);
             textBox5.Location = new Point(172, 180);
             textBox5.Name = "textBox5";
-            textBox5.Size = new Size(202, 37);
+            textBox5.Size = new Size(202, 30);
             textBox5.TabIndex = 7;
             // 
             // textBox4
             // 
+            textBox4.BorderStyle = BorderStyle.None;
             textBox4.Font = new Font("Myanmar Text", 8F);
             textBox4.Location = new Point(172, 125);
             textBox4.Name = "textBox4";
-            textBox4.Size = new Size(202, 37);
+            textBox4.Size = new Size(202, 30);
             textBox4.TabIndex = 6;
             // 
             // textBox3
             // 
+            textBox3.BorderStyle = BorderStyle.None;
             textBox3.Font = new Font("Myanmar Text", 8F);
             textBox3.Location = new Point(172, 67);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(202, 37);
+            textBox3.Size = new Size(202, 30);
             textBox3.TabIndex = 5;
             // 
             // label29
@@ -302,7 +308,7 @@
             // 
             // panel2
             // 
-            panel2.BackColor = Color.Gray;
+            panel2.BackColor = Color.Chartreuse;
             panel2.Controls.Add(button1);
             panel2.Controls.Add(linkLabel5);
             panel2.Controls.Add(label5);
@@ -315,7 +321,7 @@
             panel2.Controls.Add(label2);
             panel2.Controls.Add(label3);
             panel2.Font = new Font("Microsoft Sans Serif", 12F);
-            panel2.Location = new Point(1, 1);
+            panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
             panel2.Size = new Size(442, 571);
             panel2.TabIndex = 12;
@@ -388,6 +394,7 @@
             // button2
             // 
             button2.BackColor = SystemColors.HotTrack;
+            button2.FlatStyle = FlatStyle.Popup;
             button2.Font = new Font("MV Boli", 9F);
             button2.ForeColor = SystemColors.ButtonHighlight;
             button2.Location = new Point(142, 288);
@@ -401,19 +408,21 @@
             // txtPassword
             // 
             txtPassword.BackColor = SystemColors.InactiveCaption;
+            txtPassword.BorderStyle = BorderStyle.None;
             txtPassword.ForeColor = SystemColors.ActiveCaptionText;
             txtPassword.Location = new Point(58, 204);
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(317, 35);
+            txtPassword.Size = new Size(317, 28);
             txtPassword.TabIndex = 7;
             // 
             // txtEmail
             // 
             txtEmail.BackColor = SystemColors.InactiveCaption;
+            txtEmail.BorderStyle = BorderStyle.None;
             txtEmail.ForeColor = SystemColors.ActiveCaptionText;
             txtEmail.Location = new Point(58, 123);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(317, 35);
+            txtEmail.Size = new Size(317, 28);
             txtEmail.TabIndex = 6;
             // 
             // label4
@@ -462,7 +471,7 @@
             panel5.Controls.Add(label20);
             panel5.Controls.Add(label21);
             panel5.Font = new Font("Microsoft Sans Serif", 12F);
-            panel5.Location = new Point(1, 1);
+            panel5.Location = new Point(0, 0);
             panel5.Name = "panel5";
             panel5.Size = new Size(442, 571);
             panel5.TabIndex = 14;
@@ -505,6 +514,7 @@
             // button5
             // 
             button5.BackColor = SystemColors.HotTrack;
+            button5.FlatStyle = FlatStyle.Popup;
             button5.Font = new Font("MV Boli", 9F);
             button5.ForeColor = SystemColors.ButtonHighlight;
             button5.Location = new Point(142, 288);
@@ -513,23 +523,26 @@
             button5.TabIndex = 2;
             button5.Text = "LOGIN";
             button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             // 
             // textBox10
             // 
             textBox10.BackColor = SystemColors.InactiveCaption;
+            textBox10.BorderStyle = BorderStyle.None;
             textBox10.ForeColor = SystemColors.ButtonHighlight;
             textBox10.Location = new Point(58, 204);
             textBox10.Name = "textBox10";
-            textBox10.Size = new Size(317, 35);
+            textBox10.Size = new Size(317, 28);
             textBox10.TabIndex = 7;
             // 
             // textBox11
             // 
             textBox11.BackColor = SystemColors.InactiveCaption;
+            textBox11.BorderStyle = BorderStyle.None;
             textBox11.ForeColor = SystemColors.ButtonHighlight;
             textBox11.Location = new Point(58, 123);
             textBox11.Name = "textBox11";
-            textBox11.Size = new Size(317, 35);
+            textBox11.Size = new Size(317, 28);
             textBox11.TabIndex = 6;
             // 
             // label19
@@ -572,11 +585,11 @@
             panel4.Controls.Add(label16);
             panel4.Controls.Add(label15);
             panel4.Controls.Add(button4);
-            panel4.Controls.Add(textBox8);
+            panel4.Controls.Add(txtTo);
             panel4.Controls.Add(label14);
             panel4.Controls.Add(label12);
             panel4.Font = new Font("Microsoft Sans Serif", 12F);
-            panel4.Location = new Point(1, 1);
+            panel4.Location = new Point(0, 0);
             panel4.Name = "panel4";
             panel4.Size = new Size(442, 571);
             panel4.TabIndex = 13;
@@ -615,6 +628,7 @@
             // button4
             // 
             button4.BackColor = SystemColors.HotTrack;
+            button4.FlatStyle = FlatStyle.Popup;
             button4.Font = new Font("MV Boli", 9F);
             button4.ForeColor = SystemColors.ButtonHighlight;
             button4.Location = new Point(141, 272);
@@ -623,15 +637,17 @@
             button4.TabIndex = 10;
             button4.Text = "Submit";
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
-            // textBox8
+            // txtTo
             // 
-            textBox8.BackColor = SystemColors.InactiveCaption;
-            textBox8.ForeColor = SystemColors.ButtonHighlight;
-            textBox8.Location = new Point(57, 153);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(317, 35);
-            textBox8.TabIndex = 14;
+            txtTo.BackColor = SystemColors.InactiveCaption;
+            txtTo.BorderStyle = BorderStyle.None;
+            txtTo.ForeColor = SystemColors.ActiveCaptionText;
+            txtTo.Location = new Point(57, 153);
+            txtTo.Name = "txtTo";
+            txtTo.Size = new Size(317, 28);
+            txtTo.TabIndex = 14;
             // 
             // label14
             // 
@@ -724,7 +740,7 @@
         private Label label16;
         private Label label15;
         private Button button4;
-        private TextBox textBox8;
+        private TextBox txtTo;
         private Label label14;
         private Label label12;
         private RadioButton radioButton2;

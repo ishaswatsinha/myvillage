@@ -5,9 +5,11 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace village_management
@@ -54,7 +56,7 @@ namespace village_management
 
         private void button7_Click(object sender, EventArgs e)
         {
-            
+
             string query = "insert into register(name,email,hno,uid, phone, password,gender)VALUES(@name,@email,@house,@uid,@phone,@password,@gender)";
             SqlConnection con = new SqlConnection(constring);
             con.Open();
@@ -117,7 +119,7 @@ namespace village_management
                 // Correct credentials: Show the next form
                 MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-               
+
             }
             else
             {
@@ -138,9 +140,9 @@ namespace village_management
                     connection.Open();
 
                     // SQL query to check if the user exists with the provided email and password
-                    string query = "SELECT COUNT(1) FROM register WHERE email = @Email AND password = @Password";
+                    string query2 = "SELECT COUNT(1) FROM register WHERE email = @Email AND password = @Password";
 
-                    using (SqlCommand cmd = new SqlCommand(query, connection))
+                    using (SqlCommand cmd = new SqlCommand(query2, connection))
                     {
                         cmd.Parameters.AddWithValue("@Email", email);
                         cmd.Parameters.AddWithValue("@Password", password);
@@ -158,5 +160,67 @@ namespace village_management
                 }
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                Random random = new Random();
+                int otp = random.Next(100000, 1000000);
+
+
+                SmtpClient Smtp_Server = new SmtpClient();
+                MailMessage e_mail = new MailMessage();
+                Smtp_Server.UseDefaultCredentials = false;
+                Smtp_Server.Port = 587;
+                Smtp_Server.EnableSsl = true;
+                Smtp_Server.Host = "smtp.gmail.com";
+                Smtp_Server.Credentials =
+            new System.Net.NetworkCredential("hackathonrku@gmail.com", "vwhd bsfm glbo neyn");
+                e_mail = new MailMessage();
+                e_mail.From = new MailAddress("hackathonrku@gmail.com");
+                e_mail.To.Add(txtTo.Text);
+                e_mail.Subject = "Email Sending";
+                e_mail.IsBodyHtml = false;
+                e_mail.Body = Convert.ToString(otp);
+                Smtp_Server.Send(e_mail);
+                //Interaction.MsgBox("Mail Sent");
+
+                //DateTime time = DateTime.Now;
+                //Console.WriteLine(time.ToString("h:mm:ss tt"));
+
+
+                string query3 = "insert into Token(email,otp)VALUES(@email,@otp)";
+                SqlConnection con = new SqlConnection(constring);
+                con.Open();
+                SqlCommand cmd = new SqlCommand(query3, con);
+
+                cmd.Parameters.AddWithValue("@email", txtTo.Text);
+                cmd.Parameters.AddWithValue("@otp", otp);
+
+                cmd.ExecuteNonQuery();
+
+
+
+                con.Close();
+                // MessageBox.Show("Mail Sent");
+                Forgot obj = new Forgot();
+                obj.Show();
+                this.Hide();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error in Mail Sent");
+            }
+        }
+
+        //ADMIN LOGIN
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }
