@@ -28,7 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login));
             panel7 = new Panel();
+            radioButton2 = new RadioButton();
+            radioButton1 = new RadioButton();
+            label1 = new Label();
             textBox9 = new TextBox();
             label26 = new Label();
             textBox7 = new TextBox();
@@ -46,13 +50,14 @@
             label32 = new Label();
             label33 = new Label();
             panel2 = new Panel();
+            button1 = new Button();
             linkLabel5 = new LinkLabel();
             label5 = new Label();
             linkLabel1 = new LinkLabel();
             linkLabel2 = new LinkLabel();
             button2 = new Button();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            txtPassword = new TextBox();
+            txtEmail = new TextBox();
             label4 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -60,7 +65,6 @@
             linkLabel6 = new LinkLabel();
             label18 = new Label();
             linkLabel7 = new LinkLabel();
-            linkLabel8 = new LinkLabel();
             button5 = new Button();
             textBox10 = new TextBox();
             textBox11 = new TextBox();
@@ -84,6 +88,9 @@
             // panel7
             // 
             panel7.BackColor = Color.DarkOrange;
+            panel7.Controls.Add(radioButton2);
+            panel7.Controls.Add(radioButton1);
+            panel7.Controls.Add(label1);
             panel7.Controls.Add(textBox9);
             panel7.Controls.Add(label26);
             panel7.Controls.Add(textBox7);
@@ -101,10 +108,45 @@
             panel7.Controls.Add(label32);
             panel7.Controls.Add(label33);
             panel7.Font = new Font("Microsoft Sans Serif", 12F);
-            panel7.Location = new Point(255, 21);
+            panel7.Location = new Point(1, 1);
             panel7.Name = "panel7";
             panel7.Size = new Size(442, 571);
             panel7.TabIndex = 15;
+            // 
+            // radioButton2
+            // 
+            radioButton2.AutoSize = true;
+            radioButton2.Font = new Font("MV Boli", 10F);
+            radioButton2.Location = new Point(275, 393);
+            radioButton2.Name = "radioButton2";
+            radioButton2.Size = new Size(117, 30);
+            radioButton2.TabIndex = 18;
+            radioButton2.TabStop = true;
+            radioButton2.Text = "FEMALE";
+            radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            radioButton1.AutoSize = true;
+            radioButton1.Font = new Font("MV Boli", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            radioButton1.Location = new Point(175, 393);
+            radioButton1.Name = "radioButton1";
+            radioButton1.Size = new Size(94, 30);
+            radioButton1.TabIndex = 17;
+            radioButton1.TabStop = true;
+            radioButton1.Text = "MALE";
+            radioButton1.UseVisualStyleBackColor = true;
+            radioButton1.CheckedChanged += radioButton1_CheckedChanged;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("MV Boli", 10F);
+            label1.Location = new Point(21, 395);
+            label1.Name = "label1";
+            label1.Size = new Size(94, 26);
+            label1.TabIndex = 16;
+            label1.Text = "Gender :";
             // 
             // textBox9
             // 
@@ -146,7 +188,7 @@
             // 
             label28.AutoSize = true;
             label28.Font = new Font("MV Boli", 10F);
-            label28.Location = new Point(34, 425);
+            label28.Location = new Point(34, 496);
             label28.Name = "label28";
             label28.Size = new Size(261, 26);
             label28.TabIndex = 11;
@@ -156,7 +198,7 @@
             // 
             linkLabel10.AutoSize = true;
             linkLabel10.Font = new Font("MV Boli", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            linkLabel10.Location = new Point(311, 425);
+            linkLabel10.Location = new Point(311, 496);
             linkLabel10.Name = "linkLabel10";
             linkLabel10.Size = new Size(64, 23);
             linkLabel10.TabIndex = 10;
@@ -167,12 +209,13 @@
             // button7
             // 
             button7.Font = new Font("MV Boli", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button7.Location = new Point(172, 388);
+            button7.Location = new Point(172, 459);
             button7.Name = "button7";
             button7.Size = new Size(112, 34);
             button7.TabIndex = 9;
             button7.Text = "Submit";
             button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
             // 
             // textBox6
             // 
@@ -260,21 +303,38 @@
             // panel2
             // 
             panel2.BackColor = Color.Gray;
+            panel2.Controls.Add(button1);
             panel2.Controls.Add(linkLabel5);
             panel2.Controls.Add(label5);
             panel2.Controls.Add(linkLabel1);
             panel2.Controls.Add(linkLabel2);
             panel2.Controls.Add(button2);
-            panel2.Controls.Add(textBox2);
-            panel2.Controls.Add(textBox1);
+            panel2.Controls.Add(txtPassword);
+            panel2.Controls.Add(txtEmail);
             panel2.Controls.Add(label4);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(label3);
             panel2.Font = new Font("Microsoft Sans Serif", 12F);
-            panel2.Location = new Point(255, 21);
+            panel2.Location = new Point(1, 1);
             panel2.Name = "panel2";
             panel2.Size = new Size(442, 571);
             panel2.TabIndex = 12;
+            // 
+            // button1
+            // 
+            button1.AutoSize = true;
+            button1.BackColor = Color.Transparent;
+            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
+            button1.BackgroundImageLayout = ImageLayout.Zoom;
+            button1.FlatAppearance.BorderColor = Color.FromArgb(10, 18, 80);
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Location = new Point(392, 2);
+            button1.Name = "button1";
+            button1.Size = new Size(37, 43);
+            button1.TabIndex = 10;
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // linkLabel5
             // 
@@ -336,24 +396,25 @@
             button2.TabIndex = 2;
             button2.Text = "LOGIN";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
-            // textBox2
+            // txtPassword
             // 
-            textBox2.BackColor = SystemColors.InactiveCaption;
-            textBox2.ForeColor = SystemColors.ButtonHighlight;
-            textBox2.Location = new Point(58, 204);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(317, 35);
-            textBox2.TabIndex = 7;
+            txtPassword.BackColor = SystemColors.InactiveCaption;
+            txtPassword.ForeColor = SystemColors.ActiveCaptionText;
+            txtPassword.Location = new Point(58, 204);
+            txtPassword.Name = "txtPassword";
+            txtPassword.Size = new Size(317, 35);
+            txtPassword.TabIndex = 7;
             // 
-            // textBox1
+            // txtEmail
             // 
-            textBox1.BackColor = SystemColors.InactiveCaption;
-            textBox1.ForeColor = SystemColors.ButtonHighlight;
-            textBox1.Location = new Point(58, 123);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(317, 35);
-            textBox1.TabIndex = 6;
+            txtEmail.BackColor = SystemColors.InactiveCaption;
+            txtEmail.ForeColor = SystemColors.ActiveCaptionText;
+            txtEmail.Location = new Point(58, 123);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(317, 35);
+            txtEmail.TabIndex = 6;
             // 
             // label4
             // 
@@ -394,7 +455,6 @@
             panel5.Controls.Add(linkLabel6);
             panel5.Controls.Add(label18);
             panel5.Controls.Add(linkLabel7);
-            panel5.Controls.Add(linkLabel8);
             panel5.Controls.Add(button5);
             panel5.Controls.Add(textBox10);
             panel5.Controls.Add(textBox11);
@@ -402,7 +462,7 @@
             panel5.Controls.Add(label20);
             panel5.Controls.Add(label21);
             panel5.Font = new Font("Microsoft Sans Serif", 12F);
-            panel5.Location = new Point(255, 21);
+            panel5.Location = new Point(1, 1);
             panel5.Name = "panel5";
             panel5.Size = new Size(442, 571);
             panel5.TabIndex = 14;
@@ -441,18 +501,6 @@
             linkLabel7.TabIndex = 3;
             linkLabel7.TabStop = true;
             linkLabel7.Text = "Forgot Password";
-            // 
-            // linkLabel8
-            // 
-            linkLabel8.AutoSize = true;
-            linkLabel8.Font = new Font("MV Boli", 9F);
-            linkLabel8.ForeColor = SystemColors.ButtonHighlight;
-            linkLabel8.Location = new Point(129, 343);
-            linkLabel8.Name = "linkLabel8";
-            linkLabel8.Size = new Size(193, 23);
-            linkLabel8.TabIndex = 4;
-            linkLabel8.TabStop = true;
-            linkLabel8.Text = "Create new  Account";
             // 
             // button5
             // 
@@ -528,7 +576,7 @@
             panel4.Controls.Add(label14);
             panel4.Controls.Add(label12);
             panel4.Font = new Font("Microsoft Sans Serif", 12F);
-            panel4.Location = new Point(255, 21);
+            panel4.Location = new Point(1, 1);
             panel4.Name = "panel4";
             panel4.Size = new Size(442, 571);
             panel4.TabIndex = 13;
@@ -611,13 +659,15 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1016, 697);
+            ClientSize = new Size(442, 571);
             Controls.Add(panel2);
             Controls.Add(panel5);
             Controls.Add(panel4);
             Controls.Add(panel7);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "login";
-            Text = "home";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Village management System";
             panel7.ResumeLayout(false);
             panel7.PerformLayout();
             panel2.ResumeLayout(false);
@@ -654,8 +704,8 @@
         private LinkLabel linkLabel1;
         private LinkLabel linkLabel2;
         private Button button2;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox txtPassword;
+        private TextBox txtEmail;
         private Label label4;
         private Label label2;
         private Label label3;
@@ -663,7 +713,6 @@
         private LinkLabel linkLabel6;
         private Label label18;
         private LinkLabel linkLabel7;
-        private LinkLabel linkLabel8;
         private Button button5;
         private TextBox textBox10;
         private TextBox textBox11;
@@ -678,5 +727,9 @@
         private TextBox textBox8;
         private Label label14;
         private Label label12;
+        private RadioButton radioButton2;
+        private RadioButton radioButton1;
+        private Label label1;
+        private Button button1;
     }
 }
