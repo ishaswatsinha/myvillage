@@ -1,6 +1,6 @@
 ﻿namespace village_management
 {
-    partial class UserPanel
+    partial class UserSearch
     {
         /// <summary>
         /// Required designer variable.
@@ -34,13 +34,13 @@
             bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(components);
             bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(components);
             linkLabel1 = new LinkLabel();
-            linkLabel2 = new LinkLabel();
-            linkLabel3 = new LinkLabel();
-            linkLabel4 = new LinkLabel();
-            linkLabel5 = new LinkLabel();
-            label1 = new Label();
-            button1 = new Button();
             backmenu = new Panel();
+            linkLabel4 = new LinkLabel();
+            button1 = new Button();
+            label1 = new Label();
+            linkLabel5 = new LinkLabel();
+            linkLabel3 = new LinkLabel();
+            linkLabel2 = new LinkLabel();
             bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(components);
             panel1.SuspendLayout();
             backmenu.SuspendLayout();
@@ -54,7 +54,7 @@
             panel1.Margin = new Padding(4, 5, 4, 5);
             panel1.Name = "panel1";
             panel1.Size = new Size(1133, 957);
-            panel1.TabIndex = 0;
+            panel1.TabIndex = 16;
             // 
             // label2
             // 
@@ -63,9 +63,9 @@
             label2.Location = new Point(77, 98);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(280, 43);
+            label2.Size = new Size(142, 43);
             label2.TabIndex = 0;
-            label2.Text = "Welcome User!";
+            label2.Text = "Search";
             // 
             // bunifuElipse1
             // 
@@ -83,7 +83,7 @@
             linkLabel1.BackColor = Color.Transparent;
             linkLabel1.Font = new Font("Century Gothic", 15F, FontStyle.Bold);
             linkLabel1.LinkColor = Color.Black;
-            linkLabel1.Location = new Point(78, 11);
+            linkLabel1.Location = new Point(61, 282);
             linkLabel1.Margin = new Padding(4, 0, 4, 0);
             linkLabel1.Name = "linkLabel1";
             linkLabel1.Size = new Size(103, 37);
@@ -93,50 +93,51 @@
             linkLabel1.VisitedLinkColor = Color.FromArgb(192, 255, 255);
             linkLabel1.LinkClicked += linkLabel1_LinkClicked;
             // 
-            // linkLabel2
+            // backmenu
             // 
-            linkLabel2.AutoSize = true;
-            linkLabel2.Font = new Font("Century Gothic", 15F, FontStyle.Bold);
-            linkLabel2.LinkColor = Color.Black;
-            linkLabel2.Location = new Point(61, 367);
-            linkLabel2.Margin = new Padding(4, 0, 4, 0);
-            linkLabel2.Name = "linkLabel2";
-            linkLabel2.Size = new Size(104, 37);
-            linkLabel2.TabIndex = 2;
-            linkLabel2.TabStop = true;
-            linkLabel2.Text = "Profile";
-            linkLabel2.VisitedLinkColor = Color.FromArgb(192, 255, 255);
-            linkLabel2.LinkClicked += linkLabel2_LinkClicked;
-            // 
-            // linkLabel3
-            // 
-            linkLabel3.AutoSize = true;
-            linkLabel3.Font = new Font("Century Gothic", 15F, FontStyle.Bold);
-            linkLabel3.LinkColor = Color.Black;
-            linkLabel3.Location = new Point(61, 463);
-            linkLabel3.Margin = new Padding(4, 0, 4, 0);
-            linkLabel3.Name = "linkLabel3";
-            linkLabel3.Size = new Size(181, 37);
-            linkLabel3.TabIndex = 3;
-            linkLabel3.TabStop = true;
-            linkLabel3.Text = "Complaints";
-            linkLabel3.VisitedLinkColor = Color.FromArgb(192, 255, 255);
-            linkLabel3.LinkClicked += linkLabel3_LinkClicked;
+            backmenu.BackColor = Color.CadetBlue;
+            backmenu.Controls.Add(linkLabel4);
+            backmenu.Location = new Point(14, 552);
+            backmenu.Name = "backmenu";
+            backmenu.Size = new Size(271, 62);
+            backmenu.TabIndex = 23;
             // 
             // linkLabel4
             // 
             linkLabel4.AutoSize = true;
             linkLabel4.Font = new Font("Century Gothic", 15F, FontStyle.Bold);
             linkLabel4.LinkColor = Color.Black;
-            linkLabel4.Location = new Point(61, 560);
+            linkLabel4.Location = new Point(67, 11);
             linkLabel4.Margin = new Padding(4, 0, 4, 0);
             linkLabel4.Name = "linkLabel4";
             linkLabel4.Size = new Size(119, 37);
-            linkLabel4.TabIndex = 4;
+            linkLabel4.TabIndex = 20;
             linkLabel4.TabStop = true;
             linkLabel4.Text = "Search";
             linkLabel4.VisitedLinkColor = Color.FromArgb(192, 255, 255);
             linkLabel4.LinkClicked += linkLabel4_LinkClicked;
+            // 
+            // button1
+            // 
+            button1.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Location = new Point(61, 810);
+            button1.Margin = new Padding(4, 5, 4, 5);
+            button1.Name = "button1";
+            button1.Size = new Size(153, 52);
+            button1.TabIndex = 17;
+            button1.Text = "Logout";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Century Gothic", 15F, FontStyle.Bold);
+            label1.Location = new Point(61, 118);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(163, 37);
+            label1.TabIndex = 22;
+            label1.Text = "Username";
             // 
             // linkLabel5
             // 
@@ -147,67 +148,65 @@
             linkLabel5.Margin = new Padding(4, 0, 4, 0);
             linkLabel5.Name = "linkLabel5";
             linkLabel5.Size = new Size(112, 37);
-            linkLabel5.TabIndex = 5;
+            linkLabel5.TabIndex = 21;
             linkLabel5.TabStop = true;
             linkLabel5.Text = "Notice";
             linkLabel5.VisitedLinkColor = Color.FromArgb(192, 255, 255);
             linkLabel5.LinkClicked += linkLabel5_LinkClicked;
             // 
-            // label1
+            // linkLabel3
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Century Gothic", 15F, FontStyle.Bold);
-            label1.Location = new Point(61, 118);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(163, 37);
-            label1.TabIndex = 6;
-            label1.Text = "Username";
+            linkLabel3.AutoSize = true;
+            linkLabel3.Font = new Font("Century Gothic", 15F, FontStyle.Bold);
+            linkLabel3.LinkColor = Color.Black;
+            linkLabel3.Location = new Point(61, 463);
+            linkLabel3.Margin = new Padding(4, 0, 4, 0);
+            linkLabel3.Name = "linkLabel3";
+            linkLabel3.Size = new Size(181, 37);
+            linkLabel3.TabIndex = 19;
+            linkLabel3.TabStop = true;
+            linkLabel3.Text = "Complaints";
+            linkLabel3.VisitedLinkColor = Color.FromArgb(192, 255, 255);
+            linkLabel3.LinkClicked += linkLabel3_LinkClicked;
             // 
-            // button1
+            // linkLabel2
             // 
-            button1.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(61, 810);
-            button1.Margin = new Padding(4, 5, 4, 5);
-            button1.Name = "button1";
-            button1.Size = new Size(153, 52);
-            button1.TabIndex = 0;
-            button1.Text = "Logout";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // backmenu
-            // 
-            backmenu.BackColor = Color.CadetBlue;
-            backmenu.Controls.Add(linkLabel1);
-            backmenu.Location = new Point(12, 264);
-            backmenu.Name = "backmenu";
-            backmenu.Size = new Size(271, 62);
-            backmenu.TabIndex = 15;
+            linkLabel2.AutoSize = true;
+            linkLabel2.Font = new Font("Century Gothic", 15F, FontStyle.Bold);
+            linkLabel2.LinkColor = Color.Black;
+            linkLabel2.Location = new Point(61, 367);
+            linkLabel2.Margin = new Padding(4, 0, 4, 0);
+            linkLabel2.Name = "linkLabel2";
+            linkLabel2.Size = new Size(104, 37);
+            linkLabel2.TabIndex = 18;
+            linkLabel2.TabStop = true;
+            linkLabel2.Text = "Profile";
+            linkLabel2.VisitedLinkColor = Color.FromArgb(192, 255, 255);
+            linkLabel2.LinkClicked += linkLabel2_LinkClicked;
             // 
             // bunifuElipse3
             // 
             bunifuElipse3.ElipseRadius = 35;
             bunifuElipse3.TargetControl = backmenu;
             // 
-            // UserPanel
+            // UserSearch
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
             ClientSize = new Size(1441, 997);
+            Controls.Add(linkLabel1);
+            Controls.Add(panel1);
             Controls.Add(backmenu);
             Controls.Add(button1);
             Controls.Add(label1);
             Controls.Add(linkLabel5);
-            Controls.Add(linkLabel4);
             Controls.Add(linkLabel3);
             Controls.Add(linkLabel2);
-            Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(4, 5, 4, 5);
-            Name = "UserPanel";
+            Name = "UserSearch";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "UserPanel";
+            Text = "UserSearch";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             backmenu.ResumeLayout(false);
@@ -219,17 +218,17 @@
         #endregion
 
         private Panel panel1;
+        private Label label2;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
+        private Panel backmenu;
+        private LinkLabel linkLabel1;
+        private Button button1;
         private Label label1;
         private LinkLabel linkLabel5;
         private LinkLabel linkLabel4;
         private LinkLabel linkLabel3;
         private LinkLabel linkLabel2;
-        private LinkLabel linkLabel1;
-        private Button button1;
-        private Label label2;
-        private Panel backmenu;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
     }
 }

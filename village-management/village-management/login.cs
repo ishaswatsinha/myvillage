@@ -118,6 +118,9 @@ namespace village_management
             {
                 // Correct credentials: Show the next form
                 MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                UserPanel obj = new UserPanel();
+                obj.Show();
+                this.Hide();
 
 
             }

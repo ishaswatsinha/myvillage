@@ -10,31 +10,23 @@ using System.Windows.Forms;
 
 namespace village_management
 {
-    public partial class UserPanel : Form
+    public partial class UserSearch : Form
     {
-        public UserPanel()
+        public UserSearch()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
+            UserPanel obj = new UserPanel();
+            obj.Show();
+            this.Hide();
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            UserProfile obj = new UserProfile();
+            UserPanel obj = new UserPanel();
             obj.Show();
             this.Hide();
         }
@@ -46,13 +38,6 @@ namespace village_management
             this.Hide();
         }
 
-        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            UserSearch obj = new UserSearch();
-            obj.Show();
-            this.Hide();
-        }
-
         private void linkLabel5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             UserNotice obj = new UserNotice();
@@ -60,9 +45,9 @@ namespace village_management
             this.Hide();
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            UserPanel obj = new UserPanel();
+            UserSearch obj = new UserSearch();
             obj.Show();
             this.Hide();
         }
