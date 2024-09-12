@@ -30,6 +30,7 @@ namespace village_management
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
