@@ -117,11 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="bunifuThinButton21.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAPoAAABCCAYAAAB+dcslAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAL5SURBVHhe7dq/S1thFIfx/kXdnNw6uTmFLk46FMFBlzgU
+        wS52sGAUySAEFERbrBgUyRQIqaGigxVtLRlusXAFfxGJUUIcTj1vblPF1Dn3Pc8HviCJdntu7nvTF9Jo
+        CGPM7xE6YwZG6IwZGKEzZmCEzpiBETpjBvZs6PXbG8kdFiW5npKB5XHpmRuSl5OvGWMdMO1Ruxxem5Ts
+        t7xUryttO9b9N/St8q77h5Ib05I7Ksnu7+8SXp0JgM6gPWqX+fKOjOXSrlcNvl3PT0LXq8LY5qwMfn4v
+        57X7KwSAWKjWay74wZUJOa/cfyg/6PpR6Bp5Yj4p2YNC9KcA4mYr2JO+xbcSXpy0D10/yYkciD+9pdfz
+        +5PQ9Uyut+sA/JAqLkmmtPovdH26rgd5zuSAP+p3DUksjEpwetwMXZ/U6SEegF8y21lJFRaboev3cPqI
+        HoBffp7+cg/YXei9mREJLsPoLQC+0Nv3rqm+ZujdM/3uOzgA/tH/RedC1x8A+InQAQMIHTCA0AEDCB0w
+        gNABAwgdMIDQAQMIHTCA0AEDCB0wgNABAwgdMIDQAQMIHTCA0AEDCB0wgNABAwgdMIDQAQMIHTCA0AED
+        CB0wgNABAwgdMIDQAQMIHTCA0AEDCB0wgNABAwgdMIDQAQMIHTCgFXrXVJ/U7xrRywB80gq9Z25Iwquz
+        6GUAPmmFPrgyIVvBXvQyAF8El6H0ZkaaoWdKq5IqLkVvAfBF9qAgY5uzzdDDixNXPed0wC/D2Q+SP/ra
+        DF2X/vJJ0qWV6G0AcZc7KklyPeX6boVev72RgeVx2Q/L0a8BiKvzWsXdpVevK49D1wWnx5JYGHUHeADx
+        pJEPfHwnu8F+q+1Hoev2j39IYj4pme1s9GcA4iJf3nGf5A8j1z0JXae38anCorsq6FM7vUIA6EzVeq15
+        Ht+YluG1ydbt+sO1Df3v9Kqgj+Zfpd+4L90ZY5237pl+99Atd1hs27Hu2dAZY36M0BkzMEJnzMAInTED
+        I3TGvF9D/gDsSA3E/HK06QAAAABJRU5ErkJggg==
+</value>
+  </data>
   <metadata name="bunifuElipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>25</value>
+    <value>58</value>
   </metadata>
   <metadata name="bunifuElipse2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>142, 17</value>

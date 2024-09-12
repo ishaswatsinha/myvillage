@@ -31,17 +31,17 @@
             components = new System.ComponentModel.Container();
             panel1 = new Panel();
             label2 = new Label();
-            bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(components);
-            bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(components);
-            linkLabel1 = new LinkLabel();
+            UserPannel = new Bunifu.Framework.UI.BunifuElipse(components);
+            mainPannel = new Bunifu.Framework.UI.BunifuElipse(components);
+            button1 = new Button();
+            back = new Bunifu.Framework.UI.BunifuElipse(components);
             linkLabel2 = new LinkLabel();
             linkLabel3 = new LinkLabel();
             linkLabel4 = new LinkLabel();
             linkLabel5 = new LinkLabel();
             label1 = new Label();
-            button1 = new Button();
+            linkLabel1 = new LinkLabel();
             backmenu = new Panel();
-            bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(components);
             panel1.SuspendLayout();
             backmenu.SuspendLayout();
             SuspendLayout();
@@ -67,31 +67,31 @@
             label2.TabIndex = 0;
             label2.Text = "Welcome User!";
             // 
-            // bunifuElipse1
+            // UserPannel
             // 
-            bunifuElipse1.ElipseRadius = 35;
-            bunifuElipse1.TargetControl = this;
+            UserPannel.ElipseRadius = 35;
+            UserPannel.TargetControl = this;
             // 
-            // bunifuElipse2
+            // mainPannel
             // 
-            bunifuElipse2.ElipseRadius = 35;
-            bunifuElipse2.TargetControl = panel1;
+            mainPannel.ElipseRadius = 35;
+            mainPannel.TargetControl = panel1;
             // 
-            // linkLabel1
+            // button1
             // 
-            linkLabel1.AutoSize = true;
-            linkLabel1.BackColor = Color.Transparent;
-            linkLabel1.Font = new Font("Century Gothic", 15F, FontStyle.Bold);
-            linkLabel1.LinkColor = Color.Black;
-            linkLabel1.Location = new Point(78, 11);
-            linkLabel1.Margin = new Padding(4, 0, 4, 0);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(103, 37);
-            linkLabel1.TabIndex = 1;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "Home";
-            linkLabel1.VisitedLinkColor = Color.FromArgb(192, 255, 255);
-            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
+            button1.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Location = new Point(61, 810);
+            button1.Margin = new Padding(4, 5, 4, 5);
+            button1.Name = "button1";
+            button1.Size = new Size(153, 52);
+            button1.TabIndex = 0;
+            button1.Text = "Logout";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // back
+            // 
+            back.ElipseRadius = 35;
+            back.TargetControl = backmenu;
             // 
             // linkLabel2
             // 
@@ -164,16 +164,21 @@
             label1.TabIndex = 6;
             label1.Text = "Username";
             // 
-            // button1
+            // linkLabel1
             // 
-            button1.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(61, 810);
-            button1.Margin = new Padding(4, 5, 4, 5);
-            button1.Name = "button1";
-            button1.Size = new Size(153, 52);
-            button1.TabIndex = 0;
-            button1.Text = "Logout";
-            button1.UseVisualStyleBackColor = true;
+            linkLabel1.AutoSize = true;
+            linkLabel1.BackColor = Color.Transparent;
+            linkLabel1.Font = new Font("Century Gothic", 15F, FontStyle.Bold);
+            linkLabel1.LinkColor = Color.Black;
+            linkLabel1.Location = new Point(78, 11);
+            linkLabel1.Margin = new Padding(4, 0, 4, 0);
+            linkLabel1.Name = "linkLabel1";
+            linkLabel1.Size = new Size(103, 37);
+            linkLabel1.TabIndex = 1;
+            linkLabel1.TabStop = true;
+            linkLabel1.Text = "Home";
+            linkLabel1.VisitedLinkColor = Color.FromArgb(192, 255, 255);
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
             // 
             // backmenu
             // 
@@ -183,11 +188,6 @@
             backmenu.Name = "backmenu";
             backmenu.Size = new Size(271, 62);
             backmenu.TabIndex = 15;
-            // 
-            // bunifuElipse3
-            // 
-            bunifuElipse3.ElipseRadius = 35;
-            bunifuElipse3.TargetControl = backmenu;
             // 
             // UserPanel
             // 
@@ -219,17 +219,17 @@
         #endregion
 
         private Panel panel1;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
+        private Bunifu.Framework.UI.BunifuElipse UserPannel;
+        private Bunifu.Framework.UI.BunifuElipse mainPannel;
+        private Button button1;
+        private Label label2;
+        private Bunifu.Framework.UI.BunifuElipse back;
+        private Panel backmenu;
+        private LinkLabel linkLabel1;
         private Label label1;
         private LinkLabel linkLabel5;
         private LinkLabel linkLabel4;
         private LinkLabel linkLabel3;
         private LinkLabel linkLabel2;
-        private LinkLabel linkLabel1;
-        private Button button1;
-        private Label label2;
-        private Panel backmenu;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
     }
 }

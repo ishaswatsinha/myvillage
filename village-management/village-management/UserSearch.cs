@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,8 @@ namespace village_management
 {
     public partial class UserSearch : Form
     {
+        string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\shasw\Desktop\netproject\village-management\village-management\VILLAGE-MANAGEMENT.mdf;Integrated Security=True";
+
         public UserSearch()
         {
             InitializeComponent();
@@ -50,6 +53,37 @@ namespace village_management
             UserSearch obj = new UserSearch();
             obj.Show();
             this.Hide();
+        }
+
+        private void SearchPanel_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void fetchdata()
+        {
+            SqlConnection con = new SqlConnection(constring);
+            con.Open();
+            string query = "select * from Register Where uid='" + textId.Text + "'";
+            SqlCommand cmd = new SqlCommand(query, con);
+            DataTable dt = new DataTable();
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            sda.Fill(dt);
+            foreach (DataRow dr in dt.Rows)
+            {
+                lblName.Text = dr["name"].ToString();
+                lblEmail.Text = dr["email"].ToString();
+                lblPhone.Text = dr["phone"].ToString();
+                lblHouse.Text = dr["hno"].ToString();
+                lblGender.Text = dr["gender"].ToString();
+
+            }
+
+            con.Close();
+        }
+
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
+            fetchdata();
         }
     }
 }

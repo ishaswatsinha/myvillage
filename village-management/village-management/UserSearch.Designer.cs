@@ -29,7 +29,21 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            panel1 = new Panel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserSearch));
+            SearchPanel = new Panel();
+            bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
+            lblGender = new Label();
+            label10 = new Label();
+            lblHouse = new Label();
+            label8 = new Label();
+            lblPhone = new Label();
+            label6 = new Label();
+            lblEmail = new Label();
+            label5 = new Label();
+            lblName = new Label();
+            label3 = new Label();
+            id = new Label();
+            textId = new TextBox();
             label2 = new Label();
             bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(components);
             bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(components);
@@ -42,25 +56,188 @@
             linkLabel3 = new LinkLabel();
             linkLabel2 = new LinkLabel();
             bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(components);
-            panel1.SuspendLayout();
+            SearchPanel.SuspendLayout();
             backmenu.SuspendLayout();
             SuspendLayout();
             // 
-            // panel1
+            // SearchPanel
             // 
-            panel1.BackColor = Color.Snow;
-            panel1.Controls.Add(label2);
-            panel1.Location = new Point(291, 20);
-            panel1.Margin = new Padding(4, 5, 4, 5);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1133, 957);
-            panel1.TabIndex = 16;
+            SearchPanel.BackColor = Color.Snow;
+            SearchPanel.Controls.Add(bunifuThinButton21);
+            SearchPanel.Controls.Add(lblGender);
+            SearchPanel.Controls.Add(label10);
+            SearchPanel.Controls.Add(lblHouse);
+            SearchPanel.Controls.Add(label8);
+            SearchPanel.Controls.Add(lblPhone);
+            SearchPanel.Controls.Add(label6);
+            SearchPanel.Controls.Add(lblEmail);
+            SearchPanel.Controls.Add(label5);
+            SearchPanel.Controls.Add(lblName);
+            SearchPanel.Controls.Add(label3);
+            SearchPanel.Controls.Add(id);
+            SearchPanel.Controls.Add(textId);
+            SearchPanel.Controls.Add(label2);
+            SearchPanel.Font = new Font("Century Gothic", 15F, FontStyle.Bold);
+            SearchPanel.Location = new Point(291, 20);
+            SearchPanel.Margin = new Padding(4, 5, 4, 5);
+            SearchPanel.Name = "SearchPanel";
+            SearchPanel.Size = new Size(1133, 957);
+            SearchPanel.TabIndex = 16;
+            SearchPanel.Paint += SearchPanel_Paint;
+            // 
+            // bunifuThinButton21
+            // 
+            bunifuThinButton21.ActiveBorderThickness = 1;
+            bunifuThinButton21.ActiveCornerRadius = 20;
+            bunifuThinButton21.ActiveFillColor = Color.SeaGreen;
+            bunifuThinButton21.ActiveForecolor = Color.White;
+            bunifuThinButton21.ActiveLineColor = Color.SeaGreen;
+            bunifuThinButton21.BackColor = Color.Snow;
+            bunifuThinButton21.BackgroundImage = (Image)resources.GetObject("bunifuThinButton21.BackgroundImage");
+            bunifuThinButton21.ButtonText = "Search";
+            bunifuThinButton21.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            bunifuThinButton21.ForeColor = Color.SeaGreen;
+            bunifuThinButton21.IdleBorderThickness = 1;
+            bunifuThinButton21.IdleCornerRadius = 20;
+            bunifuThinButton21.IdleFillColor = Color.White;
+            bunifuThinButton21.IdleForecolor = Color.SeaGreen;
+            bunifuThinButton21.IdleLineColor = Color.SeaGreen;
+            bunifuThinButton21.Location = new Point(442, 580);
+            bunifuThinButton21.Margin = new Padding(7, 7, 7, 7);
+            bunifuThinButton21.Name = "bunifuThinButton21";
+            bunifuThinButton21.Size = new Size(250, 66);
+            bunifuThinButton21.TabIndex = 13;
+            bunifuThinButton21.TextAlign = ContentAlignment.MiddleCenter;
+            bunifuThinButton21.Click += bunifuThinButton21_Click;
+            // 
+            // lblGender
+            // 
+            lblGender.AutoSize = true;
+            lblGender.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblGender.ForeColor = Color.Navy;
+            lblGender.Location = new Point(847, 387);
+            lblGender.Name = "lblGender";
+            lblGender.Size = new Size(102, 37);
+            lblGender.TabIndex = 12;
+            lblGender.Text = "name";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Century Gothic", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label10.Location = new Point(685, 383);
+            label10.Name = "label10";
+            label10.Size = new Size(153, 37);
+            label10.TabIndex = 11;
+            label10.Text = "GENDER :";
+            // 
+            // lblHouse
+            // 
+            lblHouse.AutoSize = true;
+            lblHouse.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblHouse.ForeColor = Color.Navy;
+            lblHouse.Location = new Point(847, 286);
+            lblHouse.Name = "lblHouse";
+            lblHouse.Size = new Size(149, 37);
+            lblHouse.TabIndex = 10;
+            lblHouse.Text = "house no";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Century Gothic", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label8.Location = new Point(685, 293);
+            label8.Name = "label8";
+            label8.Size = new Size(130, 37);
+            label8.TabIndex = 9;
+            label8.Text = "HOUSE :";
+            // 
+            // lblPhone
+            // 
+            lblPhone.AutoSize = true;
+            lblPhone.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblPhone.ForeColor = Color.Navy;
+            lblPhone.Location = new Point(262, 469);
+            lblPhone.Name = "lblPhone";
+            lblPhone.Size = new Size(111, 37);
+            lblPhone.TabIndex = 8;
+            lblPhone.Text = "phone";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Century Gothic", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.Location = new Point(100, 473);
+            label6.Name = "label6";
+            label6.Size = new Size(135, 37);
+            label6.TabIndex = 7;
+            label6.Text = "PHONE :";
+            // 
+            // lblEmail
+            // 
+            lblEmail.AutoSize = true;
+            lblEmail.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblEmail.ForeColor = Color.Navy;
+            lblEmail.Location = new Point(262, 383);
+            lblEmail.Name = "lblEmail";
+            lblEmail.Size = new Size(98, 37);
+            lblEmail.TabIndex = 6;
+            lblEmail.Text = "email";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Century Gothic", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(100, 383);
+            label5.Name = "label5";
+            label5.Size = new Size(121, 37);
+            label5.TabIndex = 5;
+            label5.Text = "EMAIL :";
+            // 
+            // lblName
+            // 
+            lblName.AutoSize = true;
+            lblName.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblName.ForeColor = Color.Navy;
+            lblName.Location = new Point(262, 293);
+            lblName.Name = "lblName";
+            lblName.Size = new Size(102, 37);
+            lblName.TabIndex = 4;
+            lblName.Text = "name";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Century Gothic", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(100, 293);
+            label3.Name = "label3";
+            label3.Size = new Size(121, 37);
+            label3.TabIndex = 3;
+            label3.Text = "NAME :";
+            // 
+            // id
+            // 
+            id.AutoSize = true;
+            id.Font = new Font("Century Gothic", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            id.Location = new Point(355, 143);
+            id.Name = "id";
+            id.Size = new Size(140, 37);
+            id.TabIndex = 2;
+            id.Text = "USER ID :";
+            // 
+            // textId
+            // 
+            textId.ForeColor = Color.FromArgb(0, 0, 192);
+            textId.Location = new Point(501, 140);
+            textId.Name = "textId";
+            textId.Size = new Size(206, 44);
+            textId.TabIndex = 1;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(77, 98);
+            label2.Location = new Point(34, 18);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new Size(142, 43);
@@ -75,7 +252,7 @@
             // bunifuElipse2
             // 
             bunifuElipse2.ElipseRadius = 35;
-            bunifuElipse2.TargetControl = panel1;
+            bunifuElipse2.TargetControl = SearchPanel;
             // 
             // linkLabel1
             // 
@@ -196,7 +373,7 @@
             BackColor = Color.LightSteelBlue;
             ClientSize = new Size(1441, 997);
             Controls.Add(linkLabel1);
-            Controls.Add(panel1);
+            Controls.Add(SearchPanel);
             Controls.Add(backmenu);
             Controls.Add(button1);
             Controls.Add(label1);
@@ -207,8 +384,8 @@
             Name = "UserSearch";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "UserSearch";
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            SearchPanel.ResumeLayout(false);
+            SearchPanel.PerformLayout();
             backmenu.ResumeLayout(false);
             backmenu.PerformLayout();
             ResumeLayout(false);
@@ -217,7 +394,7 @@
 
         #endregion
 
-        private Panel panel1;
+        private Panel SearchPanel;
         private Label label2;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Panel backmenu;
@@ -230,5 +407,18 @@
         private LinkLabel linkLabel2;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
+        private TextBox textId;
+        private Label id;
+        private Label label3;
+        private Label lblEmail;
+        private Label label5;
+        private Label lblName;
+        private Label lblGender;
+        private Label label10;
+        private Label lblHouse;
+        private Label label8;
+        private Label lblPhone;
+        private Label label6;
+        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
     }
 }
