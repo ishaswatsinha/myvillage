@@ -89,7 +89,7 @@
             // 
             // panel7
             // 
-            panel7.BackColor = Color.DarkOrange;
+            panel7.BackColor = Color.LightSteelBlue;
             panel7.Controls.Add(radioButton2);
             panel7.Controls.Add(radioButton1);
             panel7.Controls.Add(label1);
@@ -119,11 +119,11 @@
             // radioButton2
             // 
             radioButton2.AutoSize = true;
-            radioButton2.Font = new Font("MV Boli", 10F);
-            radioButton2.Location = new Point(192, 236);
+            radioButton2.Font = new Font("Century Gothic", 9F);
+            radioButton2.Location = new Point(209, 309);
             radioButton2.Margin = new Padding(2);
             radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(81, 22);
+            radioButton2.Size = new Size(70, 21);
             radioButton2.TabIndex = 18;
             radioButton2.TabStop = true;
             radioButton2.Text = "FEMALE";
@@ -132,11 +132,11 @@
             // radioButton1
             // 
             radioButton1.AutoSize = true;
-            radioButton1.Font = new Font("MV Boli", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            radioButton1.Location = new Point(122, 236);
+            radioButton1.Font = new Font("Century Gothic", 9F);
+            radioButton1.Location = new Point(139, 309);
             radioButton1.Margin = new Padding(2);
             radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(65, 22);
+            radioButton1.Size = new Size(58, 21);
             radioButton1.TabIndex = 17;
             radioButton1.TabStop = true;
             radioButton1.Text = "MALE";
@@ -146,11 +146,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("MV Boli", 10F);
-            label1.Location = new Point(15, 237);
+            label1.Font = new Font("Century Gothic", 9F);
+            label1.Location = new Point(32, 310);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(66, 18);
+            label1.Size = new Size(59, 17);
             label1.TabIndex = 16;
             label1.Text = "Gender :";
             // 
@@ -158,7 +158,7 @@
             // 
             textBox9.BorderStyle = BorderStyle.None;
             textBox9.Font = new Font("Myanmar Text", 8F);
-            textBox9.Location = new Point(121, 203);
+            textBox9.Location = new Point(138, 276);
             textBox9.Margin = new Padding(2);
             textBox9.Name = "textBox9";
             textBox9.Size = new Size(141, 20);
@@ -167,11 +167,11 @@
             // label26
             // 
             label26.AutoSize = true;
-            label26.Font = new Font("MV Boli", 10F);
-            label26.Location = new Point(15, 203);
+            label26.Font = new Font("Century Gothic", 9F);
+            label26.Location = new Point(32, 276);
             label26.Margin = new Padding(2, 0, 2, 0);
             label26.Name = "label26";
-            label26.Size = new Size(79, 18);
+            label26.Size = new Size(69, 17);
             label26.TabIndex = 14;
             label26.Text = "Password :";
             // 
@@ -179,7 +179,7 @@
             // 
             textBox7.BorderStyle = BorderStyle.None;
             textBox7.Font = new Font("Myanmar Text", 8F);
-            textBox7.Location = new Point(120, 172);
+            textBox7.Location = new Point(137, 245);
             textBox7.Margin = new Padding(2);
             textBox7.Name = "textBox7";
             textBox7.Size = new Size(141, 20);
@@ -188,33 +188,33 @@
             // label27
             // 
             label27.AutoSize = true;
-            label27.Font = new Font("MV Boli", 10F);
-            label27.Location = new Point(15, 173);
+            label27.Font = new Font("Century Gothic", 9F);
+            label27.Location = new Point(32, 246);
             label27.Margin = new Padding(2, 0, 2, 0);
             label27.Name = "label27";
-            label27.Size = new Size(59, 18);
+            label27.Size = new Size(51, 17);
             label27.TabIndex = 12;
             label27.Text = "Phone :";
             // 
             // label28
             // 
             label28.AutoSize = true;
-            label28.Font = new Font("MV Boli", 10F);
-            label28.Location = new Point(24, 298);
+            label28.Font = new Font("Century Gothic", 8.25F);
+            label28.Location = new Point(62, 399);
             label28.Margin = new Padding(2, 0, 2, 0);
             label28.Name = "label28";
-            label28.Size = new Size(182, 18);
+            label28.Size = new Size(155, 16);
             label28.TabIndex = 11;
             label28.Text = "Already have an Account?";
             // 
             // linkLabel10
             // 
             linkLabel10.AutoSize = true;
-            linkLabel10.Font = new Font("MV Boli", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            linkLabel10.Location = new Point(218, 298);
+            linkLabel10.Font = new Font("Century Gothic", 8.25F);
+            linkLabel10.Location = new Point(213, 399);
             linkLabel10.Margin = new Padding(2, 0, 2, 0);
             linkLabel10.Name = "linkLabel10";
-            linkLabel10.Size = new Size(43, 17);
+            linkLabel10.Size = new Size(38, 16);
             linkLabel10.TabIndex = 10;
             linkLabel10.TabStop = true;
             linkLabel10.Text = "Login ";
@@ -222,21 +222,24 @@
             // 
             // button7
             // 
-            button7.Font = new Font("MV Boli", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button7.Location = new Point(120, 268);
+            button7.BackColor = SystemColors.HotTrack;
+            button7.FlatStyle = FlatStyle.Popup;
+            button7.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button7.ForeColor = Color.White;
+            button7.Location = new Point(113, 348);
             button7.Margin = new Padding(2);
             button7.Name = "button7";
-            button7.Size = new Size(78, 20);
+            button7.Size = new Size(84, 30);
             button7.TabIndex = 9;
-            button7.Text = "Submit";
-            button7.UseVisualStyleBackColor = true;
+            button7.Text = "SUBMIT";
+            button7.UseVisualStyleBackColor = false;
             button7.Click += button7_Click;
             // 
             // textBox6
             // 
             textBox6.BorderStyle = BorderStyle.None;
             textBox6.Font = new Font("Myanmar Text", 8F);
-            textBox6.Location = new Point(120, 139);
+            textBox6.Location = new Point(137, 212);
             textBox6.Margin = new Padding(2);
             textBox6.Name = "textBox6";
             textBox6.Size = new Size(141, 20);
@@ -246,7 +249,7 @@
             // 
             textBox5.BorderStyle = BorderStyle.None;
             textBox5.Font = new Font("Myanmar Text", 8F);
-            textBox5.Location = new Point(120, 108);
+            textBox5.Location = new Point(137, 181);
             textBox5.Margin = new Padding(2);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(141, 20);
@@ -256,7 +259,7 @@
             // 
             textBox4.BorderStyle = BorderStyle.None;
             textBox4.Font = new Font("Myanmar Text", 8F);
-            textBox4.Location = new Point(120, 75);
+            textBox4.Location = new Point(137, 148);
             textBox4.Margin = new Padding(2);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(141, 20);
@@ -266,7 +269,7 @@
             // 
             textBox3.BorderStyle = BorderStyle.None;
             textBox3.Font = new Font("Myanmar Text", 8F);
-            textBox3.Location = new Point(120, 40);
+            textBox3.Location = new Point(137, 113);
             textBox3.Margin = new Padding(2);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(141, 20);
@@ -275,44 +278,44 @@
             // label29
             // 
             label29.AutoSize = true;
-            label29.Font = new Font("MV Boli", 10F);
-            label29.Location = new Point(15, 143);
+            label29.Font = new Font("Century Gothic", 9F);
+            label29.Location = new Point(32, 216);
             label29.Margin = new Padding(2, 0, 2, 0);
             label29.Name = "label29";
-            label29.Size = new Size(68, 18);
+            label29.Size = new Size(53, 17);
             label29.TabIndex = 4;
             label29.Text = "User Id :";
             // 
             // label30
             // 
             label30.AutoSize = true;
-            label30.Font = new Font("MV Boli", 10F);
-            label30.Location = new Point(15, 108);
+            label30.Font = new Font("Century Gothic", 9F);
+            label30.Location = new Point(32, 181);
             label30.Margin = new Padding(2, 0, 2, 0);
             label30.Name = "label30";
-            label30.Size = new Size(76, 18);
+            label30.Size = new Size(67, 17);
             label30.TabIndex = 3;
             label30.Text = "House No:";
             // 
             // label31
             // 
             label31.AutoSize = true;
-            label31.Font = new Font("MV Boli", 10F);
-            label31.Location = new Point(15, 75);
+            label31.Font = new Font("Century Gothic", 9F);
+            label31.Location = new Point(32, 148);
             label31.Margin = new Padding(2, 0, 2, 0);
             label31.Name = "label31";
-            label31.Size = new Size(55, 18);
+            label31.Size = new Size(45, 17);
             label31.TabIndex = 2;
             label31.Text = "Email :";
             // 
             // label32
             // 
             label32.AutoSize = true;
-            label32.Font = new Font("MV Boli", 10F);
-            label32.Location = new Point(15, 41);
+            label32.Font = new Font("Century Gothic", 9F);
+            label32.Location = new Point(32, 114);
             label32.Margin = new Padding(2, 0, 2, 0);
             label32.Name = "label32";
-            label32.Size = new Size(57, 18);
+            label32.Size = new Size(50, 17);
             label32.TabIndex = 1;
             label32.Text = "Name :";
             // 
@@ -320,13 +323,13 @@
             // 
             label33.AutoSize = true;
             label33.Cursor = Cursors.IBeam;
-            label33.Font = new Font("MV Boli", 15F, FontStyle.Bold);
-            label33.Location = new Point(74, 3);
+            label33.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label33.Location = new Point(83, 61);
             label33.Margin = new Padding(2, 0, 2, 0);
             label33.Name = "label33";
-            label33.Size = new Size(138, 26);
+            label33.Size = new Size(156, 25);
             label33.TabIndex = 0;
-            label33.Text = "Registration";
+            label33.Text = "REGISTRATION";
             // 
             // panel2
             // 
