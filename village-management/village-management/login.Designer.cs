@@ -740,10 +740,10 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(309, 440);
-            Controls.Add(panel4);
-            Controls.Add(panel7);
             Controls.Add(panel2);
             Controls.Add(panel5);
+            Controls.Add(panel4);
+            Controls.Add(panel7);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(2);
             Name = "login";

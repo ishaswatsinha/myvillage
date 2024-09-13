@@ -55,8 +55,8 @@ namespace village_management
         {
             SqlConnection con = new SqlConnection(constring);
             con.Open();
-            
-            string query2 = "SELECT email FROM Token WHERE otp = '"+ txtotp.Text + "' ";
+
+            string query2 = "SELECT email FROM Token WHERE otp = '" + txtotp.Text + "' ";
             SqlCommand cmd = new SqlCommand(query2, con);
             DataTable dt = new DataTable();
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
@@ -71,7 +71,17 @@ namespace village_management
 
 
 
-            
+
+        }
+
+        private void OTP_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
