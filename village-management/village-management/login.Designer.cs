@@ -657,11 +657,11 @@
             // linkLabel9
             // 
             linkLabel9.AutoSize = true;
-            linkLabel9.Font = new Font("Century Gothic", 9F);
-            linkLabel9.Location = new Point(221, 237);
+            linkLabel9.Font = new Font("Century Gothic", 8.25F);
+            linkLabel9.Location = new Point(201, 259);
             linkLabel9.Margin = new Padding(2, 0, 2, 0);
             linkLabel9.Name = "linkLabel9";
-            linkLabel9.Size = new Size(70, 17);
+            linkLabel9.Size = new Size(62, 16);
             linkLabel9.TabIndex = 16;
             linkLabel9.TabStop = true;
             linkLabel9.Text = "Login here";
@@ -671,12 +671,12 @@
             // 
             label16.AutoSize = true;
             label16.BackColor = Color.Transparent;
-            label16.Font = new Font("Century Gothic", 9F);
+            label16.Font = new Font("Century Gothic", 8.25F);
             label16.ForeColor = SystemColors.ActiveCaptionText;
-            label16.Location = new Point(41, 239);
+            label16.Location = new Point(48, 259);
             label16.Margin = new Padding(2, 0, 2, 0);
             label16.Name = "label16";
-            label16.Size = new Size(170, 17);
+            label16.Size = new Size(157, 16);
             label16.TabIndex = 15;
             label16.Text = "Remember Your Password ?";
             // 
@@ -686,7 +686,7 @@
             button4.FlatStyle = FlatStyle.Popup;
             button4.Font = new Font("Century Gothic", 9F);
             button4.ForeColor = SystemColors.ButtonHighlight;
-            button4.Location = new Point(109, 263);
+            button4.Location = new Point(109, 323);
             button4.Margin = new Padding(2);
             button4.Name = "button4";
             button4.Size = new Size(104, 31);
@@ -740,10 +740,10 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(309, 440);
+            Controls.Add(panel7);
             Controls.Add(panel2);
             Controls.Add(panel5);
             Controls.Add(panel4);
-            Controls.Add(panel7);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(2);
             Name = "login";
