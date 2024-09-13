@@ -54,22 +54,23 @@ namespace village_management
         }
 
 
+
+        //  -----------------------REGISTRATION PAGE--------------------------------
+        //  -----------------------REGISTRATION PAGE--------------------------------
+        //  -----------------------REGISTRATION PAGE--------------------------------
+
         private void button7_Click(object sender, EventArgs e)
         {
-
             string query = "insert into register(name,email,hno,uid, phone, password,gender)VALUES(@name,@email,@house,@uid,@phone,@password,@gender)";
             SqlConnection con = new SqlConnection(constring);
             con.Open();
             SqlCommand cmd = new SqlCommand(query, con);
-
-
             cmd.Parameters.AddWithValue("@name", textBox3.Text);
             cmd.Parameters.AddWithValue("@email", textBox4.Text);
             cmd.Parameters.AddWithValue("@house", textBox5.Text);
             cmd.Parameters.AddWithValue("@uid", textBox6.Text);
             cmd.Parameters.AddWithValue("@phone", textBox7.Text);
             cmd.Parameters.AddWithValue("@password", textBox9.Text);
-
             if (radioButton1.Checked)
             {
                 gender = "male";
@@ -78,23 +79,11 @@ namespace village_management
             {
                 gender = "female";
             }
-
             cmd.Parameters.AddWithValue("@gender", gender);
-
-
-
-
-
-
             cmd.ExecuteNonQuery();
-
-
-
             con.Close();
             MessageBox.Show("Register Successfully!!!");
-
             panel2.BringToFront();
-
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -102,10 +91,16 @@ namespace village_management
 
         }
 
+
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+
+        //  -----------------------LOGIN PAGE--------------------------------
+        //  -----------------------LOGIN PAGE--------------------------------
+        //  -----------------------LOGIN PAGE--------------------------------
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -131,6 +126,7 @@ namespace village_management
             }
         }
 
+        // Function for Validate User
 
         private bool ValidateLogin(string email, string password)
         {
@@ -151,7 +147,6 @@ namespace village_management
                         cmd.Parameters.AddWithValue("@Password", password);
 
                         int count = Convert.ToInt32(cmd.ExecuteScalar());
-
                         // If count is 1, the user exists with the correct credentials
                         return count == 1;
                     }
@@ -164,6 +159,13 @@ namespace village_management
             }
         }
 
+
+        //  -----------------------FORGOT PAGE--------------------------------
+        //  -----------------------FORGOT PAGE--------------------------------
+        //  -----------------------FORGOT PAGE--------------------------------
+
+
+        // --------MAIL SENT-----------------
         private void button4_Click(object sender, EventArgs e)
         {
             try
@@ -188,12 +190,6 @@ namespace village_management
                 e_mail.IsBodyHtml = false;
                 e_mail.Body = Convert.ToString(otp);
                 Smtp_Server.Send(e_mail);
-                //Interaction.MsgBox("Mail Sent");
-
-                //DateTime time = DateTime.Now;
-                //Console.WriteLine(time.ToString("h:mm:ss tt"));
-
-
                 string query3 = "insert into Token(email,otp)VALUES(@email,@otp)";
                 SqlConnection con = new SqlConnection(constring);
                 con.Open();
@@ -217,6 +213,7 @@ namespace village_management
                 MessageBox.Show("Error in Mail Sent");
             }
         }
+
 
         //ADMIN LOGIN
         private void button5_Click(object sender, EventArgs e)

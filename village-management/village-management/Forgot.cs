@@ -10,6 +10,7 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.WebRequestMethods;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace village_management
@@ -52,16 +53,23 @@ namespace village_management
 
         private void otpsubmit_Click(object sender, EventArgs e)
         {
-            string query2 = "SELECT email FROM Token WHERE otp = otp ";
-
-            label2.Text = Name;
-
             SqlConnection con = new SqlConnection(constring);
             con.Open();
+            
+            string query2 = "SELECT email FROM Token WHERE otp = '"+ txtotp.Text + "' ";
             SqlCommand cmd = new SqlCommand(query2, con);
-            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            sda.Fill(dt);
+            foreach (DataRow dr in dt.Rows)
+            {
+                //String email = dr["email"].ToString();
+                MessageBox.Show(dr["email"].ToString());
+            }
 
             con.Close();
+
+
 
             
         }
