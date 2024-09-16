@@ -29,19 +29,20 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserPanel));
             panel1 = new Panel();
             label2 = new Label();
             UserPannel = new Bunifu.Framework.UI.BunifuElipse(components);
             mainPannel = new Bunifu.Framework.UI.BunifuElipse(components);
-            button1 = new Button();
             back = new Bunifu.Framework.UI.BunifuElipse(components);
+            backmenu = new Panel();
+            linkLabel1 = new LinkLabel();
             linkLabel2 = new LinkLabel();
             linkLabel3 = new LinkLabel();
             linkLabel4 = new LinkLabel();
             linkLabel5 = new LinkLabel();
             label1 = new Label();
-            linkLabel1 = new LinkLabel();
-            backmenu = new Panel();
+            LogOut = new Bunifu.Framework.UI.BunifuThinButton2();
             panel1.SuspendLayout();
             backmenu.SuspendLayout();
             SuspendLayout();
@@ -77,21 +78,35 @@
             mainPannel.ElipseRadius = 35;
             mainPannel.TargetControl = panel1;
             // 
-            // button1
-            // 
-            button1.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(61, 810);
-            button1.Margin = new Padding(4, 5, 4, 5);
-            button1.Name = "button1";
-            button1.Size = new Size(153, 52);
-            button1.TabIndex = 0;
-            button1.Text = "Logout";
-            button1.UseVisualStyleBackColor = true;
-            // 
             // back
             // 
             back.ElipseRadius = 35;
             back.TargetControl = backmenu;
+            // 
+            // backmenu
+            // 
+            backmenu.BackColor = Color.CadetBlue;
+            backmenu.Controls.Add(linkLabel1);
+            backmenu.Location = new Point(12, 264);
+            backmenu.Name = "backmenu";
+            backmenu.Size = new Size(271, 62);
+            backmenu.TabIndex = 15;
+            // 
+            // linkLabel1
+            // 
+            linkLabel1.AutoSize = true;
+            linkLabel1.BackColor = Color.Transparent;
+            linkLabel1.Font = new Font("Century Gothic", 15F, FontStyle.Bold);
+            linkLabel1.LinkColor = Color.Black;
+            linkLabel1.Location = new Point(78, 11);
+            linkLabel1.Margin = new Padding(4, 0, 4, 0);
+            linkLabel1.Name = "linkLabel1";
+            linkLabel1.Size = new Size(103, 37);
+            linkLabel1.TabIndex = 1;
+            linkLabel1.TabStop = true;
+            linkLabel1.Text = "Home";
+            linkLabel1.VisitedLinkColor = Color.FromArgb(192, 255, 255);
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
             // 
             // linkLabel2
             // 
@@ -164,30 +179,29 @@
             label1.TabIndex = 6;
             label1.Text = "Username";
             // 
-            // linkLabel1
+            // LogOut
             // 
-            linkLabel1.AutoSize = true;
-            linkLabel1.BackColor = Color.Transparent;
-            linkLabel1.Font = new Font("Century Gothic", 15F, FontStyle.Bold);
-            linkLabel1.LinkColor = Color.Black;
-            linkLabel1.Location = new Point(78, 11);
-            linkLabel1.Margin = new Padding(4, 0, 4, 0);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(103, 37);
-            linkLabel1.TabIndex = 1;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "Home";
-            linkLabel1.VisitedLinkColor = Color.FromArgb(192, 255, 255);
-            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
-            // 
-            // backmenu
-            // 
-            backmenu.BackColor = Color.CadetBlue;
-            backmenu.Controls.Add(linkLabel1);
-            backmenu.Location = new Point(12, 264);
-            backmenu.Name = "backmenu";
-            backmenu.Size = new Size(271, 62);
-            backmenu.TabIndex = 15;
+            LogOut.ActiveBorderThickness = 1;
+            LogOut.ActiveCornerRadius = 20;
+            LogOut.ActiveFillColor = Color.SeaGreen;
+            LogOut.ActiveForecolor = Color.White;
+            LogOut.ActiveLineColor = Color.SeaGreen;
+            LogOut.BackColor = Color.LightSteelBlue;
+            LogOut.BackgroundImage = (Image)resources.GetObject("LogOut.BackgroundImage");
+            LogOut.ButtonText = "Logout";
+            LogOut.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            LogOut.ForeColor = Color.SeaGreen;
+            LogOut.IdleBorderThickness = 1;
+            LogOut.IdleCornerRadius = 20;
+            LogOut.IdleFillColor = Color.White;
+            LogOut.IdleForecolor = Color.SeaGreen;
+            LogOut.IdleLineColor = Color.SeaGreen;
+            LogOut.Location = new Point(61, 810);
+            LogOut.Margin = new Padding(7, 7, 7, 7);
+            LogOut.Name = "LogOut";
+            LogOut.Size = new Size(191, 64);
+            LogOut.TabIndex = 27;
+            LogOut.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // UserPanel
             // 
@@ -195,8 +209,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
             ClientSize = new Size(1441, 997);
+            Controls.Add(LogOut);
             Controls.Add(backmenu);
-            Controls.Add(button1);
             Controls.Add(label1);
             Controls.Add(linkLabel5);
             Controls.Add(linkLabel4);
@@ -221,7 +235,6 @@
         private Panel panel1;
         private Bunifu.Framework.UI.BunifuElipse UserPannel;
         private Bunifu.Framework.UI.BunifuElipse mainPannel;
-        private Button button1;
         private Label label2;
         private Bunifu.Framework.UI.BunifuElipse back;
         private Panel backmenu;
@@ -231,5 +244,6 @@
         private LinkLabel linkLabel4;
         private LinkLabel linkLabel3;
         private LinkLabel linkLabel2;
+        private Bunifu.Framework.UI.BunifuThinButton2 LogOut;
     }
 }

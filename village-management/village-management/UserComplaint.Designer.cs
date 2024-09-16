@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserComplaint));
             panel1 = new Panel();
             label2 = new Label();
             bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(components);
@@ -36,12 +37,12 @@
             linkLabel1 = new LinkLabel();
             backmenu = new Panel();
             linkLabel3 = new LinkLabel();
-            button1 = new Button();
             label1 = new Label();
             linkLabel5 = new LinkLabel();
             linkLabel4 = new LinkLabel();
             linkLabel2 = new LinkLabel();
             bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(components);
+            LogOut = new Bunifu.Framework.UI.BunifuThinButton2();
             panel1.SuspendLayout();
             backmenu.SuspendLayout();
             SuspendLayout();
@@ -117,17 +118,6 @@
             linkLabel3.VisitedLinkColor = Color.FromArgb(192, 255, 255);
             linkLabel3.LinkClicked += linkLabel3_LinkClicked;
             // 
-            // button1
-            // 
-            button1.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(61, 810);
-            button1.Margin = new Padding(4, 5, 4, 5);
-            button1.Name = "button1";
-            button1.Size = new Size(153, 52);
-            button1.TabIndex = 17;
-            button1.Text = "Logout";
-            button1.UseVisualStyleBackColor = true;
-            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -189,16 +179,40 @@
             bunifuElipse3.ElipseRadius = 35;
             bunifuElipse3.TargetControl = backmenu;
             // 
+            // LogOut
+            // 
+            LogOut.ActiveBorderThickness = 1;
+            LogOut.ActiveCornerRadius = 20;
+            LogOut.ActiveFillColor = Color.SeaGreen;
+            LogOut.ActiveForecolor = Color.White;
+            LogOut.ActiveLineColor = Color.SeaGreen;
+            LogOut.BackColor = Color.LightSteelBlue;
+            LogOut.BackgroundImage = (Image)resources.GetObject("LogOut.BackgroundImage");
+            LogOut.ButtonText = "Logout";
+            LogOut.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            LogOut.ForeColor = Color.SeaGreen;
+            LogOut.IdleBorderThickness = 1;
+            LogOut.IdleCornerRadius = 20;
+            LogOut.IdleFillColor = Color.White;
+            LogOut.IdleForecolor = Color.SeaGreen;
+            LogOut.IdleLineColor = Color.SeaGreen;
+            LogOut.Location = new Point(61, 810);
+            LogOut.Margin = new Padding(7, 7, 7, 7);
+            LogOut.Name = "LogOut";
+            LogOut.Size = new Size(191, 64);
+            LogOut.TabIndex = 24;
+            LogOut.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // UserComplaint
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
             ClientSize = new Size(1441, 997);
+            Controls.Add(LogOut);
             Controls.Add(linkLabel1);
             Controls.Add(panel1);
             Controls.Add(backmenu);
-            Controls.Add(button1);
             Controls.Add(label1);
             Controls.Add(linkLabel5);
             Controls.Add(linkLabel4);
@@ -223,12 +237,12 @@
         private LinkLabel linkLabel1;
         private Panel backmenu;
         private LinkLabel linkLabel3;
-        private Button button1;
         private Label label1;
         private LinkLabel linkLabel5;
         private LinkLabel linkLabel4;
         private LinkLabel linkLabel2;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
+        private Bunifu.Framework.UI.BunifuThinButton2 LogOut;
     }
 }
