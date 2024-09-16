@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace village_management
 {
-    public partial class AdminPanel : Form
+    public partial class AdminManage: Form
     {
-        public AdminPanel()
+        public AdminManage()
         {
             InitializeComponent();
-        }
-
-        private void dashboard_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
         }
     }
 }
