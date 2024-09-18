@@ -22,14 +22,14 @@ namespace village_management
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            UserPanel obj = new UserPanel();
+            UserHome obj = new UserHome();
             obj.Show();
             this.Hide();
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            UserPanel obj = new UserPanel();
+            UserProfile obj = new UserProfile();
             obj.Show();
             this.Hide();
         }
