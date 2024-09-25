@@ -51,20 +51,18 @@
             // 
             panel1.BackColor = Color.Snow;
             panel1.Controls.Add(label2);
-            panel1.Location = new Point(291, 20);
-            panel1.Margin = new Padding(4, 5, 4, 5);
+            panel1.Location = new Point(204, 12);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1133, 957);
+            panel1.Size = new Size(793, 574);
             panel1.TabIndex = 16;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(77, 98);
-            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Location = new Point(54, 59);
             label2.Name = "label2";
-            label2.Size = new Size(219, 43);
+            label2.Size = new Size(145, 28);
             label2.TabIndex = 0;
             label2.Text = "Complaints";
             // 
@@ -84,10 +82,9 @@
             linkLabel1.BackColor = Color.Transparent;
             linkLabel1.Font = new Font("Century Gothic", 15F, FontStyle.Bold);
             linkLabel1.LinkColor = Color.Black;
-            linkLabel1.Location = new Point(61, 282);
-            linkLabel1.Margin = new Padding(4, 0, 4, 0);
+            linkLabel1.Location = new Point(43, 169);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(103, 37);
+            linkLabel1.Size = new Size(69, 23);
             linkLabel1.TabIndex = 1;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Home";
@@ -98,9 +95,10 @@
             // 
             backmenu.BackColor = Color.CadetBlue;
             backmenu.Controls.Add(linkLabel3);
-            backmenu.Location = new Point(14, 461);
+            backmenu.Location = new Point(10, 277);
+            backmenu.Margin = new Padding(2, 2, 2, 2);
             backmenu.Name = "backmenu";
-            backmenu.Size = new Size(271, 62);
+            backmenu.Size = new Size(190, 37);
             backmenu.TabIndex = 23;
             // 
             // linkLabel3
@@ -108,10 +106,9 @@
             linkLabel3.AutoSize = true;
             linkLabel3.Font = new Font("Century Gothic", 15F, FontStyle.Bold);
             linkLabel3.LinkColor = Color.Black;
-            linkLabel3.Location = new Point(49, 12);
-            linkLabel3.Margin = new Padding(4, 0, 4, 0);
+            linkLabel3.Location = new Point(34, 7);
             linkLabel3.Name = "linkLabel3";
-            linkLabel3.Size = new Size(181, 37);
+            linkLabel3.Size = new Size(121, 23);
             linkLabel3.TabIndex = 19;
             linkLabel3.TabStop = true;
             linkLabel3.Text = "Complaints";
@@ -122,10 +119,9 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 15F, FontStyle.Bold);
-            label1.Location = new Point(61, 118);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Location = new Point(43, 71);
             label1.Name = "label1";
-            label1.Size = new Size(163, 37);
+            label1.Size = new Size(108, 23);
             label1.TabIndex = 22;
             label1.Text = "Username";
             // 
@@ -134,10 +130,9 @@
             linkLabel5.AutoSize = true;
             linkLabel5.Font = new Font("Century Gothic", 15F, FontStyle.Bold);
             linkLabel5.LinkColor = Color.Black;
-            linkLabel5.Location = new Point(61, 657);
-            linkLabel5.Margin = new Padding(4, 0, 4, 0);
+            linkLabel5.Location = new Point(43, 394);
             linkLabel5.Name = "linkLabel5";
-            linkLabel5.Size = new Size(112, 37);
+            linkLabel5.Size = new Size(75, 23);
             linkLabel5.TabIndex = 21;
             linkLabel5.TabStop = true;
             linkLabel5.Text = "Notice";
@@ -149,10 +144,9 @@
             linkLabel4.AutoSize = true;
             linkLabel4.Font = new Font("Century Gothic", 15F, FontStyle.Bold);
             linkLabel4.LinkColor = Color.Black;
-            linkLabel4.Location = new Point(61, 560);
-            linkLabel4.Margin = new Padding(4, 0, 4, 0);
+            linkLabel4.Location = new Point(43, 336);
             linkLabel4.Name = "linkLabel4";
-            linkLabel4.Size = new Size(119, 37);
+            linkLabel4.Size = new Size(77, 23);
             linkLabel4.TabIndex = 20;
             linkLabel4.TabStop = true;
             linkLabel4.Text = "Search";
@@ -164,10 +158,9 @@
             linkLabel2.AutoSize = true;
             linkLabel2.Font = new Font("Century Gothic", 15F, FontStyle.Bold);
             linkLabel2.LinkColor = Color.Black;
-            linkLabel2.Location = new Point(61, 367);
-            linkLabel2.Margin = new Padding(4, 0, 4, 0);
+            linkLabel2.Location = new Point(43, 220);
             linkLabel2.Name = "linkLabel2";
-            linkLabel2.Size = new Size(104, 37);
+            linkLabel2.Size = new Size(69, 23);
             linkLabel2.TabIndex = 18;
             linkLabel2.TabStop = true;
             linkLabel2.Text = "Profile";
@@ -196,19 +189,19 @@
             LogOut.IdleFillColor = Color.White;
             LogOut.IdleForecolor = Color.SeaGreen;
             LogOut.IdleLineColor = Color.SeaGreen;
-            LogOut.Location = new Point(61, 810);
-            LogOut.Margin = new Padding(7, 7, 7, 7);
+            LogOut.Location = new Point(43, 486);
+            LogOut.Margin = new Padding(5, 4, 5, 4);
             LogOut.Name = "LogOut";
-            LogOut.Size = new Size(191, 64);
+            LogOut.Size = new Size(134, 38);
             LogOut.TabIndex = 24;
             LogOut.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // UserComplaint
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
-            ClientSize = new Size(1441, 997);
+            ClientSize = new Size(970, 598);
             Controls.Add(LogOut);
             Controls.Add(linkLabel1);
             Controls.Add(panel1);
@@ -218,6 +211,7 @@
             Controls.Add(linkLabel4);
             Controls.Add(linkLabel2);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(2, 2, 2, 2);
             Name = "UserComplaint";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "UserComplaint";
