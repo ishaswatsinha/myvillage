@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace village_management
 {
-    public partial class AdminNotice : Form
+    public partial class AddNotice : Form
     {
-        public AdminNotice()
+        public AddNotice()
         {
             InitializeComponent();
-        }
-
-        private void AdminNotice_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
