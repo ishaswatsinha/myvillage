@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminNotice));
             panel1 = new Panel();
+            bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            label3 = new Label();
+            dataGridView1 = new DataGridView();
+            label2 = new Label();
             LogOut = new Bunifu.Framework.UI.BunifuThinButton2();
             dashboard = new LinkLabel();
             backmenu = new Panel();
@@ -37,10 +41,6 @@
             linkLabel4 = new LinkLabel();
             linkLabel3 = new LinkLabel();
             linkLabel2 = new LinkLabel();
-            label2 = new Label();
-            dataGridView1 = new DataGridView();
-            label3 = new Label();
-            bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -57,6 +57,69 @@
             panel1.Size = new Size(906, 766);
             panel1.TabIndex = 0;
             // 
+            // bunifuFlatButton1
+            // 
+            bunifuFlatButton1.Active = false;
+            bunifuFlatButton1.Activecolor = Color.FromArgb(46, 139, 87);
+            bunifuFlatButton1.BackColor = Color.FromArgb(46, 139, 87);
+            bunifuFlatButton1.BackgroundImageLayout = ImageLayout.Stretch;
+            bunifuFlatButton1.BorderRadius = 0;
+            bunifuFlatButton1.ButtonText = "Add Notice";
+            bunifuFlatButton1.DisabledColor = Color.Gray;
+            bunifuFlatButton1.Iconcolor = Color.Transparent;
+            bunifuFlatButton1.Iconimage = (Image)resources.GetObject("bunifuFlatButton1.Iconimage");
+            bunifuFlatButton1.Iconimage_right = null;
+            bunifuFlatButton1.Iconimage_right_Selected = null;
+            bunifuFlatButton1.Iconimage_Selected = null;
+            bunifuFlatButton1.IconMarginLeft = 0;
+            bunifuFlatButton1.IconMarginRight = 0;
+            bunifuFlatButton1.IconRightVisible = true;
+            bunifuFlatButton1.IconRightZoom = 0D;
+            bunifuFlatButton1.IconVisible = true;
+            bunifuFlatButton1.IconZoom = 90D;
+            bunifuFlatButton1.IsTab = false;
+            bunifuFlatButton1.Location = new Point(691, 141);
+            bunifuFlatButton1.Margin = new Padding(4, 3, 4, 3);
+            bunifuFlatButton1.Name = "bunifuFlatButton1";
+            bunifuFlatButton1.Normalcolor = Color.FromArgb(46, 139, 87);
+            bunifuFlatButton1.OnHovercolor = Color.FromArgb(36, 129, 77);
+            bunifuFlatButton1.OnHoverTextColor = Color.White;
+            bunifuFlatButton1.selected = false;
+            bunifuFlatButton1.Size = new Size(164, 47);
+            bunifuFlatButton1.TabIndex = 50;
+            bunifuFlatButton1.Text = "Add Notice";
+            bunifuFlatButton1.TextAlign = ContentAlignment.MiddleLeft;
+            bunifuFlatButton1.Textcolor = Color.White;
+            bunifuFlatButton1.TextFont = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Century Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(406, 46);
+            label3.Name = "label3";
+            label3.Size = new Size(119, 38);
+            label3.TabIndex = 49;
+            label3.Text = "Notice";
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(67, 201);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(788, 540);
+            dataGridView1.TabIndex = 48;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(67, 156);
+            label2.Name = "label2";
+            label2.Size = new Size(160, 23);
+            label2.TabIndex = 47;
+            label2.Text = "Previous Notices";
+            // 
             // LogOut
             // 
             LogOut.ActiveBorderThickness = 1;
@@ -64,7 +127,7 @@
             LogOut.ActiveFillColor = Color.SeaGreen;
             LogOut.ActiveForecolor = Color.White;
             LogOut.ActiveLineColor = Color.SeaGreen;
-            LogOut.BackColor = SystemColors.AppWorkspace;
+            LogOut.BackColor = Color.LightSteelBlue;
             LogOut.BackgroundImage = (Image)resources.GetObject("LogOut.BackgroundImage");
             LogOut.ButtonText = "Logout";
             LogOut.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -153,74 +216,11 @@
             linkLabel2.Text = "Manage Users";
             linkLabel2.VisitedLinkColor = Color.FromArgb(192, 255, 255);
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(67, 156);
-            label2.Name = "label2";
-            label2.Size = new Size(160, 23);
-            label2.TabIndex = 47;
-            label2.Text = "Previous Notices";
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(67, 201);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(788, 540);
-            dataGridView1.TabIndex = 48;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Century Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(406, 46);
-            label3.Name = "label3";
-            label3.Size = new Size(119, 38);
-            label3.TabIndex = 49;
-            label3.Text = "Notice";
-            // 
-            // bunifuFlatButton1
-            // 
-            bunifuFlatButton1.Active = false;
-            bunifuFlatButton1.Activecolor = Color.FromArgb(46, 139, 87);
-            bunifuFlatButton1.BackColor = Color.FromArgb(46, 139, 87);
-            bunifuFlatButton1.BackgroundImageLayout = ImageLayout.Stretch;
-            bunifuFlatButton1.BorderRadius = 0;
-            bunifuFlatButton1.ButtonText = "Add Notice";
-            bunifuFlatButton1.DisabledColor = Color.Gray;
-            bunifuFlatButton1.Iconcolor = Color.Transparent;
-            bunifuFlatButton1.Iconimage = (Image)resources.GetObject("bunifuFlatButton1.Iconimage");
-            bunifuFlatButton1.Iconimage_right = null;
-            bunifuFlatButton1.Iconimage_right_Selected = null;
-            bunifuFlatButton1.Iconimage_Selected = null;
-            bunifuFlatButton1.IconMarginLeft = 0;
-            bunifuFlatButton1.IconMarginRight = 0;
-            bunifuFlatButton1.IconRightVisible = true;
-            bunifuFlatButton1.IconRightZoom = 0D;
-            bunifuFlatButton1.IconVisible = true;
-            bunifuFlatButton1.IconZoom = 90D;
-            bunifuFlatButton1.IsTab = false;
-            bunifuFlatButton1.Location = new Point(691, 141);
-            bunifuFlatButton1.Margin = new Padding(4, 3, 4, 3);
-            bunifuFlatButton1.Name = "bunifuFlatButton1";
-            bunifuFlatButton1.Normalcolor = Color.FromArgb(46, 139, 87);
-            bunifuFlatButton1.OnHovercolor = Color.FromArgb(36, 129, 77);
-            bunifuFlatButton1.OnHoverTextColor = Color.White;
-            bunifuFlatButton1.selected = false;
-            bunifuFlatButton1.Size = new Size(164, 47);
-            bunifuFlatButton1.TabIndex = 50;
-            bunifuFlatButton1.Text = "Add Notice";
-            bunifuFlatButton1.TextAlign = ContentAlignment.MiddleLeft;
-            bunifuFlatButton1.Textcolor = Color.White;
-            bunifuFlatButton1.TextFont = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            // 
             // AdminNotice
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.AppWorkspace;
+            BackColor = Color.LightSteelBlue;
             ClientSize = new Size(1153, 788);
             Controls.Add(dashboard);
             Controls.Add(backmenu);

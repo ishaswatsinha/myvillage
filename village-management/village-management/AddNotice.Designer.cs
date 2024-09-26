@@ -30,6 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddNotice));
             panel1 = new Panel();
+            textBox1 = new TextBox();
+            label4 = new Label();
+            label2 = new Label();
+            richTextBox1 = new RichTextBox();
+            bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            label3 = new Label();
             dashboard = new LinkLabel();
             backmenu = new Panel();
             label1 = new Label();
@@ -37,12 +43,6 @@
             linkLabel3 = new LinkLabel();
             linkLabel2 = new LinkLabel();
             LogOut = new Bunifu.Framework.UI.BunifuThinButton2();
-            label3 = new Label();
-            bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            richTextBox1 = new RichTextBox();
-            label2 = new Label();
-            label4 = new Label();
-            textBox1 = new TextBox();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -59,6 +59,86 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(906, 766);
             panel1.TabIndex = 0;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(72, 178);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(783, 23);
+            textBox1.TabIndex = 57;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Location = new Point(72, 157);
+            label4.Name = "label4";
+            label4.Size = new Size(120, 18);
+            label4.TabIndex = 56;
+            label4.Text = "Notice Subject:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(72, 242);
+            label2.Name = "label2";
+            label2.Size = new Size(95, 18);
+            label2.TabIndex = 54;
+            label2.Text = "Description:";
+            // 
+            // richTextBox1
+            // 
+            richTextBox1.Location = new Point(72, 263);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.Size = new Size(783, 392);
+            richTextBox1.TabIndex = 52;
+            richTextBox1.Text = "";
+            // 
+            // bunifuFlatButton1
+            // 
+            bunifuFlatButton1.Active = false;
+            bunifuFlatButton1.Activecolor = Color.FromArgb(46, 139, 87);
+            bunifuFlatButton1.BackColor = Color.FromArgb(46, 139, 87);
+            bunifuFlatButton1.BackgroundImageLayout = ImageLayout.Stretch;
+            bunifuFlatButton1.BorderRadius = 0;
+            bunifuFlatButton1.ButtonText = "Submit";
+            bunifuFlatButton1.DisabledColor = Color.Gray;
+            bunifuFlatButton1.Iconcolor = Color.Transparent;
+            bunifuFlatButton1.Iconimage = (Image)resources.GetObject("bunifuFlatButton1.Iconimage");
+            bunifuFlatButton1.Iconimage_right = null;
+            bunifuFlatButton1.Iconimage_right_Selected = null;
+            bunifuFlatButton1.Iconimage_Selected = null;
+            bunifuFlatButton1.IconMarginLeft = 0;
+            bunifuFlatButton1.IconMarginRight = 0;
+            bunifuFlatButton1.IconRightVisible = true;
+            bunifuFlatButton1.IconRightZoom = 0D;
+            bunifuFlatButton1.IconVisible = true;
+            bunifuFlatButton1.IconZoom = 90D;
+            bunifuFlatButton1.IsTab = false;
+            bunifuFlatButton1.Location = new Point(383, 676);
+            bunifuFlatButton1.Margin = new Padding(4, 3, 4, 3);
+            bunifuFlatButton1.Name = "bunifuFlatButton1";
+            bunifuFlatButton1.Normalcolor = Color.FromArgb(46, 139, 87);
+            bunifuFlatButton1.OnHovercolor = Color.FromArgb(36, 129, 77);
+            bunifuFlatButton1.OnHoverTextColor = Color.White;
+            bunifuFlatButton1.selected = false;
+            bunifuFlatButton1.Size = new Size(185, 45);
+            bunifuFlatButton1.TabIndex = 51;
+            bunifuFlatButton1.Text = "Submit";
+            bunifuFlatButton1.TextAlign = ContentAlignment.MiddleLeft;
+            bunifuFlatButton1.Textcolor = Color.White;
+            bunifuFlatButton1.TextFont = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Century Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(398, 53);
+            label3.Name = "label3";
+            label3.Size = new Size(194, 38);
+            label3.TabIndex = 50;
+            label3.Text = "Add Notice";
             // 
             // dashboard
             // 
@@ -139,7 +219,7 @@
             LogOut.ActiveFillColor = Color.SeaGreen;
             LogOut.ActiveForecolor = Color.White;
             LogOut.ActiveLineColor = Color.SeaGreen;
-            LogOut.BackColor = SystemColors.AppWorkspace;
+            LogOut.BackColor = Color.LightSteelBlue;
             LogOut.BackgroundImage = (Image)resources.GetObject("LogOut.BackgroundImage");
             LogOut.ButtonText = "Logout";
             LogOut.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -156,91 +236,11 @@
             LogOut.TabIndex = 47;
             LogOut.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Century Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(398, 53);
-            label3.Name = "label3";
-            label3.Size = new Size(194, 38);
-            label3.TabIndex = 50;
-            label3.Text = "Add Notice";
-            // 
-            // bunifuFlatButton1
-            // 
-            bunifuFlatButton1.Active = false;
-            bunifuFlatButton1.Activecolor = Color.FromArgb(46, 139, 87);
-            bunifuFlatButton1.BackColor = Color.FromArgb(46, 139, 87);
-            bunifuFlatButton1.BackgroundImageLayout = ImageLayout.Stretch;
-            bunifuFlatButton1.BorderRadius = 0;
-            bunifuFlatButton1.ButtonText = "Submit";
-            bunifuFlatButton1.DisabledColor = Color.Gray;
-            bunifuFlatButton1.Iconcolor = Color.Transparent;
-            bunifuFlatButton1.Iconimage = (Image)resources.GetObject("bunifuFlatButton1.Iconimage");
-            bunifuFlatButton1.Iconimage_right = null;
-            bunifuFlatButton1.Iconimage_right_Selected = null;
-            bunifuFlatButton1.Iconimage_Selected = null;
-            bunifuFlatButton1.IconMarginLeft = 0;
-            bunifuFlatButton1.IconMarginRight = 0;
-            bunifuFlatButton1.IconRightVisible = true;
-            bunifuFlatButton1.IconRightZoom = 0D;
-            bunifuFlatButton1.IconVisible = true;
-            bunifuFlatButton1.IconZoom = 90D;
-            bunifuFlatButton1.IsTab = false;
-            bunifuFlatButton1.Location = new Point(383, 676);
-            bunifuFlatButton1.Margin = new Padding(4, 3, 4, 3);
-            bunifuFlatButton1.Name = "bunifuFlatButton1";
-            bunifuFlatButton1.Normalcolor = Color.FromArgb(46, 139, 87);
-            bunifuFlatButton1.OnHovercolor = Color.FromArgb(36, 129, 77);
-            bunifuFlatButton1.OnHoverTextColor = Color.White;
-            bunifuFlatButton1.selected = false;
-            bunifuFlatButton1.Size = new Size(185, 45);
-            bunifuFlatButton1.TabIndex = 51;
-            bunifuFlatButton1.Text = "Submit";
-            bunifuFlatButton1.TextAlign = ContentAlignment.MiddleLeft;
-            bunifuFlatButton1.Textcolor = Color.White;
-            bunifuFlatButton1.TextFont = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            // 
-            // richTextBox1
-            // 
-            richTextBox1.Location = new Point(72, 263);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(783, 392);
-            richTextBox1.TabIndex = 52;
-            richTextBox1.Text = "";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(72, 242);
-            label2.Name = "label2";
-            label2.Size = new Size(95, 18);
-            label2.TabIndex = 54;
-            label2.Text = "Description:";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(72, 157);
-            label4.Name = "label4";
-            label4.Size = new Size(120, 18);
-            label4.TabIndex = 56;
-            label4.Text = "Notice Subject:";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(72, 178);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(783, 23);
-            textBox1.TabIndex = 57;
-            // 
             // AddNotice
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.AppWorkspace;
+            BackColor = Color.LightSteelBlue;
             ClientSize = new Size(1153, 788);
             Controls.Add(dashboard);
             Controls.Add(backmenu);
