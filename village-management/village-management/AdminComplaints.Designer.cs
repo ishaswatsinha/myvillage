@@ -39,6 +39,11 @@
             linkLabel3 = new LinkLabel();
             linkLabel2 = new LinkLabel();
             bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(components);
+            label3 = new Label();
+            dataGridView1 = new DataGridView();
+            label2 = new Label();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // bunifuElipse1
@@ -49,6 +54,9 @@
             // panel1
             // 
             panel1.BackColor = Color.Snow;
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(dataGridView1);
+            panel1.Controls.Add(label2);
             panel1.Location = new Point(233, 16);
             panel1.Name = "panel1";
             panel1.Size = new Size(906, 766);
@@ -137,6 +145,34 @@
             bunifuElipse3.ElipseRadius = 20;
             bunifuElipse3.TargetControl = backmenu;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Century Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(398, 36);
+            label3.Name = "label3";
+            label3.Size = new Size(193, 38);
+            label3.TabIndex = 53;
+            label3.Text = "Complaints";
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(59, 191);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(788, 540);
+            dataGridView1.TabIndex = 52;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(59, 146);
+            label2.Name = "label2";
+            label2.Size = new Size(145, 23);
+            label2.TabIndex = 51;
+            label2.Text = "All Complaints";
+            // 
             // AdminComplaints
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -153,6 +189,9 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "AdminComplaints";
             Text = "AdminComplaints";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -169,5 +208,8 @@
         private LinkLabel linkLabel3;
         private LinkLabel linkLabel2;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
+        private Label label3;
+        private DataGridView dataGridView1;
+        private Label label2;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminManage));
             panel1 = new Panel();
             dashboard = new LinkLabel();
@@ -37,6 +38,8 @@
             linkLabel3 = new LinkLabel();
             linkLabel2 = new LinkLabel();
             LogOut = new Bunifu.Framework.UI.BunifuThinButton2();
+            bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(components);
+            bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(components);
             SuspendLayout();
             // 
             // panel1
@@ -143,6 +146,16 @@
             LogOut.TabIndex = 47;
             LogOut.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // bunifuElipse1
+            // 
+            bunifuElipse1.ElipseRadius = 35;
+            bunifuElipse1.TargetControl = this;
+            // 
+            // bunifuElipse2
+            // 
+            bunifuElipse2.ElipseRadius = 35;
+            bunifuElipse2.TargetControl = panel1;
+            // 
             // AdminManage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -175,5 +188,7 @@
         private LinkLabel linkLabel3;
         private LinkLabel linkLabel2;
         private Bunifu.Framework.UI.BunifuThinButton2 LogOut;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
     }
 }
