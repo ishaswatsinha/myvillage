@@ -53,9 +53,8 @@
             OTP.Controls.Add(label1);
             OTP.Controls.Add(label5);
             OTP.Location = new Point(0, 0);
-            OTP.Margin = new Padding(2, 2, 2, 2);
             OTP.Name = "OTP";
-            OTP.Size = new Size(309, 440);
+            OTP.Size = new Size(441, 733);
             OTP.TabIndex = 0;
             OTP.Paint += OTP_Paint;
             // 
@@ -65,10 +64,9 @@
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Red;
-            label3.Location = new Point(52, 159);
-            label3.Margin = new Padding(2, 0, 2, 0);
+            label3.Location = new Point(74, 265);
             label3.Name = "label3";
-            label3.Size = new Size(226, 17);
+            label3.Size = new Size(342, 21);
             label3.TabIndex = 19;
             label3.Text = "OTP has been sent, check your e-mail";
             // 
@@ -78,10 +76,9 @@
             tym.BackColor = Color.Transparent;
             tym.Font = new Font("Century Gothic", 9F);
             tym.ForeColor = SystemColors.ActiveCaptionText;
-            tym.Location = new Point(217, 340);
-            tym.Margin = new Padding(2, 0, 2, 0);
+            tym.Location = new Point(310, 567);
             tym.Name = "tym";
-            tym.Size = new Size(26, 17);
+            tym.Size = new Size(38, 21);
             tym.TabIndex = 18;
             tym.Text = "%%";
             // 
@@ -91,10 +88,9 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Century Gothic", 9F);
             label2.ForeColor = SystemColors.ActiveCaptionText;
-            label2.Location = new Point(88, 340);
-            label2.Margin = new Padding(2, 0, 2, 0);
+            label2.Location = new Point(126, 567);
             label2.Name = "label2";
-            label2.Size = new Size(123, 17);
+            label2.Size = new Size(183, 21);
             label2.TabIndex = 17;
             label2.Text = "Your OTP expires in: ";
             // 
@@ -104,10 +100,9 @@
             otpsubmit.FlatStyle = FlatStyle.Popup;
             otpsubmit.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             otpsubmit.ForeColor = SystemColors.ButtonHighlight;
-            otpsubmit.Location = new Point(111, 271);
-            otpsubmit.Margin = new Padding(2, 2, 2, 2);
+            otpsubmit.Location = new Point(159, 452);
             otpsubmit.Name = "otpsubmit";
-            otpsubmit.Size = new Size(104, 31);
+            otpsubmit.Size = new Size(149, 52);
             otpsubmit.TabIndex = 16;
             otpsubmit.Text = "SUBMIT";
             otpsubmit.UseVisualStyleBackColor = false;
@@ -118,10 +113,9 @@
             txtotp.BackColor = Color.White;
             txtotp.BorderStyle = BorderStyle.None;
             txtotp.ForeColor = SystemColors.ActiveCaptionText;
-            txtotp.Location = new Point(52, 226);
-            txtotp.Margin = new Padding(2, 2, 2, 2);
+            txtotp.Location = new Point(74, 377);
             txtotp.Name = "txtotp";
-            txtotp.Size = new Size(222, 16);
+            txtotp.Size = new Size(317, 24);
             txtotp.TabIndex = 15;
             // 
             // label1
@@ -130,10 +124,9 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ActiveCaptionText;
-            label1.Location = new Point(52, 207);
-            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Location = new Point(74, 345);
             label1.Name = "label1";
-            label1.Size = new Size(66, 17);
+            label1.Size = new Size(102, 21);
             label1.TabIndex = 14;
             label1.Text = "ENTER OTP";
             // 
@@ -141,10 +134,9 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(65, 80);
-            label5.Margin = new Padding(2, 0, 2, 0);
+            label5.Location = new Point(93, 133);
             label5.Name = "label5";
-            label5.Size = new Size(188, 25);
+            label5.Size = new Size(281, 38);
             label5.TabIndex = 13;
             label5.Text = "AUTHENTICATION";
             label5.Click += label5_Click;
@@ -160,12 +152,11 @@
             // 
             // Forgot
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(309, 440);
+            ClientSize = new Size(441, 733);
             Controls.Add(OTP);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(2, 2, 2, 2);
             Name = "Forgot";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Forgot";

@@ -65,6 +65,7 @@ namespace village_management
             {
                 //String email = dr["email"].ToString();
                 MessageBox.Show(dr["email"].ToString());
+
             }
 
             con.Close();
@@ -76,6 +77,7 @@ namespace village_management
 
         private void OTP_Paint(object sender, PaintEventArgs e)
         {
+
 
         }
 
