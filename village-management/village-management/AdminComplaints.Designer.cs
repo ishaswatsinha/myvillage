@@ -29,8 +29,12 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminComplaints));
             bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(components);
-            panel1 = new Panel();
+            Com1 = new Panel();
+            ComOpen = new Bunifu.Framework.UI.BunifuThinButton2();
+            id = new Label();
+            ComId = new TextBox();
             label3 = new Label();
             allcomplaints = new DataGridView();
             label2 = new Label();
@@ -42,8 +46,17 @@
             linkLabel3 = new LinkLabel();
             linkLabel2 = new LinkLabel();
             bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(components);
-            panel1.SuspendLayout();
+            Com2 = new Panel();
+            CDesc = new Label();
+            Cheading = new Label();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            Back = new Bunifu.Framework.UI.BunifuThinButton2();
+            bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(components);
+            Com1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)allcomplaints).BeginInit();
+            Com2.SuspendLayout();
             SuspendLayout();
             // 
             // bunifuElipse1
@@ -51,17 +64,63 @@
             bunifuElipse1.ElipseRadius = 35;
             bunifuElipse1.TargetControl = this;
             // 
-            // panel1
+            // Com1
             // 
-            panel1.BackColor = Color.Snow;
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(allcomplaints);
-            panel1.Controls.Add(label2);
-            panel1.Location = new Point(333, 27);
-            panel1.Margin = new Padding(4, 5, 4, 5);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1133, 957);
-            panel1.TabIndex = 0;
+            Com1.BackColor = Color.Snow;
+            Com1.Controls.Add(ComOpen);
+            Com1.Controls.Add(id);
+            Com1.Controls.Add(ComId);
+            Com1.Controls.Add(label3);
+            Com1.Controls.Add(allcomplaints);
+            Com1.Controls.Add(label2);
+            Com1.Location = new Point(291, 20);
+            Com1.Margin = new Padding(4, 5, 4, 5);
+            Com1.Name = "Com1";
+            Com1.Size = new Size(1133, 957);
+            Com1.TabIndex = 0;
+            // 
+            // ComOpen
+            // 
+            ComOpen.ActiveBorderThickness = 1;
+            ComOpen.ActiveCornerRadius = 20;
+            ComOpen.ActiveFillColor = Color.SeaGreen;
+            ComOpen.ActiveForecolor = Color.White;
+            ComOpen.ActiveLineColor = Color.SeaGreen;
+            ComOpen.BackColor = Color.Snow;
+            ComOpen.BackgroundImage = (Image)resources.GetObject("ComOpen.BackgroundImage");
+            ComOpen.ButtonText = "Open";
+            ComOpen.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ComOpen.ForeColor = Color.SeaGreen;
+            ComOpen.IdleBorderThickness = 1;
+            ComOpen.IdleCornerRadius = 20;
+            ComOpen.IdleFillColor = Color.White;
+            ComOpen.IdleForecolor = Color.SeaGreen;
+            ComOpen.IdleLineColor = Color.SeaGreen;
+            ComOpen.Location = new Point(805, 164);
+            ComOpen.Margin = new Padding(7, 7, 7, 7);
+            ComOpen.Name = "ComOpen";
+            ComOpen.Size = new Size(200, 66);
+            ComOpen.TabIndex = 56;
+            ComOpen.TextAlign = ContentAlignment.MiddleCenter;
+            ComOpen.Click += ComOpen_Click;
+            // 
+            // id
+            // 
+            id.AutoSize = true;
+            id.Font = new Font("Century Gothic", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            id.Location = new Point(317, 182);
+            id.Name = "id";
+            id.Size = new Size(246, 37);
+            id.TabIndex = 55;
+            id.Text = "COMPLAINT ID :";
+            // 
+            // ComId
+            // 
+            ComId.ForeColor = Color.FromArgb(0, 0, 192);
+            ComId.Location = new Point(569, 187);
+            ComId.Name = "ComId";
+            ComId.Size = new Size(206, 31);
+            ComId.TabIndex = 54;
             // 
             // label3
             // 
@@ -77,11 +136,11 @@
             // allcomplaints
             // 
             allcomplaints.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            allcomplaints.Location = new Point(84, 333);
+            allcomplaints.Location = new Point(317, 398);
             allcomplaints.Margin = new Padding(4, 5, 4, 5);
             allcomplaints.Name = "allcomplaints";
             allcomplaints.RowHeadersWidth = 62;
-            allcomplaints.Size = new Size(722, 404);
+            allcomplaints.Size = new Size(667, 264);
             allcomplaints.TabIndex = 52;
             allcomplaints.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -89,7 +148,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(84, 243);
+            label2.Location = new Point(527, 347);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new Size(218, 36);
@@ -99,13 +158,13 @@
             // bunifuElipse2
             // 
             bunifuElipse2.ElipseRadius = 35;
-            bunifuElipse2.TargetControl = panel1;
+            bunifuElipse2.TargetControl = Com1;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 15F, FontStyle.Bold);
-            label1.Location = new Point(61, 250);
+            label1.Location = new Point(29, 250);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new Size(209, 37);
@@ -118,7 +177,7 @@
             dashboard.BackColor = Color.Transparent;
             dashboard.Font = new Font("Century Gothic", 15F, FontStyle.Bold);
             dashboard.LinkColor = Color.Black;
-            dashboard.Location = new Point(43, 413);
+            dashboard.Location = new Point(11, 413);
             dashboard.Margin = new Padding(4, 0, 4, 0);
             dashboard.Name = "dashboard";
             dashboard.Size = new Size(178, 37);
@@ -130,7 +189,7 @@
             // backmenu
             // 
             backmenu.BackColor = Color.CadetBlue;
-            backmenu.Location = new Point(32, 515);
+            backmenu.Location = new Point(0, 515);
             backmenu.Name = "backmenu";
             backmenu.Size = new Size(240, 62);
             backmenu.TabIndex = 23;
@@ -140,7 +199,7 @@
             linkLabel4.AutoSize = true;
             linkLabel4.Font = new Font("Century Gothic", 15F, FontStyle.Bold);
             linkLabel4.LinkColor = Color.Black;
-            linkLabel4.Location = new Point(43, 717);
+            linkLabel4.Location = new Point(11, 717);
             linkLabel4.Margin = new Padding(4, 0, 4, 0);
             linkLabel4.Name = "linkLabel4";
             linkLabel4.Size = new Size(243, 37);
@@ -154,7 +213,7 @@
             linkLabel3.AutoSize = true;
             linkLabel3.Font = new Font("Century Gothic", 15F, FontStyle.Bold);
             linkLabel3.LinkColor = Color.Black;
-            linkLabel3.Location = new Point(43, 620);
+            linkLabel3.Location = new Point(11, 620);
             linkLabel3.Margin = new Padding(4, 0, 4, 0);
             linkLabel3.Name = "linkLabel3";
             linkLabel3.Size = new Size(164, 37);
@@ -169,7 +228,7 @@
             linkLabel2.BackColor = Color.CadetBlue;
             linkLabel2.Font = new Font("Century Gothic", 15F, FontStyle.Bold);
             linkLabel2.LinkColor = Color.Black;
-            linkLabel2.Location = new Point(43, 523);
+            linkLabel2.Location = new Point(11, 523);
             linkLabel2.Margin = new Padding(4, 0, 4, 0);
             linkLabel2.Name = "linkLabel2";
             linkLabel2.Size = new Size(223, 37);
@@ -183,26 +242,127 @@
             bunifuElipse3.ElipseRadius = 20;
             bunifuElipse3.TargetControl = backmenu;
             // 
+            // Com2
+            // 
+            Com2.BackColor = Color.Snow;
+            Com2.CausesValidation = false;
+            Com2.Controls.Add(Back);
+            Com2.Controls.Add(CDesc);
+            Com2.Controls.Add(Cheading);
+            Com2.Controls.Add(label6);
+            Com2.Controls.Add(label5);
+            Com2.Controls.Add(label4);
+            Com2.Location = new Point(291, 20);
+            Com2.Name = "Com2";
+            Com2.Size = new Size(1133, 957);
+            Com2.TabIndex = 24;
+            // 
+            // CDesc
+            // 
+            CDesc.AutoSize = true;
+            CDesc.Location = new Point(379, 326);
+            CDesc.Margin = new Padding(4, 0, 4, 0);
+            CDesc.Name = "CDesc";
+            CDesc.Size = new Size(59, 25);
+            CDesc.TabIndex = 60;
+            CDesc.Text = "label7";
+            // 
+            // Cheading
+            // 
+            Cheading.AutoSize = true;
+            Cheading.Location = new Point(379, 222);
+            Cheading.Margin = new Padding(4, 0, 4, 0);
+            Cheading.Name = "Cheading";
+            Cheading.Size = new Size(59, 25);
+            Cheading.TabIndex = 59;
+            Cheading.Text = "label7";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.Location = new Point(134, 326);
+            label6.Margin = new Padding(4, 0, 4, 0);
+            label6.Name = "label6";
+            label6.Size = new Size(144, 27);
+            label6.TabIndex = 58;
+            label6.Text = "Description:";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.Location = new Point(134, 219);
+            label5.Margin = new Padding(4, 0, 4, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(221, 28);
+            label5.TabIndex = 56;
+            label5.Text = "Problem Heading:";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Century Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Location = new Point(291, 18);
+            label4.Margin = new Padding(4, 0, 4, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(543, 56);
+            label4.TabIndex = 55;
+            label4.Text = "Complaint Description";
+            // 
+            // Back
+            // 
+            Back.ActiveBorderThickness = 1;
+            Back.ActiveCornerRadius = 20;
+            Back.ActiveFillColor = Color.SeaGreen;
+            Back.ActiveForecolor = Color.White;
+            Back.ActiveLineColor = Color.SeaGreen;
+            Back.BackColor = Color.Snow;
+            Back.BackgroundImage = (Image)resources.GetObject("Back.BackgroundImage");
+            Back.ButtonText = "Back";
+            Back.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Back.ForeColor = Color.SeaGreen;
+            Back.IdleBorderThickness = 1;
+            Back.IdleCornerRadius = 20;
+            Back.IdleFillColor = Color.White;
+            Back.IdleForecolor = Color.SeaGreen;
+            Back.IdleLineColor = Color.SeaGreen;
+            Back.Location = new Point(22, 28);
+            Back.Margin = new Padding(7, 7, 7, 7);
+            Back.Name = "Back";
+            Back.Size = new Size(96, 46);
+            Back.TabIndex = 61;
+            Back.TextAlign = ContentAlignment.MiddleCenter;
+            Back.Click += Back_Click;
+            // 
+            // bunifuElipse4
+            // 
+            bunifuElipse4.ElipseRadius = 35;
+            bunifuElipse4.TargetControl = Com2;
+            // 
             // AdminComplaints
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
-            ClientSize = new Size(1386, 997);
+            ClientSize = new Size(1441, 997);
             Controls.Add(dashboard);
             Controls.Add(linkLabel4);
             Controls.Add(linkLabel3);
             Controls.Add(linkLabel2);
             Controls.Add(label1);
-            Controls.Add(panel1);
             Controls.Add(backmenu);
+            Controls.Add(Com1);
+            Controls.Add(Com2);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4, 5, 4, 5);
             Name = "AdminComplaints";
             Text = "AdminComplaints";
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            Com1.ResumeLayout(false);
+            Com1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)allcomplaints).EndInit();
+            Com2.ResumeLayout(false);
+            Com2.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -210,7 +370,7 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private Panel panel1;
+        private Panel Com1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
         private Label label1;
         private LinkLabel dashboard;
@@ -222,5 +382,16 @@
         private Label label3;
         private DataGridView allcomplaints;
         private Label label2;
+        private Label id;
+        private TextBox ComId;
+        private Bunifu.Framework.UI.BunifuThinButton2 ComOpen;
+        private Panel Com2;
+        private Label label4;
+        private Label label5;
+        private Label label6;
+        private Label CDesc;
+        private Label Cheading;
+        private Bunifu.Framework.UI.BunifuThinButton2 Back;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse4;
     }
 }

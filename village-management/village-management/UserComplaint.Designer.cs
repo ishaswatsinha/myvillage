@@ -293,7 +293,7 @@
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
-            ClientSize = new Size(1386, 997);
+            ClientSize = new Size(1441, 997);
             Controls.Add(LogOut);
             Controls.Add(linkLabel1);
             Controls.Add(panel1);
