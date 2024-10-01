@@ -31,6 +31,19 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserProfile));
             profilepannel = new Panel();
+            pictureBox1 = new PictureBox();
+            lblPhone = new Label();
+            label7 = new Label();
+            lblHouse = new Label();
+            label9 = new Label();
+            lblGender = new Label();
+            label11 = new Label();
+            lblUserId = new Label();
+            label6 = new Label();
+            lblEmail = new Label();
+            label5 = new Label();
+            lblName = new Label();
+            label3 = new Label();
             label2 = new Label();
             bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(components);
             bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(components);
@@ -43,13 +56,29 @@
             linkLabel3 = new LinkLabel();
             bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(components);
             LogOut = new Bunifu.Framework.UI.BunifuThinButton2();
+            lblPassword = new Label();
             profilepannel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             backmenu.SuspendLayout();
             SuspendLayout();
             // 
             // profilepannel
             // 
             profilepannel.BackColor = Color.Snow;
+            profilepannel.Controls.Add(lblPassword);
+            profilepannel.Controls.Add(pictureBox1);
+            profilepannel.Controls.Add(lblPhone);
+            profilepannel.Controls.Add(label7);
+            profilepannel.Controls.Add(lblHouse);
+            profilepannel.Controls.Add(label9);
+            profilepannel.Controls.Add(lblGender);
+            profilepannel.Controls.Add(label11);
+            profilepannel.Controls.Add(lblUserId);
+            profilepannel.Controls.Add(label6);
+            profilepannel.Controls.Add(lblEmail);
+            profilepannel.Controls.Add(label5);
+            profilepannel.Controls.Add(lblName);
+            profilepannel.Controls.Add(label3);
             profilepannel.Controls.Add(label2);
             profilepannel.Location = new Point(291, 20);
             profilepannel.Margin = new Padding(4, 5, 4, 5);
@@ -57,16 +86,152 @@
             profilepannel.Size = new Size(1133, 957);
             profilepannel.TabIndex = 16;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(470, 112);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(150, 115);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 21;
+            pictureBox1.TabStop = false;
+            // 
+            // lblPhone
+            // 
+            lblPhone.AutoSize = true;
+            lblPhone.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblPhone.ForeColor = Color.Navy;
+            lblPhone.Location = new Point(855, 606);
+            lblPhone.Name = "lblPhone";
+            lblPhone.Size = new Size(111, 37);
+            lblPhone.TabIndex = 20;
+            lblPhone.Text = "phone";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Century Gothic", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.Location = new Point(693, 610);
+            label7.Name = "label7";
+            label7.Size = new Size(135, 37);
+            label7.TabIndex = 19;
+            label7.Text = "PHONE :";
+            // 
+            // lblHouse
+            // 
+            lblHouse.AutoSize = true;
+            lblHouse.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblHouse.ForeColor = Color.Navy;
+            lblHouse.Location = new Point(855, 520);
+            lblHouse.Name = "lblHouse";
+            lblHouse.Size = new Size(171, 37);
+            lblHouse.TabIndex = 18;
+            lblHouse.Text = "HouseNo...";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Century Gothic", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label9.Location = new Point(693, 520);
+            label9.Name = "label9";
+            label9.Size = new Size(130, 37);
+            label9.TabIndex = 17;
+            label9.Text = "HOUSE :";
+            // 
+            // lblGender
+            // 
+            lblGender.AutoSize = true;
+            lblGender.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblGender.ForeColor = Color.Navy;
+            lblGender.Location = new Point(855, 430);
+            lblGender.Name = "lblGender";
+            lblGender.Size = new Size(128, 37);
+            lblGender.TabIndex = 16;
+            lblGender.Text = "Gender";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Century Gothic", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label11.Location = new Point(693, 439);
+            label11.Name = "label11";
+            label11.Size = new Size(153, 37);
+            label11.TabIndex = 15;
+            label11.Text = "GENDER :";
+            // 
+            // lblUserId
+            // 
+            lblUserId.AutoSize = true;
+            lblUserId.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblUserId.ForeColor = Color.Navy;
+            lblUserId.Location = new Point(316, 430);
+            lblUserId.Name = "lblUserId";
+            lblUserId.Size = new Size(106, 37);
+            lblUserId.TabIndex = 14;
+            lblUserId.Text = "UserId";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Century Gothic", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.Location = new Point(154, 610);
+            label6.Name = "label6";
+            label6.Size = new Size(196, 37);
+            label6.TabIndex = 13;
+            label6.Text = "PASSWORD :";
+            // 
+            // lblEmail
+            // 
+            lblEmail.AutoSize = true;
+            lblEmail.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblEmail.ForeColor = Color.Navy;
+            lblEmail.Location = new Point(316, 520);
+            lblEmail.Name = "lblEmail";
+            lblEmail.Size = new Size(98, 37);
+            lblEmail.TabIndex = 12;
+            lblEmail.Text = "email";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Century Gothic", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(154, 520);
+            label5.Name = "label5";
+            label5.Size = new Size(121, 37);
+            label5.TabIndex = 11;
+            label5.Text = "EMAIL :";
+            // 
+            // lblName
+            // 
+            lblName.AutoSize = true;
+            lblName.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblName.ForeColor = Color.Navy;
+            lblName.Location = new Point(460, 248);
+            lblName.Name = "lblName";
+            lblName.Size = new Size(102, 37);
+            lblName.TabIndex = 10;
+            lblName.Text = "name";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Century Gothic", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(154, 430);
+            label3.Name = "label3";
+            label3.Size = new Size(140, 37);
+            label3.TabIndex = 9;
+            label3.Text = "USER ID :";
+            // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(77, 98);
+            label2.Font = new Font("Mistral", 22F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(460, 27);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(125, 43);
+            label2.Size = new Size(183, 53);
             label2.TabIndex = 0;
-            label2.Text = "Profile";
+            label2.Text = "My Profile";
             // 
             // bunifuElipse1
             // 
@@ -203,6 +368,17 @@
             LogOut.TabIndex = 26;
             LogOut.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // lblPassword
+            // 
+            lblPassword.AutoSize = true;
+            lblPassword.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblPassword.ForeColor = Color.Navy;
+            lblPassword.Location = new Point(356, 610);
+            lblPassword.Name = "lblPassword";
+            lblPassword.Size = new Size(153, 37);
+            lblPassword.TabIndex = 22;
+            lblPassword.Text = "Password";
+            // 
             // UserProfile
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -223,6 +399,7 @@
             Text = "UserProfile";
             profilepannel.ResumeLayout(false);
             profilepannel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             backmenu.ResumeLayout(false);
             backmenu.PerformLayout();
             ResumeLayout(false);
@@ -244,5 +421,19 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
         private Bunifu.Framework.UI.BunifuThinButton2 LogOut;
+        private Label lblPhone;
+        private Label label7;
+        private Label lblHouse;
+        private Label label9;
+        private Label lblGender;
+        private Label label11;
+        private Label lblUserId;
+        private Label label6;
+        private Label lblEmail;
+        private Label label5;
+        private Label lblName;
+        private Label label3;
+        private PictureBox pictureBox1;
+        private Label lblPassword;
     }
 }

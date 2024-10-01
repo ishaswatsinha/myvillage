@@ -109,15 +109,17 @@ namespace village_management
             string password = txtPassword.Text;
 
             // Validate credentials with the database
-            if (ValidateLogin(email, password))
+            if (ValidateLogin(email, password, out string userName))
             {
-                // Correct credentials: Show the next form
+                // Correct credentials: Show the next form and pass the user info
                 MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                UserHome obj = new UserHome();
+                UserHome obj = new UserHome(userName, email);  // Passing the userName and email
                 obj.Show();
                 this.Hide();
-
-
+                UserNotice obj1 = new UserNotice(userName, email);
+                UserComplaint obj2 = new UserComplaint(userName, email);
+                UserProfile obj3 = new UserProfile(userName, email);
+                UserSearch obj4 = new UserSearch(userName, email);
             }
             else
             {
@@ -126,12 +128,11 @@ namespace village_management
             }
         }
 
-        // Function for Validate User
-
-        private bool ValidateLogin(string email, string password)
+        // Modify ValidateLogin to retrieve user name along with validating credentials
+        private bool ValidateLogin(string email, string password, out string userName)
         {
+            userName = null;
             // Connect to the database and check for matching credentials
-
             using (SqlConnection connection = new SqlConnection(constring))
             {
                 try
@@ -139,16 +140,20 @@ namespace village_management
                     connection.Open();
 
                     // SQL query to check if the user exists with the provided email and password
-                    string query2 = "SELECT COUNT(1) FROM register WHERE email = @Email AND password = @Password";
+                    string query2 = "SELECT name FROM register WHERE email = @Email AND password = @Password";
 
                     using (SqlCommand cmd = new SqlCommand(query2, connection))
                     {
                         cmd.Parameters.AddWithValue("@Email", email);
                         cmd.Parameters.AddWithValue("@Password", password);
 
-                        int count = Convert.ToInt32(cmd.ExecuteScalar());
-                        // If count is 1, the user exists with the correct credentials
-                        return count == 1;
+                        SqlDataReader reader = cmd.ExecuteReader();
+                        if (reader.Read())
+                        {
+                            userName = reader["name"].ToString();  // Get the user's name from the database
+                            return true;  // Valid credentials
+                        }
+                        return false;  // Invalid credentials
                     }
                 }
                 catch (Exception ex)

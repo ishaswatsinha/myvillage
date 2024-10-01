@@ -306,6 +306,7 @@
             Name = "UserComplaint";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "UserComplaint";
+            Load += UserComplaint_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             backmenu.ResumeLayout(false);
