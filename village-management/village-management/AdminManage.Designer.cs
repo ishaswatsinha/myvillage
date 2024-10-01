@@ -40,11 +40,19 @@
             LogOut = new Bunifu.Framework.UI.BunifuThinButton2();
             bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(components);
             bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(components);
+            label3 = new Label();
+            dataGridView1 = new DataGridView();
+            label2 = new Label();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = SystemColors.Control;
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(dataGridView1);
+            panel1.Controls.Add(label2);
             panel1.Location = new Point(233, 16);
             panel1.Name = "panel1";
             panel1.Size = new Size(906, 766);
@@ -156,6 +164,34 @@
             bunifuElipse2.ElipseRadius = 35;
             bunifuElipse2.TargetControl = panel1;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Century Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(327, 41);
+            label3.Name = "label3";
+            label3.Size = new Size(235, 38);
+            label3.TabIndex = 53;
+            label3.Text = "Manage Users";
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(59, 191);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(788, 540);
+            dataGridView1.TabIndex = 52;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(59, 146);
+            label2.Name = "label2";
+            label2.Size = new Size(140, 23);
+            label2.TabIndex = 51;
+            label2.Text = "List of All Users";
+            // 
             // AdminManage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -174,6 +210,9 @@
             Name = "AdminManage";
             Text = "AdminManage";
             Load += AdminManage_Load;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -190,5 +229,8 @@
         private Bunifu.Framework.UI.BunifuThinButton2 LogOut;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
+        private Label label3;
+        private DataGridView dataGridView1;
+        private Label label2;
     }
 }
