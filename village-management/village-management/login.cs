@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace village_management
 {
@@ -173,6 +175,7 @@ namespace village_management
         // --------MAIL SENT-----------------
         private void button4_Click(object sender, EventArgs e)
         {
+            string email2 = txtTo.Text;
             try
             {
 
@@ -199,17 +202,16 @@ namespace village_management
                 SqlConnection con = new SqlConnection(constring);
                 con.Open();
                 SqlCommand cmd = new SqlCommand(query3, con);
-
                 cmd.Parameters.AddWithValue("@email", txtTo.Text);
                 cmd.Parameters.AddWithValue("@otp", otp);
-
                 cmd.ExecuteNonQuery();
 
+               
 
 
                 con.Close();
                 // MessageBox.Show("Mail Sent");
-                Forgot obj = new Forgot();
+                Forgot obj = new Forgot(email2);
                 obj.Show();
                 this.Hide();
             }

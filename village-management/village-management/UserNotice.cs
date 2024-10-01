@@ -24,7 +24,7 @@ namespace village_management
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            UserHome obj = new UserHome(userName,userEmail);
+            UserHome obj = new UserHome(userName, userEmail);
             obj.Show();
             this.Hide();
         }
@@ -53,6 +53,13 @@ namespace village_management
         private void linkLabel5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             UserNotice obj = new UserNotice(userName, userEmail);
+            obj.Show();
+            this.Hide();
+        }
+
+        private void LogOut_Click(object sender, EventArgs e)
+        {
+            login obj = new login();
             obj.Show();
             this.Hide();
         }

@@ -33,94 +33,106 @@
             panel1 = new Panel();
             dashboard = new LinkLabel();
             backmenu = new Panel();
+            linkLabel2 = new LinkLabel();
             label1 = new Label();
             linkLabel4 = new LinkLabel();
             linkLabel3 = new LinkLabel();
-            linkLabel2 = new LinkLabel();
             LogOut = new Bunifu.Framework.UI.BunifuThinButton2();
             bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(components);
             bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(components);
+            bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(components);
+            backmenu.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = SystemColors.Control;
-            panel1.Location = new Point(233, 16);
+            panel1.Location = new Point(291, 20);
+            panel1.Margin = new Padding(4, 5, 4, 5);
             panel1.Name = "panel1";
-            panel1.Size = new Size(906, 766);
+            panel1.Size = new Size(1133, 957);
             panel1.TabIndex = 0;
             // 
             // dashboard
             // 
             dashboard.AutoSize = true;
-            dashboard.BackColor = Color.CadetBlue;
+            dashboard.BackColor = Color.LightSteelBlue;
             dashboard.Font = new Font("Century Gothic", 15F, FontStyle.Bold);
             dashboard.LinkColor = Color.Black;
-            dashboard.Location = new Point(33, 229);
+            dashboard.Location = new Point(30, 282);
+            dashboard.Margin = new Padding(4, 0, 4, 0);
             dashboard.Name = "dashboard";
-            dashboard.Size = new Size(116, 23);
+            dashboard.Size = new Size(178, 37);
             dashboard.TabIndex = 48;
             dashboard.TabStop = true;
             dashboard.Text = "Dashboard";
             dashboard.VisitedLinkColor = Color.FromArgb(192, 255, 255);
+            dashboard.LinkClicked += dashboard_LinkClicked;
             // 
             // backmenu
             // 
             backmenu.BackColor = Color.CadetBlue;
-            backmenu.Location = new Point(23, 224);
-            backmenu.Margin = new Padding(2);
+            backmenu.Controls.Add(linkLabel2);
+            backmenu.Location = new Point(14, 367);
             backmenu.Name = "backmenu";
-            backmenu.Size = new Size(136, 37);
+            backmenu.Size = new Size(271, 62);
             backmenu.TabIndex = 53;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Century Gothic", 15F, FontStyle.Bold);
-            label1.Location = new Point(46, 131);
-            label1.Name = "label1";
-            label1.Size = new Size(140, 23);
-            label1.TabIndex = 52;
-            label1.Text = "Admin Name";
-            // 
-            // linkLabel4
-            // 
-            linkLabel4.AutoSize = true;
-            linkLabel4.Font = new Font("Century Gothic", 15F, FontStyle.Bold);
-            linkLabel4.LinkColor = Color.Black;
-            linkLabel4.Location = new Point(33, 411);
-            linkLabel4.Name = "linkLabel4";
-            linkLabel4.Size = new Size(163, 23);
-            linkLabel4.TabIndex = 51;
-            linkLabel4.TabStop = true;
-            linkLabel4.Text = "See Complaints";
-            linkLabel4.VisitedLinkColor = Color.FromArgb(192, 255, 255);
-            // 
-            // linkLabel3
-            // 
-            linkLabel3.AutoSize = true;
-            linkLabel3.Font = new Font("Century Gothic", 15F, FontStyle.Bold);
-            linkLabel3.LinkColor = Color.Black;
-            linkLabel3.Location = new Point(33, 353);
-            linkLabel3.Name = "linkLabel3";
-            linkLabel3.Size = new Size(110, 23);
-            linkLabel3.TabIndex = 50;
-            linkLabel3.TabStop = true;
-            linkLabel3.Text = "Put Notice";
-            linkLabel3.VisitedLinkColor = Color.FromArgb(192, 255, 255);
             // 
             // linkLabel2
             // 
             linkLabel2.AutoSize = true;
             linkLabel2.Font = new Font("Century Gothic", 15F, FontStyle.Bold);
             linkLabel2.LinkColor = Color.Black;
-            linkLabel2.Location = new Point(33, 295);
+            linkLabel2.Location = new Point(14, 10);
+            linkLabel2.Margin = new Padding(4, 0, 4, 0);
             linkLabel2.Name = "linkLabel2";
-            linkLabel2.Size = new Size(148, 23);
+            linkLabel2.Size = new Size(223, 37);
             linkLabel2.TabIndex = 49;
             linkLabel2.TabStop = true;
             linkLabel2.Text = "Manage Users";
             linkLabel2.VisitedLinkColor = Color.FromArgb(192, 255, 255);
+            linkLabel2.LinkClicked += linkLabel2_LinkClicked;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Century Gothic", 15F, FontStyle.Bold);
+            label1.Location = new Point(88, 136);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(120, 37);
+            label1.TabIndex = 52;
+            label1.Text = "Admin ";
+            // 
+            // linkLabel4
+            // 
+            linkLabel4.AutoSize = true;
+            linkLabel4.Font = new Font("Century Gothic", 15F, FontStyle.Bold);
+            linkLabel4.LinkColor = Color.Black;
+            linkLabel4.Location = new Point(30, 560);
+            linkLabel4.Margin = new Padding(4, 0, 4, 0);
+            linkLabel4.Name = "linkLabel4";
+            linkLabel4.Size = new Size(243, 37);
+            linkLabel4.TabIndex = 51;
+            linkLabel4.TabStop = true;
+            linkLabel4.Text = "See Complaints";
+            linkLabel4.VisitedLinkColor = Color.FromArgb(192, 255, 255);
+            linkLabel4.LinkClicked += linkLabel4_LinkClicked;
+            // 
+            // linkLabel3
+            // 
+            linkLabel3.AutoSize = true;
+            linkLabel3.Font = new Font("Century Gothic", 15F, FontStyle.Bold);
+            linkLabel3.LinkColor = Color.Black;
+            linkLabel3.Location = new Point(30, 467);
+            linkLabel3.Margin = new Padding(4, 0, 4, 0);
+            linkLabel3.Name = "linkLabel3";
+            linkLabel3.Size = new Size(164, 37);
+            linkLabel3.TabIndex = 50;
+            linkLabel3.TabStop = true;
+            linkLabel3.Text = "Put Notice";
+            linkLabel3.VisitedLinkColor = Color.FromArgb(192, 255, 255);
+            linkLabel3.LinkClicked += linkLabel3_LinkClicked;
             // 
             // LogOut
             // 
@@ -139,12 +151,13 @@
             LogOut.IdleFillColor = Color.White;
             LogOut.IdleForecolor = Color.SeaGreen;
             LogOut.IdleLineColor = Color.SeaGreen;
-            LogOut.Location = new Point(46, 594);
-            LogOut.Margin = new Padding(5, 4, 5, 4);
+            LogOut.Location = new Point(30, 810);
+            LogOut.Margin = new Padding(7, 7, 7, 7);
             LogOut.Name = "LogOut";
-            LogOut.Size = new Size(134, 38);
+            LogOut.Size = new Size(191, 63);
             LogOut.TabIndex = 47;
             LogOut.TextAlign = ContentAlignment.MiddleCenter;
+            LogOut.Click += LogOut_Click;
             // 
             // bunifuElipse1
             // 
@@ -156,24 +169,32 @@
             bunifuElipse2.ElipseRadius = 35;
             bunifuElipse2.TargetControl = panel1;
             // 
+            // bunifuElipse3
+            // 
+            bunifuElipse3.ElipseRadius = 20;
+            bunifuElipse3.TargetControl = backmenu;
+            // 
             // AdminManage
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
-            ClientSize = new Size(1153, 788);
+            ClientSize = new Size(1441, 997);
             Controls.Add(dashboard);
             Controls.Add(backmenu);
             Controls.Add(label1);
             Controls.Add(linkLabel4);
             Controls.Add(linkLabel3);
-            Controls.Add(linkLabel2);
             Controls.Add(LogOut);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(4, 5, 4, 5);
             Name = "AdminManage";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "AdminManage";
             Load += AdminManage_Load;
+            backmenu.ResumeLayout(false);
+            backmenu.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -190,5 +211,6 @@
         private Bunifu.Framework.UI.BunifuThinButton2 LogOut;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
     }
 }

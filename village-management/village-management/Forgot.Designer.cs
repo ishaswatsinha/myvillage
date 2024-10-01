@@ -39,7 +39,13 @@
             label5 = new Label();
             timer1 = new System.Windows.Forms.Timer(components);
             bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(components);
+            Updatepannel = new Panel();
+            UpdateBtn = new Button();
+            newPass = new TextBox();
+            label6 = new Label();
+            label7 = new Label();
             OTP.SuspendLayout();
+            Updatepannel.SuspendLayout();
             SuspendLayout();
             // 
             // OTP
@@ -150,18 +156,79 @@
             bunifuElipse1.ElipseRadius = 20;
             bunifuElipse1.TargetControl = this;
             // 
+            // Updatepannel
+            // 
+            Updatepannel.BackColor = Color.LightSteelBlue;
+            Updatepannel.Controls.Add(UpdateBtn);
+            Updatepannel.Controls.Add(newPass);
+            Updatepannel.Controls.Add(label6);
+            Updatepannel.Controls.Add(label7);
+            Updatepannel.Location = new Point(0, 0);
+            Updatepannel.Name = "Updatepannel";
+            Updatepannel.Size = new Size(441, 733);
+            Updatepannel.TabIndex = 1;
+            // 
+            // UpdateBtn
+            // 
+            UpdateBtn.BackColor = SystemColors.HotTrack;
+            UpdateBtn.FlatStyle = FlatStyle.Popup;
+            UpdateBtn.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            UpdateBtn.ForeColor = SystemColors.ButtonHighlight;
+            UpdateBtn.Location = new Point(159, 435);
+            UpdateBtn.Name = "UpdateBtn";
+            UpdateBtn.Size = new Size(149, 52);
+            UpdateBtn.TabIndex = 23;
+            UpdateBtn.Text = "SUBMIT";
+            UpdateBtn.UseVisualStyleBackColor = false;
+            UpdateBtn.Click += UpdateBtn_Click;
+            // 
+            // newPass
+            // 
+            newPass.BackColor = Color.White;
+            newPass.BorderStyle = BorderStyle.None;
+            newPass.ForeColor = SystemColors.ActiveCaptionText;
+            newPass.Location = new Point(64, 278);
+            newPass.Name = "newPass";
+            newPass.Size = new Size(317, 24);
+            newPass.TabIndex = 22;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.BackColor = Color.Transparent;
+            label6.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.ForeColor = SystemColors.ActiveCaptionText;
+            label6.Location = new Point(64, 246);
+            label6.Name = "label6";
+            label6.Size = new Size(213, 21);
+            label6.TabIndex = 21;
+            label6.Text = "ENTER NEW PASSWORD";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.Location = new Point(68, 35);
+            label7.Name = "label7";
+            label7.Size = new Size(313, 38);
+            label7.TabIndex = 20;
+            label7.Text = "UPDATE PASSWORD";
+            // 
             // Forgot
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(441, 733);
             Controls.Add(OTP);
+            Controls.Add(Updatepannel);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Forgot";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Forgot";
             OTP.ResumeLayout(false);
             OTP.PerformLayout();
+            Updatepannel.ResumeLayout(false);
+            Updatepannel.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -178,5 +245,10 @@
         private System.Windows.Forms.Timer timer1;
         private TextBox txtotp;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private Panel Updatepannel;
+        private Button UpdateBtn;
+        private TextBox newPass;
+        private Label label6;
+        private Label label7;
     }
 }

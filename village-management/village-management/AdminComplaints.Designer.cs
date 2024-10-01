@@ -47,15 +47,17 @@
             linkLabel2 = new LinkLabel();
             bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(components);
             Com2 = new Panel();
+            Back = new Bunifu.Framework.UI.BunifuThinButton2();
             CDesc = new Label();
             Cheading = new Label();
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
-            Back = new Bunifu.Framework.UI.BunifuThinButton2();
             bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(components);
+            LogOut = new Bunifu.Framework.UI.BunifuThinButton2();
             Com1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)allcomplaints).BeginInit();
+            backmenu.SuspendLayout();
             Com2.SuspendLayout();
             SuspendLayout();
             // 
@@ -164,12 +166,12 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 15F, FontStyle.Bold);
-            label1.Location = new Point(29, 250);
+            label1.Location = new Point(88, 136);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(209, 37);
+            label1.Size = new Size(120, 37);
             label1.TabIndex = 18;
-            label1.Text = "Admin Name";
+            label1.Text = "Admin ";
             // 
             // dashboard
             // 
@@ -177,7 +179,7 @@
             dashboard.BackColor = Color.Transparent;
             dashboard.Font = new Font("Century Gothic", 15F, FontStyle.Bold);
             dashboard.LinkColor = Color.Black;
-            dashboard.Location = new Point(11, 413);
+            dashboard.Location = new Point(30, 282);
             dashboard.Margin = new Padding(4, 0, 4, 0);
             dashboard.Name = "dashboard";
             dashboard.Size = new Size(178, 37);
@@ -185,13 +187,15 @@
             dashboard.TabStop = true;
             dashboard.Text = "Dashboard";
             dashboard.VisitedLinkColor = Color.FromArgb(192, 255, 255);
+            dashboard.LinkClicked += dashboard_LinkClicked;
             // 
             // backmenu
             // 
             backmenu.BackColor = Color.CadetBlue;
-            backmenu.Location = new Point(0, 515);
+            backmenu.Controls.Add(linkLabel4);
+            backmenu.Location = new Point(14, 560);
             backmenu.Name = "backmenu";
-            backmenu.Size = new Size(240, 62);
+            backmenu.Size = new Size(271, 62);
             backmenu.TabIndex = 23;
             // 
             // linkLabel4
@@ -199,7 +203,7 @@
             linkLabel4.AutoSize = true;
             linkLabel4.Font = new Font("Century Gothic", 15F, FontStyle.Bold);
             linkLabel4.LinkColor = Color.Black;
-            linkLabel4.Location = new Point(11, 717);
+            linkLabel4.Location = new Point(14, 10);
             linkLabel4.Margin = new Padding(4, 0, 4, 0);
             linkLabel4.Name = "linkLabel4";
             linkLabel4.Size = new Size(243, 37);
@@ -207,13 +211,14 @@
             linkLabel4.TabStop = true;
             linkLabel4.Text = "See Complaints";
             linkLabel4.VisitedLinkColor = Color.FromArgb(192, 255, 255);
+            linkLabel4.LinkClicked += linkLabel4_LinkClicked;
             // 
             // linkLabel3
             // 
             linkLabel3.AutoSize = true;
             linkLabel3.Font = new Font("Century Gothic", 15F, FontStyle.Bold);
             linkLabel3.LinkColor = Color.Black;
-            linkLabel3.Location = new Point(11, 620);
+            linkLabel3.Location = new Point(30, 467);
             linkLabel3.Margin = new Padding(4, 0, 4, 0);
             linkLabel3.Name = "linkLabel3";
             linkLabel3.Size = new Size(164, 37);
@@ -221,14 +226,15 @@
             linkLabel3.TabStop = true;
             linkLabel3.Text = "Put Notice";
             linkLabel3.VisitedLinkColor = Color.FromArgb(192, 255, 255);
+            linkLabel3.LinkClicked += linkLabel3_LinkClicked;
             // 
             // linkLabel2
             // 
             linkLabel2.AutoSize = true;
-            linkLabel2.BackColor = Color.CadetBlue;
+            linkLabel2.BackColor = Color.LightSteelBlue;
             linkLabel2.Font = new Font("Century Gothic", 15F, FontStyle.Bold);
             linkLabel2.LinkColor = Color.Black;
-            linkLabel2.Location = new Point(11, 523);
+            linkLabel2.Location = new Point(30, 367);
             linkLabel2.Margin = new Padding(4, 0, 4, 0);
             linkLabel2.Name = "linkLabel2";
             linkLabel2.Size = new Size(223, 37);
@@ -236,6 +242,7 @@
             linkLabel2.TabStop = true;
             linkLabel2.Text = "Manage Users";
             linkLabel2.VisitedLinkColor = Color.FromArgb(192, 255, 255);
+            linkLabel2.LinkClicked += linkLabel2_LinkClicked;
             // 
             // bunifuElipse3
             // 
@@ -256,6 +263,31 @@
             Com2.Name = "Com2";
             Com2.Size = new Size(1133, 957);
             Com2.TabIndex = 24;
+            // 
+            // Back
+            // 
+            Back.ActiveBorderThickness = 1;
+            Back.ActiveCornerRadius = 20;
+            Back.ActiveFillColor = Color.SeaGreen;
+            Back.ActiveForecolor = Color.White;
+            Back.ActiveLineColor = Color.SeaGreen;
+            Back.BackColor = Color.Snow;
+            Back.BackgroundImage = (Image)resources.GetObject("Back.BackgroundImage");
+            Back.ButtonText = "Back";
+            Back.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Back.ForeColor = Color.SeaGreen;
+            Back.IdleBorderThickness = 1;
+            Back.IdleCornerRadius = 20;
+            Back.IdleFillColor = Color.White;
+            Back.IdleForecolor = Color.SeaGreen;
+            Back.IdleLineColor = Color.SeaGreen;
+            Back.Location = new Point(22, 28);
+            Back.Margin = new Padding(7, 7, 7, 7);
+            Back.Name = "Back";
+            Back.Size = new Size(96, 46);
+            Back.TabIndex = 61;
+            Back.TextAlign = ContentAlignment.MiddleCenter;
+            Back.Click += Back_Click;
             // 
             // CDesc
             // 
@@ -310,35 +342,35 @@
             label4.TabIndex = 55;
             label4.Text = "Complaint Description";
             // 
-            // Back
-            // 
-            Back.ActiveBorderThickness = 1;
-            Back.ActiveCornerRadius = 20;
-            Back.ActiveFillColor = Color.SeaGreen;
-            Back.ActiveForecolor = Color.White;
-            Back.ActiveLineColor = Color.SeaGreen;
-            Back.BackColor = Color.Snow;
-            Back.BackgroundImage = (Image)resources.GetObject("Back.BackgroundImage");
-            Back.ButtonText = "Back";
-            Back.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Back.ForeColor = Color.SeaGreen;
-            Back.IdleBorderThickness = 1;
-            Back.IdleCornerRadius = 20;
-            Back.IdleFillColor = Color.White;
-            Back.IdleForecolor = Color.SeaGreen;
-            Back.IdleLineColor = Color.SeaGreen;
-            Back.Location = new Point(22, 28);
-            Back.Margin = new Padding(7, 7, 7, 7);
-            Back.Name = "Back";
-            Back.Size = new Size(96, 46);
-            Back.TabIndex = 61;
-            Back.TextAlign = ContentAlignment.MiddleCenter;
-            Back.Click += Back_Click;
-            // 
             // bunifuElipse4
             // 
             bunifuElipse4.ElipseRadius = 35;
             bunifuElipse4.TargetControl = Com2;
+            // 
+            // LogOut
+            // 
+            LogOut.ActiveBorderThickness = 1;
+            LogOut.ActiveCornerRadius = 20;
+            LogOut.ActiveFillColor = Color.SeaGreen;
+            LogOut.ActiveForecolor = Color.White;
+            LogOut.ActiveLineColor = Color.SeaGreen;
+            LogOut.BackColor = Color.LightSteelBlue;
+            LogOut.BackgroundImage = (Image)resources.GetObject("LogOut.BackgroundImage");
+            LogOut.ButtonText = "Logout";
+            LogOut.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            LogOut.ForeColor = Color.SeaGreen;
+            LogOut.IdleBorderThickness = 1;
+            LogOut.IdleCornerRadius = 20;
+            LogOut.IdleFillColor = Color.White;
+            LogOut.IdleForecolor = Color.SeaGreen;
+            LogOut.IdleLineColor = Color.SeaGreen;
+            LogOut.Location = new Point(30, 810);
+            LogOut.Margin = new Padding(7, 7, 7, 7);
+            LogOut.Name = "LogOut";
+            LogOut.Size = new Size(191, 63);
+            LogOut.TabIndex = 48;
+            LogOut.TextAlign = ContentAlignment.MiddleCenter;
+            LogOut.Click += LogOut_Click;
             // 
             // AdminComplaints
             // 
@@ -346,8 +378,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
             ClientSize = new Size(1441, 997);
+            Controls.Add(LogOut);
             Controls.Add(dashboard);
-            Controls.Add(linkLabel4);
             Controls.Add(linkLabel3);
             Controls.Add(linkLabel2);
             Controls.Add(label1);
@@ -357,10 +389,13 @@
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4, 5, 4, 5);
             Name = "AdminComplaints";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "AdminComplaints";
             Com1.ResumeLayout(false);
             Com1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)allcomplaints).EndInit();
+            backmenu.ResumeLayout(false);
+            backmenu.PerformLayout();
             Com2.ResumeLayout(false);
             Com2.PerformLayout();
             ResumeLayout(false);
@@ -393,5 +428,6 @@
         private Label Cheading;
         private Bunifu.Framework.UI.BunifuThinButton2 Back;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse4;
+        private Bunifu.Framework.UI.BunifuThinButton2 LogOut;
     }
 }

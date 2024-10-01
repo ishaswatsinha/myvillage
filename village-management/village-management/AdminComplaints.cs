@@ -69,5 +69,40 @@ namespace village_management
         {
             Com1.BringToFront();
         }
+
+        private void dashboard_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            AdminPanel obj = new AdminPanel();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            AdminManage obj = new AdminManage();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            AddNotice obj = new AddNotice();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            AdminComplaints obj = new AdminComplaints();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void LogOut_Click(object sender, EventArgs e)
+        {
+            login obj = new login();
+            obj.Show();
+            this.Hide();
+        }
     }
 }

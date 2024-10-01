@@ -31,6 +31,7 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserProfile));
             profilepannel = new Panel();
+            lblPassword = new Label();
             pictureBox1 = new PictureBox();
             lblPhone = new Label();
             label7 = new Label();
@@ -56,7 +57,6 @@
             linkLabel3 = new LinkLabel();
             bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(components);
             LogOut = new Bunifu.Framework.UI.BunifuThinButton2();
-            lblPassword = new Label();
             profilepannel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             backmenu.SuspendLayout();
@@ -85,6 +85,17 @@
             profilepannel.Name = "profilepannel";
             profilepannel.Size = new Size(1133, 957);
             profilepannel.TabIndex = 16;
+            // 
+            // lblPassword
+            // 
+            lblPassword.AutoSize = true;
+            lblPassword.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblPassword.ForeColor = Color.Navy;
+            lblPassword.Location = new Point(356, 610);
+            lblPassword.Name = "lblPassword";
+            lblPassword.Size = new Size(153, 37);
+            lblPassword.TabIndex = 22;
+            lblPassword.Text = "Password";
             // 
             // pictureBox1
             // 
@@ -367,17 +378,7 @@
             LogOut.Size = new Size(191, 64);
             LogOut.TabIndex = 26;
             LogOut.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // lblPassword
-            // 
-            lblPassword.AutoSize = true;
-            lblPassword.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblPassword.ForeColor = Color.Navy;
-            lblPassword.Location = new Point(356, 610);
-            lblPassword.Name = "lblPassword";
-            lblPassword.Size = new Size(153, 37);
-            lblPassword.TabIndex = 22;
-            lblPassword.Text = "Password";
+            LogOut.Click += LogOut_Click;
             // 
             // UserProfile
             // 

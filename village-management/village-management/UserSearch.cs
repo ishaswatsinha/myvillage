@@ -88,5 +88,12 @@ namespace village_management
         {
             fetchdata();
         }
+
+        private void LogOut_Click(object sender, EventArgs e)
+        {
+            login obj = new login();
+            obj.Show();
+            this.Hide();
+        }
     }
 }

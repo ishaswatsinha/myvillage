@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.WebRequestMethods;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace village_management
 {
@@ -20,9 +21,11 @@ namespace village_management
     {
         string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\shasw\Desktop\netproject\village-management\village-management\VILLAGE-MANAGEMENT.mdf;Integrated Security=True";
 
-        public Forgot()
+        private string email;
+        public Forgot(string email)
         {
             InitializeComponent();
+            this.email = email;
             timer1.Start();
         }
 
@@ -56,16 +59,22 @@ namespace village_management
             SqlConnection con = new SqlConnection(constring);
             con.Open();
 
-            string query2 = "SELECT email FROM Token WHERE otp = '" + txtotp.Text + "' ";
+            string query2 = "SELECT otp FROM Token WHERE email = '" + email + "' ";
             SqlCommand cmd = new SqlCommand(query2, con);
             DataTable dt = new DataTable();
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
             sda.Fill(dt);
             foreach (DataRow dr in dt.Rows)
             {
-                //String email = dr["email"].ToString();
-                MessageBox.Show(dr["email"].ToString());
-
+                String otp = dr["otp"].ToString();
+                if (otp == txtotp.Text)
+                {
+                    Updatepannel.BringToFront();
+                }
+                else
+                {
+                    MessageBox.Show("OTP is Wrong");
+                }
             }
 
             con.Close();
@@ -83,6 +92,23 @@ namespace village_management
 
         private void label5_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void UpdateBtn_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(constring);
+            con.Open();
+            string query3 = "UPDATE register SET password = @password WHERE email = @email";
+
+            SqlCommand cmd = new SqlCommand(query3, con);
+
+            cmd.Parameters.AddWithValue("@password", newPass.Text);
+            cmd.Parameters.AddWithValue("@email", email);
+            cmd.ExecuteNonQuery();
+            con.Close();
+
+            MessageBox.Show("Update successful!");
 
         }
     }

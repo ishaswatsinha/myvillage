@@ -23,7 +23,6 @@ namespace village_management
             this.userName = userName;
             this.userEmail = userEmail;
             lblUserName.Text = $"Welcome, {userName}!";
-
         }
 
 
@@ -74,6 +73,13 @@ namespace village_management
         private void backmenu_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void LogOut_Click(object sender, EventArgs e)
+        {
+            login obj = new login();
+            obj.Show();
+            this.Hide();
         }
     }
 }

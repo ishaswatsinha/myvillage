@@ -188,7 +188,7 @@
             linkLabel3.AutoSize = true;
             linkLabel3.Font = new Font("Century Gothic", 15F, FontStyle.Bold);
             linkLabel3.LinkColor = Color.Black;
-            linkLabel3.Location = new Point(49, 12);
+            linkLabel3.Location = new Point(46, 10);
             linkLabel3.Margin = new Padding(4, 0, 4, 0);
             linkLabel3.Name = "linkLabel3";
             linkLabel3.Size = new Size(181, 37);
@@ -282,6 +282,7 @@
             LogOut.Size = new Size(191, 63);
             LogOut.TabIndex = 24;
             LogOut.TextAlign = ContentAlignment.MiddleCenter;
+            LogOut.Click += LogOut_Click;
             // 
             // bunifuElipse4
             // 

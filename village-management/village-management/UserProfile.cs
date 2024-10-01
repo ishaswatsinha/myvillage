@@ -23,7 +23,7 @@ namespace village_management
         {
 
             InitializeComponent();
-            
+
             this.userName = userName;
             this.userEmail = userEmail;
             lblName.Text = $"Hey!{userName}";
@@ -82,12 +82,19 @@ namespace village_management
                 lblPhone.Text = dr["phone"].ToString();
                 lblHouse.Text = dr["hno"].ToString();
                 lblGender.Text = dr["gender"].ToString();
-                lblPassword.Text = dr["password"].ToString(); 
+                lblPassword.Text = dr["password"].ToString();
                 lblUserId.Text = dr["uid"].ToString();
-                
+
             }
 
             con.Close();
+        }
+
+        private void LogOut_Click(object sender, EventArgs e)
+        {
+            login obj = new login();
+            obj.Show();
+            this.Hide();
         }
     }
 }

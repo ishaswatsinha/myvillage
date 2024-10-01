@@ -378,6 +378,7 @@
             LogOut.Size = new Size(191, 64);
             LogOut.TabIndex = 25;
             LogOut.TextAlign = ContentAlignment.MiddleCenter;
+            LogOut.Click += LogOut_Click;
             // 
             // UserSearch
             // 
