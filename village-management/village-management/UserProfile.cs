@@ -27,6 +27,7 @@ namespace village_management
             this.userName = userName;
             this.userEmail = userEmail;
             lblName.Text = $"Hey!{userName}";
+            lblUserName.Text = $"Welcome, {userName}!";
             fetchdata();
 
         }

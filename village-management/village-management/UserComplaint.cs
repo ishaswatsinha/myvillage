@@ -22,6 +22,7 @@ namespace village_management
             InitializeComponent();
             this.userName = userName;
             this.userEmail = userEmail;
+            lblUserName.Text = $"Welcome, {userName}!";
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

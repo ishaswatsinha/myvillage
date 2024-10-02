@@ -50,7 +50,7 @@
             linkLabel1 = new LinkLabel();
             backmenu = new Panel();
             linkLabel4 = new LinkLabel();
-            label1 = new Label();
+            lblUserName = new Label();
             linkLabel5 = new LinkLabel();
             linkLabel3 = new LinkLabel();
             linkLabel2 = new LinkLabel();
@@ -294,16 +294,16 @@
             linkLabel4.VisitedLinkColor = Color.FromArgb(192, 255, 255);
             linkLabel4.LinkClicked += linkLabel4_LinkClicked;
             // 
-            // label1
+            // lblUserName
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Century Gothic", 15F, FontStyle.Bold);
-            label1.Location = new Point(61, 118);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(163, 37);
-            label1.TabIndex = 22;
-            label1.Text = "Username";
+            lblUserName.AutoSize = true;
+            lblUserName.Font = new Font("Century Gothic", 15F, FontStyle.Bold);
+            lblUserName.Location = new Point(11, 118);
+            lblUserName.Margin = new Padding(4, 0, 4, 0);
+            lblUserName.Name = "lblUserName";
+            lblUserName.Size = new Size(163, 37);
+            lblUserName.TabIndex = 22;
+            lblUserName.Text = "Username";
             // 
             // linkLabel5
             // 
@@ -390,7 +390,7 @@
             Controls.Add(linkLabel1);
             Controls.Add(SearchPanel);
             Controls.Add(backmenu);
-            Controls.Add(label1);
+            Controls.Add(lblUserName);
             Controls.Add(linkLabel5);
             Controls.Add(linkLabel3);
             Controls.Add(linkLabel2);
@@ -413,7 +413,7 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Panel backmenu;
         private LinkLabel linkLabel1;
-        private Label label1;
+        private Label lblUserName;
         private LinkLabel linkLabel5;
         private LinkLabel linkLabel4;
         private LinkLabel linkLabel3;

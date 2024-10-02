@@ -338,9 +338,9 @@
             label4.Location = new Point(291, 18);
             label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(543, 56);
+            label4.Size = new Size(564, 56);
             label4.TabIndex = 55;
-            label4.Text = "Complaint Description";
+            label4.Text = "Complaints Description";
             // 
             // bunifuElipse4
             // 
