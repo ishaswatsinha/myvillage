@@ -35,7 +35,7 @@
             id = new Label();
             UserId = new TextBox();
             label3 = new Label();
-            dataGridView1 = new DataGridView();
+            AllUserGrid = new DataGridView();
             label2 = new Label();
             dashboard = new LinkLabel();
             backmenu = new Panel();
@@ -48,6 +48,7 @@
             bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(components);
             bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(components);
             UserDetailPanel2 = new Panel();
+            Backbtn = new Bunifu.Framework.UI.BunifuThinButton2();
             DeleteUser = new Bunifu.Framework.UI.BunifuThinButton2();
             UpdateUser = new Bunifu.Framework.UI.BunifuThinButton2();
             pictureBox1 = new PictureBox();
@@ -64,6 +65,7 @@
             label4 = new Label();
             label8 = new Label();
             UpdatePanel3 = new Panel();
+            Backbtn2 = new Bunifu.Framework.UI.BunifuThinButton2();
             txtuhouse = new TextBox();
             txtugender = new TextBox();
             txtuphone = new TextBox();
@@ -75,13 +77,12 @@
             label13 = new Label();
             label15 = new Label();
             label18 = new Label();
-            txtUserName = new Label();
             label20 = new Label();
             label21 = new Label();
             bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(components);
             bunifuElipse5 = new Bunifu.Framework.UI.BunifuElipse(components);
             ViewUserPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)AllUserGrid).BeginInit();
             backmenu.SuspendLayout();
             UserDetailPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -96,7 +97,7 @@
             ViewUserPanel1.Controls.Add(id);
             ViewUserPanel1.Controls.Add(UserId);
             ViewUserPanel1.Controls.Add(label3);
-            ViewUserPanel1.Controls.Add(dataGridView1);
+            ViewUserPanel1.Controls.Add(AllUserGrid);
             ViewUserPanel1.Controls.Add(label2);
             ViewUserPanel1.Location = new Point(291, 20);
             ViewUserPanel1.Margin = new Padding(4, 5, 4, 5);
@@ -157,14 +158,14 @@
             label3.TabIndex = 53;
             label3.Text = "Manage Users";
             // 
-            // dataGridView1
+            // AllUserGrid
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(257, 399);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(676, 308);
-            dataGridView1.TabIndex = 52;
+            AllUserGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            AllUserGrid.Location = new Point(257, 399);
+            AllUserGrid.Name = "AllUserGrid";
+            AllUserGrid.RowHeadersWidth = 62;
+            AllUserGrid.Size = new Size(676, 308);
+            AllUserGrid.TabIndex = 52;
             // 
             // label2
             // 
@@ -300,6 +301,7 @@
             // UserDetailPanel2
             // 
             UserDetailPanel2.BackColor = SystemColors.Control;
+            UserDetailPanel2.Controls.Add(Backbtn);
             UserDetailPanel2.Controls.Add(DeleteUser);
             UserDetailPanel2.Controls.Add(UpdateUser);
             UserDetailPanel2.Controls.Add(pictureBox1);
@@ -319,6 +321,31 @@
             UserDetailPanel2.Name = "UserDetailPanel2";
             UserDetailPanel2.Size = new Size(1133, 957);
             UserDetailPanel2.TabIndex = 54;
+            // 
+            // Backbtn
+            // 
+            Backbtn.ActiveBorderThickness = 1;
+            Backbtn.ActiveCornerRadius = 20;
+            Backbtn.ActiveFillColor = Color.SeaGreen;
+            Backbtn.ActiveForecolor = Color.White;
+            Backbtn.ActiveLineColor = Color.SeaGreen;
+            Backbtn.BackColor = SystemColors.Control;
+            Backbtn.BackgroundImage = (Image)resources.GetObject("Backbtn.BackgroundImage");
+            Backbtn.ButtonText = "Back";
+            Backbtn.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Backbtn.ForeColor = Color.SeaGreen;
+            Backbtn.IdleBorderThickness = 1;
+            Backbtn.IdleCornerRadius = 20;
+            Backbtn.IdleFillColor = Color.White;
+            Backbtn.IdleForecolor = Color.SeaGreen;
+            Backbtn.IdleLineColor = Color.SeaGreen;
+            Backbtn.Location = new Point(29, 26);
+            Backbtn.Margin = new Padding(7, 7, 7, 7);
+            Backbtn.Name = "Backbtn";
+            Backbtn.Size = new Size(129, 53);
+            Backbtn.TabIndex = 50;
+            Backbtn.TextAlign = ContentAlignment.MiddleCenter;
+            Backbtn.Click += Backbtn_Click;
             // 
             // DeleteUser
             // 
@@ -343,6 +370,7 @@
             DeleteUser.Size = new Size(191, 63);
             DeleteUser.TabIndex = 49;
             DeleteUser.TextAlign = ContentAlignment.MiddleCenter;
+            DeleteUser.Click += DeleteUser_Click;
             // 
             // UpdateUser
             // 
@@ -509,6 +537,7 @@
             // UpdatePanel3
             // 
             UpdatePanel3.BackColor = SystemColors.Control;
+            UpdatePanel3.Controls.Add(Backbtn2);
             UpdatePanel3.Controls.Add(txtuhouse);
             UpdatePanel3.Controls.Add(txtugender);
             UpdatePanel3.Controls.Add(txtuphone);
@@ -520,13 +549,37 @@
             UpdatePanel3.Controls.Add(label13);
             UpdatePanel3.Controls.Add(label15);
             UpdatePanel3.Controls.Add(label18);
-            UpdatePanel3.Controls.Add(txtUserName);
             UpdatePanel3.Controls.Add(label20);
             UpdatePanel3.Controls.Add(label21);
             UpdatePanel3.Location = new Point(291, 20);
             UpdatePanel3.Name = "UpdatePanel3";
             UpdatePanel3.Size = new Size(1133, 957);
             UpdatePanel3.TabIndex = 55;
+            // 
+            // Backbtn2
+            // 
+            Backbtn2.ActiveBorderThickness = 1;
+            Backbtn2.ActiveCornerRadius = 20;
+            Backbtn2.ActiveFillColor = Color.SeaGreen;
+            Backbtn2.ActiveForecolor = Color.White;
+            Backbtn2.ActiveLineColor = Color.SeaGreen;
+            Backbtn2.BackColor = SystemColors.Control;
+            Backbtn2.BackgroundImage = (Image)resources.GetObject("Backbtn2.BackgroundImage");
+            Backbtn2.ButtonText = "Back";
+            Backbtn2.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Backbtn2.ForeColor = Color.SeaGreen;
+            Backbtn2.IdleBorderThickness = 1;
+            Backbtn2.IdleCornerRadius = 20;
+            Backbtn2.IdleFillColor = Color.White;
+            Backbtn2.IdleForecolor = Color.SeaGreen;
+            Backbtn2.IdleLineColor = Color.SeaGreen;
+            Backbtn2.Location = new Point(39, 26);
+            Backbtn2.Margin = new Padding(7, 7, 7, 7);
+            Backbtn2.Name = "Backbtn2";
+            Backbtn2.Size = new Size(129, 53);
+            Backbtn2.TabIndex = 54;
+            Backbtn2.TextAlign = ContentAlignment.MiddleCenter;
+            Backbtn2.Click += Backbtn2_Click;
             // 
             // txtuhouse
             // 
@@ -637,17 +690,6 @@
             label18.TabIndex = 26;
             label18.Text = "EMAIL :";
             // 
-            // txtUserName
-            // 
-            txtUserName.AutoSize = true;
-            txtUserName.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtUserName.ForeColor = Color.Navy;
-            txtUserName.Location = new Point(457, 250);
-            txtUserName.Name = "txtUserName";
-            txtUserName.Size = new Size(102, 37);
-            txtUserName.TabIndex = 25;
-            txtUserName.Text = "name";
-            // 
             // label20
             // 
             label20.AutoSize = true;
@@ -691,9 +733,9 @@
             Controls.Add(linkLabel4);
             Controls.Add(linkLabel3);
             Controls.Add(LogOut);
-            Controls.Add(UpdatePanel3);
             Controls.Add(UserDetailPanel2);
             Controls.Add(ViewUserPanel1);
+            Controls.Add(UpdatePanel3);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4, 5, 4, 5);
             Name = "AdminManage";
@@ -702,7 +744,7 @@
             Load += AdminManage_Load;
             ViewUserPanel1.ResumeLayout(false);
             ViewUserPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)AllUserGrid).EndInit();
             backmenu.ResumeLayout(false);
             backmenu.PerformLayout();
             UserDetailPanel2.ResumeLayout(false);
@@ -731,7 +773,7 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
 
         private Label label3;
-        private DataGridView dataGridView1;
+        private DataGridView AllUserGrid;
         private Label label2;
         private Bunifu.Framework.UI.BunifuThinButton2 OpenUserDetails;
         private Label id;
@@ -764,10 +806,11 @@
         private Label label13;
         private Label label15;
         private Label label18;
-        private Label txtUserName;
         private Label label20;
         private Label label21;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse4;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse5;
+        private Bunifu.Framework.UI.BunifuThinButton2 Backbtn;
+        private Bunifu.Framework.UI.BunifuThinButton2 Backbtn2;
     }
 }
