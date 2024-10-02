@@ -167,6 +167,43 @@ namespace village_management
         }
 
 
+
+        private bool AdminValidate()
+        {
+            
+            // Connect to the database and check for matching credentials
+            using (SqlConnection connection = new SqlConnection(constring))
+            {
+                try
+                {
+                    connection.Open();
+
+                    // SQL query to check if the user exists with the provided email and password
+                    string query3 = "SELECT * FROM Admin WHERE UserId = @UserId AND password = @Password";
+
+                    using (SqlCommand cmd = new SqlCommand(query3, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@UserId", txtUser.Text);
+                        cmd.Parameters.AddWithValue("@Password", txtpass.Text);
+
+                        SqlDataReader reader = cmd.ExecuteReader();
+                        if (reader.Read())
+                        {
+                            return true;  // Valid credentials
+                        }
+                        return false;  // Invalid credentials
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+            }
+        }
+
+
+
         //  -----------------------FORGOT PAGE--------------------------------
         //  -----------------------FORGOT PAGE--------------------------------
         //  -----------------------FORGOT PAGE--------------------------------
@@ -225,7 +262,19 @@ namespace village_management
         //ADMIN LOGIN
         private void button5_Click(object sender, EventArgs e)
         {
-
+            if (AdminValidate())
+            {
+                // Correct credentials: Show the next form and pass the user info
+                MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                AdminPanel obj = new AdminPanel(); 
+                obj.Show();
+                this.Hide();
+            }
+            else
+            {
+                // Incorrect credentials: Show error message
+                MessageBox.Show("Invalid email or password. Please try again.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)

@@ -68,8 +68,8 @@
             label18 = new Label();
             linkLabel7 = new LinkLabel();
             button5 = new Button();
-            textBox10 = new TextBox();
-            textBox11 = new TextBox();
+            txtpass = new TextBox();
+            txtUser = new TextBox();
             label19 = new Label();
             label20 = new Label();
             label21 = new Label();
@@ -518,8 +518,8 @@
             panel5.Controls.Add(label18);
             panel5.Controls.Add(linkLabel7);
             panel5.Controls.Add(button5);
-            panel5.Controls.Add(textBox10);
-            panel5.Controls.Add(textBox11);
+            panel5.Controls.Add(txtpass);
+            panel5.Controls.Add(txtUser);
             panel5.Controls.Add(label19);
             panel5.Controls.Add(label20);
             panel5.Controls.Add(label21);
@@ -584,27 +584,27 @@
             button5.UseVisualStyleBackColor = false;
             button5.Click += button5_Click;
             // 
-            // textBox10
+            // txtpass
             // 
-            textBox10.BackColor = Color.White;
-            textBox10.BorderStyle = BorderStyle.None;
-            textBox10.ForeColor = SystemColors.ButtonHighlight;
-            textBox10.Location = new Point(66, 365);
-            textBox10.Margin = new Padding(2);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(318, 28);
-            textBox10.TabIndex = 7;
+            txtpass.BackColor = Color.White;
+            txtpass.BorderStyle = BorderStyle.None;
+            txtpass.ForeColor = SystemColors.ActiveCaptionText;
+            txtpass.Location = new Point(66, 365);
+            txtpass.Margin = new Padding(2);
+            txtpass.Name = "txtpass";
+            txtpass.Size = new Size(318, 28);
+            txtpass.TabIndex = 7;
             // 
-            // textBox11
+            // txtUser
             // 
-            textBox11.BackColor = Color.White;
-            textBox11.BorderStyle = BorderStyle.None;
-            textBox11.ForeColor = SystemColors.ButtonHighlight;
-            textBox11.Location = new Point(66, 285);
-            textBox11.Margin = new Padding(2);
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(318, 28);
-            textBox11.TabIndex = 6;
+            txtUser.BackColor = Color.White;
+            txtUser.BorderStyle = BorderStyle.None;
+            txtUser.ForeColor = SystemColors.ActiveCaptionText;
+            txtUser.Location = new Point(66, 285);
+            txtUser.Margin = new Padding(2);
+            txtUser.Name = "txtUser";
+            txtUser.Size = new Size(318, 28);
+            txtUser.TabIndex = 6;
             // 
             // label19
             // 
@@ -800,8 +800,8 @@
         private Label label18;
         private LinkLabel linkLabel7;
         private Button button5;
-        private TextBox textBox10;
-        private TextBox textBox11;
+        private TextBox txtpass;
+        private TextBox txtUser;
         private Label label19;
         private Label label20;
         private Label label21;
