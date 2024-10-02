@@ -31,6 +31,9 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminManage));
             panel1 = new Panel();
+            label3 = new Label();
+            dataGridView1 = new DataGridView();
+            label2 = new Label();
             dashboard = new LinkLabel();
             backmenu = new Panel();
             linkLabel2 = new LinkLabel();
@@ -40,33 +43,52 @@
             LogOut = new Bunifu.Framework.UI.BunifuThinButton2();
             bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(components);
             bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(components);
-<<<<<<< HEAD
             bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(components);
-            backmenu.SuspendLayout();
-=======
-            label3 = new Label();
-            dataGridView1 = new DataGridView();
-            label2 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
->>>>>>> 8a3a813dc79d798b0f21512e5860d62f91cf3245
+            backmenu.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = SystemColors.Control;
-<<<<<<< HEAD
-            panel1.Location = new Point(291, 20);
-            panel1.Margin = new Padding(4, 5, 4, 5);
-=======
             panel1.Controls.Add(label3);
             panel1.Controls.Add(dataGridView1);
             panel1.Controls.Add(label2);
-            panel1.Location = new Point(233, 16);
->>>>>>> 8a3a813dc79d798b0f21512e5860d62f91cf3245
+            panel1.Location = new Point(291, 20);
+            panel1.Margin = new Padding(4, 5, 4, 5);
             panel1.Name = "panel1";
             panel1.Size = new Size(1133, 957);
             panel1.TabIndex = 0;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Century Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(327, 41);
+            label3.Name = "label3";
+            label3.Size = new Size(355, 56);
+            label3.TabIndex = 53;
+            label3.Text = "Manage Users";
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(59, 191);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 62;
+            dataGridView1.Size = new Size(788, 540);
+            dataGridView1.TabIndex = 52;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(59, 146);
+            label2.Name = "label2";
+            label2.Size = new Size(216, 36);
+            label2.TabIndex = 51;
+            label2.Text = "List of All Users";
             // 
             // dashboard
             // 
@@ -184,40 +206,10 @@
             bunifuElipse2.ElipseRadius = 35;
             bunifuElipse2.TargetControl = panel1;
             // 
-<<<<<<< HEAD
             // bunifuElipse3
             // 
             bunifuElipse3.ElipseRadius = 20;
             bunifuElipse3.TargetControl = backmenu;
-=======
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Century Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(327, 41);
-            label3.Name = "label3";
-            label3.Size = new Size(235, 38);
-            label3.TabIndex = 53;
-            label3.Text = "Manage Users";
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(59, 191);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(788, 540);
-            dataGridView1.TabIndex = 52;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(59, 146);
-            label2.Name = "label2";
-            label2.Size = new Size(140, 23);
-            label2.TabIndex = 51;
-            label2.Text = "List of All Users";
->>>>>>> 8a3a813dc79d798b0f21512e5860d62f91cf3245
             // 
             // AdminManage
             // 
@@ -238,14 +230,11 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "AdminManage";
             Load += AdminManage_Load;
-<<<<<<< HEAD
-            backmenu.ResumeLayout(false);
-            backmenu.PerformLayout();
-=======
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
->>>>>>> 8a3a813dc79d798b0f21512e5860d62f91cf3245
+            backmenu.ResumeLayout(false);
+            backmenu.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -262,12 +251,12 @@
         private Bunifu.Framework.UI.BunifuThinButton2 LogOut;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
-<<<<<<< HEAD
+
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
-=======
+
         private Label label3;
         private DataGridView dataGridView1;
         private Label label2;
->>>>>>> 8a3a813dc79d798b0f21512e5860d62f91cf3245
+
     }
 }

@@ -9,20 +9,25 @@ using System.Speech.Recognition;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-<<<<<<< HEAD
+
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
-=======
+
 using static System.ComponentModel.Design.ObjectSelectorEditor;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
->>>>>>> 8a3a813dc79d798b0f21512e5860d62f91cf3245
+
 
 namespace village_management
 {
     public partial class AdminPanel : Form
     {
+        string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\shasw\Desktop\netproject\village-management\village-management\VILLAGE-MANAGEMENT.mdf;Integrated Security=True";
+
         public AdminPanel()
         {
             InitializeComponent();
+            NoticeCount();
+            Residence();
+            ResolvedComplaints();
         }
 
         private void dashboard_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -30,7 +35,7 @@ namespace village_management
 
         }
 
-<<<<<<< HEAD
+
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             AdminPanel obj = new AdminPanel();
@@ -64,27 +69,25 @@ namespace village_management
             login obj = new login();
             obj.Show();
             this.Hide();
-=======
-        private void label3_Click(object sender, EventArgs e)
+        }
+
+        private void Residence()
         {
-            string constring = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Rishabh\\Documents\\Visual Studio 2022\\Projects\\myvillage\\myvillage\\village-management\\village-management\\Database1.mdf\";Integrated Security=True";
             using (SqlConnection con = new SqlConnection(constring))
             {
-                string query = "SELECT COUNT(Id) FROM Users";
+                string query = "SELECT COUNT(Id) FROM register";
 
                 con.Open();
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
                     object result = cmd.ExecuteScalar();
                     int count = Convert.ToInt32(result);
-                    label5.Text = count.ToString();
+                    lblResident.Text = count.ToString();
                 }
             }
         }
-
-        private void label5_Click(object sender, EventArgs e)
+        private void ResolvedComplaints()
         {
-            string constring = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Rishabh\\Documents\\Visual Studio 2022\\Projects\\myvillage\\myvillage\\village-management\\village-management\\Database1.mdf\";Integrated Security=True";
             using (SqlConnection con = new SqlConnection(constring))
             {
                 string query = "SELECT COUNT(Id) FROM Complaints";
@@ -94,14 +97,12 @@ namespace village_management
                 {
                     object result = cmd.ExecuteScalar();
                     int count = Convert.ToInt32(result);
-                    label5.Text = count.ToString();
+                    lblResolvedComp.Text = count.ToString();
                 }
             }
         }
-
-        private void label7_Click(object sender, EventArgs e)
+        private void NoticeCount()
         {
-            string constring = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Rishabh\\Documents\\Visual Studio 2022\\Projects\\myvillage\\myvillage\\village-management\\village-management\\Database1.mdf\";Integrated Security=True";
             using (SqlConnection con = new SqlConnection(constring))
             {
                 string query = "SELECT COUNT(Id) FROM Notices";
@@ -111,10 +112,10 @@ namespace village_management
                 {
                     object result = cmd.ExecuteScalar();
                     int count = Convert.ToInt32(result);
-                    label5.Text = count.ToString();
+                    lblNoticeCount.Text = count.ToString();
                 }
             }
->>>>>>> 8a3a813dc79d798b0f21512e5860d62f91cf3245
         }
+
     }
 }
