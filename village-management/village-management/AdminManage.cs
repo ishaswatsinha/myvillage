@@ -56,5 +56,15 @@ namespace village_management
             obj.Show();
             this.Hide();
         }
+
+        private void OpenUserDetails_Click(object sender, EventArgs e)
+        {
+            UserDetailPanel2.BringToFront();
+        }
+
+        private void UpdateUser_Click(object sender, EventArgs e)
+        {
+            UpdatePanel3.BringToFront();
+        }
     }
 }
