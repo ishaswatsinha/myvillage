@@ -14,15 +14,17 @@ namespace village_management
 {
     public partial class AddNotice : Form
     {
+        string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\shasw\Desktop\netproject\village-management\village-management\VILLAGE-MANAGEMENT.mdf;Integrated Security=True";
+
         public AddNotice()
         {
             InitializeComponent();
+            AllNotice();
         }
 
         private void NoticeSubmit_Click(object sender, EventArgs e)
         {
 
-            string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\shasw\Desktop\netproject\village-management\village-management\VILLAGE-MANAGEMENT.mdf;Integrated Security=True";
             string query = "insert into Notices(NoticeSubject,NoticeDesc)VALUES(@subject,@desc)";
             SqlConnection con = new SqlConnection(constring);
             con.Open();
@@ -78,6 +80,19 @@ namespace village_management
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
             panel1.BringToFront();
+        }
+
+        private void AllNotice()
+        {
+            SqlConnection con = new SqlConnection(constring);
+            string query = "select*from Notices";
+            con.Open();
+            SqlDataAdapter da = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            AllNoticesGrid.DataSource = dt;
+            con.Close();
+
         }
     }
 }

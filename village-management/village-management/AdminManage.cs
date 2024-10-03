@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.WebRequestMethods;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace village_management
@@ -71,6 +72,7 @@ namespace village_management
         private void UpdateUser_Click(object sender, EventArgs e)
         {
             UpdatePanel3.BringToFront();
+
         }
 
         private void AllUser()
@@ -101,6 +103,7 @@ namespace village_management
                 lblHouse.Text = dr["hno"].ToString();
                 lblPhone.Text = dr["phone"].ToString();
                 lblName.Text = dr["name"].ToString();
+                lblUserName.Text = dr["name"].ToString();
             }
             con.Close();
         }
@@ -122,9 +125,11 @@ namespace village_management
             {
                 SqlConnection con = new SqlConnection(constring);
                 con.Open();
-                string query = "delete * from register Where uid=@Uid";
+
+                string query = "DELETE FROM Register WHERE uid=@Uid";
                 SqlCommand cmd = new SqlCommand(query, con);
-                cmd.Parameters.AddWithValue("@Uid", txtuid.Text);
+                cmd.Parameters.AddWithValue("@Uid", UserId.Text);
+                cmd.ExecuteNonQuery();
                 con.Close();
                 MessageBox.Show("User Deleted Succesfully");
             }
@@ -134,6 +139,24 @@ namespace village_management
             }
         }
 
-       
+        private void Update_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(constring);
+            con.Open();
+            string query3 = "UPDATE register SET name = @name, email = @email, hno = @hno, phone = @phone WHERE uid = @uid";
+
+            SqlCommand cmd = new SqlCommand(query3, con);
+
+            cmd.Parameters.AddWithValue("@name", texuName.Text);
+            cmd.Parameters.AddWithValue("@email", txtuemail.Text);
+            cmd.Parameters.AddWithValue("@hno", txtuhouse.Text);
+            cmd.Parameters.AddWithValue("@phone", txtuphone.Text);
+            cmd.Parameters.AddWithValue("@uid", UserId.Text);
+
+            cmd.ExecuteNonQuery();
+            con.Close();
+
+            MessageBox.Show("Update successful!");
+        }
     }
 }

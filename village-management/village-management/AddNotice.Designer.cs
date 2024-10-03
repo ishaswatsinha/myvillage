@@ -50,13 +50,13 @@
             Notice2 = new Panel();
             bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             label5 = new Label();
-            dataGridView1 = new DataGridView();
+            AllNoticesGrid = new DataGridView();
             label6 = new Label();
             bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(components);
             panel1.SuspendLayout();
             backmenu.SuspendLayout();
             Notice2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)AllNoticesGrid).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -276,7 +276,7 @@
             Notice2.BackColor = SystemColors.ButtonHighlight;
             Notice2.Controls.Add(bunifuThinButton21);
             Notice2.Controls.Add(label5);
-            Notice2.Controls.Add(dataGridView1);
+            Notice2.Controls.Add(AllNoticesGrid);
             Notice2.Controls.Add(label6);
             Notice2.Location = new Point(291, 20);
             Notice2.Name = "Notice2";
@@ -319,21 +319,21 @@
             label5.TabIndex = 52;
             label5.Text = "Notice";
             // 
-            // dataGridView1
+            // AllNoticesGrid
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(105, 354);
-            dataGridView1.Margin = new Padding(4, 5, 4, 5);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(961, 525);
-            dataGridView1.TabIndex = 51;
+            AllNoticesGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            AllNoticesGrid.Location = new Point(322, 473);
+            AllNoticesGrid.Margin = new Padding(4, 5, 4, 5);
+            AllNoticesGrid.Name = "AllNoticesGrid";
+            AllNoticesGrid.RowHeadersWidth = 62;
+            AllNoticesGrid.Size = new Size(548, 380);
+            AllNoticesGrid.TabIndex = 51;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(67, 260);
+            label6.Location = new Point(471, 403);
             label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
             label6.Size = new Size(246, 36);
@@ -370,7 +370,7 @@
             backmenu.PerformLayout();
             Notice2.ResumeLayout(false);
             Notice2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)AllNoticesGrid).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -397,7 +397,7 @@
         private Panel Notice2;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse4;
         private Label label5;
-        private DataGridView dataGridView1;
+        private DataGridView AllNoticesGrid;
         private Label label6;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
     }

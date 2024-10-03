@@ -65,19 +65,18 @@
             label4 = new Label();
             label8 = new Label();
             UpdatePanel3 = new Panel();
+            texuName = new TextBox();
+            label12 = new Label();
+            lblUserName = new Label();
             Backbtn2 = new Bunifu.Framework.UI.BunifuThinButton2();
             txtuhouse = new TextBox();
-            txtugender = new TextBox();
             txtuphone = new TextBox();
             txtuemail = new TextBox();
-            txtuid = new TextBox();
             Update = new Bunifu.Framework.UI.BunifuThinButton2();
             pictureBox2 = new PictureBox();
             label10 = new Label();
             label13 = new Label();
-            label15 = new Label();
             label18 = new Label();
-            label20 = new Label();
             label21 = new Label();
             bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(components);
             bunifuElipse5 = new Bunifu.Framework.UI.BunifuElipse(components);
@@ -537,24 +536,51 @@
             // UpdatePanel3
             // 
             UpdatePanel3.BackColor = SystemColors.Control;
+            UpdatePanel3.Controls.Add(texuName);
+            UpdatePanel3.Controls.Add(label12);
+            UpdatePanel3.Controls.Add(lblUserName);
             UpdatePanel3.Controls.Add(Backbtn2);
             UpdatePanel3.Controls.Add(txtuhouse);
-            UpdatePanel3.Controls.Add(txtugender);
             UpdatePanel3.Controls.Add(txtuphone);
             UpdatePanel3.Controls.Add(txtuemail);
-            UpdatePanel3.Controls.Add(txtuid);
             UpdatePanel3.Controls.Add(Update);
             UpdatePanel3.Controls.Add(pictureBox2);
             UpdatePanel3.Controls.Add(label10);
             UpdatePanel3.Controls.Add(label13);
-            UpdatePanel3.Controls.Add(label15);
             UpdatePanel3.Controls.Add(label18);
-            UpdatePanel3.Controls.Add(label20);
             UpdatePanel3.Controls.Add(label21);
             UpdatePanel3.Location = new Point(291, 20);
             UpdatePanel3.Name = "UpdatePanel3";
             UpdatePanel3.Size = new Size(1133, 957);
             UpdatePanel3.TabIndex = 55;
+            // 
+            // texuName
+            // 
+            texuName.Location = new Point(301, 482);
+            texuName.Name = "texuName";
+            texuName.Size = new Size(246, 31);
+            texuName.TabIndex = 57;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Century Gothic", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label12.Location = new Point(124, 463);
+            label12.Name = "label12";
+            label12.Size = new Size(121, 37);
+            label12.TabIndex = 56;
+            label12.Text = "NAME :";
+            // 
+            // lblUserName
+            // 
+            lblUserName.AutoSize = true;
+            lblUserName.Font = new Font("Century Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblUserName.ForeColor = Color.Navy;
+            lblUserName.Location = new Point(467, 250);
+            lblUserName.Name = "lblUserName";
+            lblUserName.Size = new Size(102, 37);
+            lblUserName.TabIndex = 55;
+            lblUserName.Text = "name";
             // 
             // Backbtn2
             // 
@@ -588,16 +614,9 @@
             txtuhouse.Size = new Size(256, 31);
             txtuhouse.TabIndex = 53;
             // 
-            // txtugender
-            // 
-            txtugender.Location = new Point(846, 480);
-            txtugender.Name = "txtugender";
-            txtugender.Size = new Size(256, 31);
-            txtugender.TabIndex = 52;
-            // 
             // txtuphone
             // 
-            txtuphone.Location = new Point(301, 661);
+            txtuphone.Location = new Point(844, 480);
             txtuphone.Name = "txtuphone";
             txtuphone.Size = new Size(246, 31);
             txtuphone.TabIndex = 51;
@@ -608,13 +627,6 @@
             txtuemail.Name = "txtuemail";
             txtuemail.Size = new Size(246, 31);
             txtuemail.TabIndex = 50;
-            // 
-            // txtuid
-            // 
-            txtuid.Location = new Point(301, 472);
-            txtuid.Name = "txtuid";
-            txtuid.Size = new Size(246, 31);
-            txtuid.TabIndex = 49;
             // 
             // Update
             // 
@@ -639,6 +651,7 @@
             Update.Size = new Size(191, 68);
             Update.TabIndex = 48;
             Update.TextAlign = ContentAlignment.MiddleCenter;
+            Update.Click += Update_Click;
             // 
             // pictureBox2
             // 
@@ -654,7 +667,7 @@
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Century Gothic", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label10.Location = new Point(124, 653);
+            label10.Location = new Point(667, 472);
             label10.Name = "label10";
             label10.Size = new Size(135, 37);
             label10.TabIndex = 34;
@@ -670,16 +683,6 @@
             label13.TabIndex = 32;
             label13.Text = "HOUSE :";
             // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.Font = new Font("Century Gothic", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label15.Location = new Point(663, 472);
-            label15.Name = "label15";
-            label15.Size = new Size(153, 37);
-            label15.TabIndex = 30;
-            label15.Text = "GENDER :";
-            // 
             // label18
             // 
             label18.AutoSize = true;
@@ -689,16 +692,6 @@
             label18.Size = new Size(121, 37);
             label18.TabIndex = 26;
             label18.Text = "EMAIL :";
-            // 
-            // label20
-            // 
-            label20.AutoSize = true;
-            label20.Font = new Font("Century Gothic", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label20.Location = new Point(124, 463);
-            label20.Name = "label20";
-            label20.Size = new Size(140, 37);
-            label20.TabIndex = 24;
-            label20.Text = "USER ID :";
             // 
             // label21
             // 
@@ -733,9 +726,9 @@
             Controls.Add(linkLabel4);
             Controls.Add(linkLabel3);
             Controls.Add(LogOut);
-            Controls.Add(UserDetailPanel2);
             Controls.Add(ViewUserPanel1);
             Controls.Add(UpdatePanel3);
+            Controls.Add(UserDetailPanel2);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4, 5, 4, 5);
             Name = "AdminManage";
@@ -796,21 +789,20 @@
         private Label label8;
         private Panel UpdatePanel3;
         private TextBox txtuhouse;
-        private TextBox txtugender;
         private TextBox txtuphone;
         private TextBox txtuemail;
-        private TextBox txtuid;
         private Bunifu.Framework.UI.BunifuThinButton2 Update;
         private PictureBox pictureBox2;
         private Label label10;
         private Label label13;
-        private Label label15;
         private Label label18;
-        private Label label20;
         private Label label21;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse4;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse5;
         private Bunifu.Framework.UI.BunifuThinButton2 Backbtn;
         private Bunifu.Framework.UI.BunifuThinButton2 Backbtn2;
+        private Label lblUserName;
+        private TextBox texuName;
+        private Label label12;
     }
 }
