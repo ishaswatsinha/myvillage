@@ -104,5 +104,30 @@ namespace village_management
             obj.Show();
             this.Hide();
         }
+
+        private void BtnResolved_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(constring);
+                con.Open();
+
+                string query = "DELETE FROM Complaints WHERE id=@id";
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@id", ComId.Text);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Complaints Deleted Succesfully");
+
+                AdminComplaints obj = new AdminComplaints();
+                obj.Show();
+                this.Hide();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error in Delete Complaints ");
+            }
+        }
     }
 }

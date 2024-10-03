@@ -48,6 +48,9 @@
             bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(components);
             bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(components);
             Notice2 = new Panel();
+            DeleteNoticeBtn = new Bunifu.Framework.UI.BunifuThinButton2();
+            id = new Label();
+            txtNoticeId = new TextBox();
             bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             label5 = new Label();
             AllNoticesGrid = new DataGridView();
@@ -274,6 +277,9 @@
             // Notice2
             // 
             Notice2.BackColor = SystemColors.ButtonHighlight;
+            Notice2.Controls.Add(DeleteNoticeBtn);
+            Notice2.Controls.Add(id);
+            Notice2.Controls.Add(txtNoticeId);
             Notice2.Controls.Add(bunifuThinButton21);
             Notice2.Controls.Add(label5);
             Notice2.Controls.Add(AllNoticesGrid);
@@ -282,6 +288,49 @@
             Notice2.Name = "Notice2";
             Notice2.Size = new Size(1133, 957);
             Notice2.TabIndex = 54;
+            // 
+            // DeleteNoticeBtn
+            // 
+            DeleteNoticeBtn.ActiveBorderThickness = 1;
+            DeleteNoticeBtn.ActiveCornerRadius = 20;
+            DeleteNoticeBtn.ActiveFillColor = Color.SeaGreen;
+            DeleteNoticeBtn.ActiveForecolor = Color.White;
+            DeleteNoticeBtn.ActiveLineColor = Color.SeaGreen;
+            DeleteNoticeBtn.BackColor = SystemColors.ButtonHighlight;
+            DeleteNoticeBtn.BackgroundImage = (Image)resources.GetObject("DeleteNoticeBtn.BackgroundImage");
+            DeleteNoticeBtn.ButtonText = "Delete";
+            DeleteNoticeBtn.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            DeleteNoticeBtn.ForeColor = Color.SeaGreen;
+            DeleteNoticeBtn.IdleBorderThickness = 1;
+            DeleteNoticeBtn.IdleCornerRadius = 20;
+            DeleteNoticeBtn.IdleFillColor = Color.White;
+            DeleteNoticeBtn.IdleForecolor = Color.SeaGreen;
+            DeleteNoticeBtn.IdleLineColor = Color.SeaGreen;
+            DeleteNoticeBtn.Location = new Point(734, 814);
+            DeleteNoticeBtn.Margin = new Padding(7, 7, 7, 7);
+            DeleteNoticeBtn.Name = "DeleteNoticeBtn";
+            DeleteNoticeBtn.Size = new Size(164, 64);
+            DeleteNoticeBtn.TabIndex = 65;
+            DeleteNoticeBtn.TextAlign = ContentAlignment.MiddleCenter;
+            DeleteNoticeBtn.Click += DeleteNoticeBtn_Click;
+            // 
+            // id
+            // 
+            id.AutoSize = true;
+            id.Font = new Font("Century Gothic", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            id.Location = new Point(310, 832);
+            id.Name = "id";
+            id.Size = new Size(180, 37);
+            id.TabIndex = 64;
+            id.Text = "NOTICE ID :";
+            // 
+            // txtNoticeId
+            // 
+            txtNoticeId.ForeColor = Color.FromArgb(0, 0, 192);
+            txtNoticeId.Location = new Point(498, 837);
+            txtNoticeId.Name = "txtNoticeId";
+            txtNoticeId.Size = new Size(206, 31);
+            txtNoticeId.TabIndex = 63;
             // 
             // bunifuThinButton21
             // 
@@ -322,18 +371,18 @@
             // AllNoticesGrid
             // 
             AllNoticesGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            AllNoticesGrid.Location = new Point(322, 473);
+            AllNoticesGrid.Location = new Point(355, 368);
             AllNoticesGrid.Margin = new Padding(4, 5, 4, 5);
             AllNoticesGrid.Name = "AllNoticesGrid";
             AllNoticesGrid.RowHeadersWidth = 62;
-            AllNoticesGrid.Size = new Size(548, 380);
+            AllNoticesGrid.Size = new Size(497, 307);
             AllNoticesGrid.TabIndex = 51;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(471, 403);
+            label6.Location = new Point(471, 307);
             label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
             label6.Size = new Size(246, 36);
@@ -400,5 +449,8 @@
         private DataGridView AllNoticesGrid;
         private Label label6;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
+        private Bunifu.Framework.UI.BunifuThinButton2 DeleteNoticeBtn;
+        private Label id;
+        private TextBox txtNoticeId;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -93,6 +94,31 @@ namespace village_management
             AllNoticesGrid.DataSource = dt;
             con.Close();
 
+        }
+
+        private void DeleteNoticeBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(constring);
+                con.Open();
+
+                string query = "DELETE FROM Notices WHERE id=@Nid";
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@Nid", txtNoticeId.Text);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Notice Deleted Succesfully");
+
+                AddNotice obj = new AddNotice();
+                obj.Show();
+                this.Hide();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error in Delete Notice ");
+            }
         }
     }
 }

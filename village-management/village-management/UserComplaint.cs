@@ -15,6 +15,8 @@ namespace village_management
 {
     public partial class UserComplaint : Form
     {
+        string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\shasw\Desktop\netproject\village-management\village-management\VILLAGE-MANAGEMENT.mdf;Integrated Security=True";
+
         private string userName;
         private string userEmail;
         public UserComplaint(string userName, string userEmail)
@@ -67,14 +69,14 @@ namespace village_management
 
         private void Csubmit_Click(object sender, EventArgs e)
         {
-            string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\shasw\Desktop\netproject\village-management\village-management\VILLAGE-MANAGEMENT.mdf;Integrated Security=True";
-            string query = "insert into Complaints(subject,description)VALUES(@subject,@desc)";
+            string query = "insert into Complaints(ComBy ,subject,description)VALUES(@Comby, @subject,@desc)";
             SqlConnection con = new SqlConnection(constring);
             con.Open();
             SqlCommand cmd = new SqlCommand(query, con);
             //cmd.Parameters.AddWithValue("@ComBy", "shaswat");
             cmd.Parameters.AddWithValue("@subject", subject.Text);
             cmd.Parameters.AddWithValue("@desc", description.Text);
+            cmd.Parameters.AddWithValue("@Comby", userName );
             cmd.ExecuteNonQuery();
             con.Close();
             MessageBox.Show("Submit Successfully!!!");

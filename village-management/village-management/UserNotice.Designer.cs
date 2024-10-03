@@ -50,7 +50,6 @@
             LogOut = new Bunifu.Framework.UI.BunifuThinButton2();
             panel2 = new Panel();
             Back = new Bunifu.Framework.UI.BunifuThinButton2();
-            NoticeDesc = new Label();
             NoticeHeading = new Label();
             label6 = new Label();
             label5 = new Label();
@@ -58,6 +57,7 @@
             bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(components);
             bunifuElipse5 = new Bunifu.Framework.UI.BunifuElipse(components);
             bunifuElipse6 = new Bunifu.Framework.UI.BunifuElipse(components);
+            NoticeDesc = new RichTextBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)NoticeGrid).BeginInit();
             backmenu.SuspendLayout();
@@ -292,8 +292,8 @@
             // panel2
             // 
             panel2.BackColor = Color.Snow;
-            panel2.Controls.Add(Back);
             panel2.Controls.Add(NoticeDesc);
+            panel2.Controls.Add(Back);
             panel2.Controls.Add(NoticeHeading);
             panel2.Controls.Add(label6);
             panel2.Controls.Add(label5);
@@ -328,16 +328,6 @@
             Back.TabIndex = 67;
             Back.TextAlign = ContentAlignment.MiddleCenter;
             Back.Click += Back_Click;
-            // 
-            // NoticeDesc
-            // 
-            NoticeDesc.AutoSize = true;
-            NoticeDesc.Location = new Point(307, 329);
-            NoticeDesc.Margin = new Padding(4, 0, 4, 0);
-            NoticeDesc.Name = "NoticeDesc";
-            NoticeDesc.Size = new Size(59, 25);
-            NoticeDesc.TabIndex = 66;
-            NoticeDesc.Text = "label7";
             // 
             // NoticeHeading
             // 
@@ -396,6 +386,16 @@
             // 
             bunifuElipse6.ElipseRadius = 35;
             bunifuElipse6.TargetControl = panel2;
+            // 
+            // NoticeDesc
+            // 
+            NoticeDesc.BackColor = Color.Snow;
+            NoticeDesc.BorderStyle = BorderStyle.None;
+            NoticeDesc.Location = new Point(316, 334);
+            NoticeDesc.Name = "NoticeDesc";
+            NoticeDesc.Size = new Size(795, 504);
+            NoticeDesc.TabIndex = 68;
+            NoticeDesc.Text = "";
             // 
             // UserNotice
             // 
@@ -457,6 +457,6 @@
         private Label label6;
         private Label label5;
         private Label label4;
-        private Label NoticeDesc;
+        private RichTextBox NoticeDesc;
     }
 }

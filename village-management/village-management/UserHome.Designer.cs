@@ -40,11 +40,15 @@
             LogOut = new Bunifu.Framework.UI.BunifuThinButton2();
             bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(components);
             SearchPanel = new Panel();
+            label3 = new Label();
             label2 = new Label();
+            label1 = new Label();
+            pictureBox1 = new PictureBox();
             bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(components);
             bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(components);
             backmenu.SuspendLayout();
             SearchPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // backmenu
@@ -177,7 +181,10 @@
             // SearchPanel
             // 
             SearchPanel.BackColor = Color.Snow;
+            SearchPanel.Controls.Add(label3);
             SearchPanel.Controls.Add(label2);
+            SearchPanel.Controls.Add(label1);
+            SearchPanel.Controls.Add(pictureBox1);
             SearchPanel.Font = new Font("Century Gothic", 15F, FontStyle.Bold);
             SearchPanel.Location = new Point(291, 20);
             SearchPanel.Margin = new Padding(4, 5, 4, 5);
@@ -185,16 +192,42 @@
             SearchPanel.Size = new Size(1133, 957);
             SearchPanel.TabIndex = 27;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(70, 689);
+            label3.Name = "label3";
+            label3.Size = new Size(947, 37);
+            label3.TabIndex = 14;
+            label3.Text = "villagers, promoting transparency and community engagement.";
+            // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(34, 18);
-            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Location = new Point(70, 618);
             label2.Name = "label2";
-            label2.Size = new Size(123, 43);
-            label2.TabIndex = 0;
-            label2.Text = "Home";
+            label2.Size = new Size(1007, 37);
+            label2.TabIndex = 13;
+            label2.Text = "access notices from the Mukhiya, and view detailed profiles of fellow";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(70, 548);
+            label1.Name = "label1";
+            label1.Size = new Size(1021, 37);
+            label1.TabIndex = 12;
+            label1.Text = "The Village Management System enables residents to file complaints, ";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(1, -15);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(1133, 430);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 11;
+            pictureBox1.TabStop = false;
             // 
             // bunifuElipse1
             // 
@@ -228,6 +261,7 @@
             backmenu.PerformLayout();
             SearchPanel.ResumeLayout(false);
             SearchPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -242,10 +276,13 @@
         private Bunifu.Framework.UI.BunifuThinButton2 LogOut;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
         private Panel SearchPanel;
-        private Label label2;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private LinkLabel linkLabel1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
         private Label lblUserName;
+        private PictureBox pictureBox1;
+        private Label label3;
+        private Label label2;
+        private Label label1;
     }
 }

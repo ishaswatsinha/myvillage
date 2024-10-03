@@ -47,8 +47,9 @@
             linkLabel2 = new LinkLabel();
             bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(components);
             Com2 = new Panel();
+            BtnResolved = new Bunifu.Framework.UI.BunifuThinButton2();
+            CDesc = new RichTextBox();
             Back = new Bunifu.Framework.UI.BunifuThinButton2();
-            CDesc = new Label();
             Cheading = new Label();
             label6 = new Label();
             label5 = new Label();
@@ -253,8 +254,9 @@
             // 
             Com2.BackColor = Color.Snow;
             Com2.CausesValidation = false;
-            Com2.Controls.Add(Back);
+            Com2.Controls.Add(BtnResolved);
             Com2.Controls.Add(CDesc);
+            Com2.Controls.Add(Back);
             Com2.Controls.Add(Cheading);
             Com2.Controls.Add(label6);
             Com2.Controls.Add(label5);
@@ -263,6 +265,41 @@
             Com2.Name = "Com2";
             Com2.Size = new Size(1133, 957);
             Com2.TabIndex = 24;
+            // 
+            // BtnResolved
+            // 
+            BtnResolved.ActiveBorderThickness = 1;
+            BtnResolved.ActiveCornerRadius = 20;
+            BtnResolved.ActiveFillColor = Color.SeaGreen;
+            BtnResolved.ActiveForecolor = Color.White;
+            BtnResolved.ActiveLineColor = Color.SeaGreen;
+            BtnResolved.BackColor = Color.Snow;
+            BtnResolved.BackgroundImage = (Image)resources.GetObject("BtnResolved.BackgroundImage");
+            BtnResolved.ButtonText = "Resolved";
+            BtnResolved.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            BtnResolved.ForeColor = Color.SeaGreen;
+            BtnResolved.IdleBorderThickness = 1;
+            BtnResolved.IdleCornerRadius = 20;
+            BtnResolved.IdleFillColor = Color.White;
+            BtnResolved.IdleForecolor = Color.SeaGreen;
+            BtnResolved.IdleLineColor = Color.SeaGreen;
+            BtnResolved.Location = new Point(938, 137);
+            BtnResolved.Margin = new Padding(7, 7, 7, 7);
+            BtnResolved.Name = "BtnResolved";
+            BtnResolved.Size = new Size(154, 53);
+            BtnResolved.TabIndex = 63;
+            BtnResolved.TextAlign = ContentAlignment.MiddleCenter;
+            BtnResolved.Click += BtnResolved_Click;
+            // 
+            // CDesc
+            // 
+            CDesc.BackColor = Color.Snow;
+            CDesc.BorderStyle = BorderStyle.None;
+            CDesc.Location = new Point(291, 340);
+            CDesc.Name = "CDesc";
+            CDesc.Size = new Size(801, 160);
+            CDesc.TabIndex = 62;
+            CDesc.Text = "";
             // 
             // Back
             // 
@@ -288,16 +325,6 @@
             Back.TabIndex = 61;
             Back.TextAlign = ContentAlignment.MiddleCenter;
             Back.Click += Back_Click;
-            // 
-            // CDesc
-            // 
-            CDesc.AutoSize = true;
-            CDesc.Location = new Point(379, 326);
-            CDesc.Margin = new Padding(4, 0, 4, 0);
-            CDesc.Name = "CDesc";
-            CDesc.Size = new Size(59, 25);
-            CDesc.TabIndex = 60;
-            CDesc.Text = "label7";
             // 
             // Cheading
             // 
@@ -327,9 +354,9 @@
             label5.Location = new Point(134, 219);
             label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
-            label5.Size = new Size(221, 28);
+            label5.Size = new Size(104, 28);
             label5.TabIndex = 56;
-            label5.Text = "Problem Heading:";
+            label5.Text = "Subject:";
             // 
             // label4
             // 
@@ -424,10 +451,11 @@
         private Label label4;
         private Label label5;
         private Label label6;
-        private Label CDesc;
         private Label Cheading;
         private Bunifu.Framework.UI.BunifuThinButton2 Back;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse4;
         private Bunifu.Framework.UI.BunifuThinButton2 LogOut;
+        private RichTextBox CDesc;
+        private Bunifu.Framework.UI.BunifuThinButton2 BtnResolved;
     }
 }

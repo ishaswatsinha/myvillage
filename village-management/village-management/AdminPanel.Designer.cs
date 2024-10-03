@@ -32,9 +32,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminPanel));
             bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(components);
             panel1 = new Panel();
+            pictureBox1 = new PictureBox();
             label11 = new Label();
             label10 = new Label();
-            label9 = new Label();
             label8 = new Label();
             lblNoticeCount = new Label();
             label6 = new Label();
@@ -52,6 +52,7 @@
             linkLabel1 = new LinkLabel();
             LogOut = new Bunifu.Framework.UI.BunifuThinButton2();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             backmenu.SuspendLayout();
             SuspendLayout();
             // 
@@ -63,9 +64,9 @@
             // panel1
             // 
             panel1.BackColor = Color.Snow;
+            panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(label11);
             panel1.Controls.Add(label10);
-            panel1.Controls.Add(label9);
             panel1.Controls.Add(label8);
             panel1.Controls.Add(lblNoticeCount);
             panel1.Controls.Add(label6);
@@ -79,41 +80,41 @@
             panel1.Size = new Size(1133, 957);
             panel1.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(1, -15);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(1133, 430);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 10;
+            pictureBox1.TabStop = false;
+            // 
             // label11
             // 
             label11.AutoSize = true;
-            label11.Font = new Font("Century Gothic", 14.25F, FontStyle.Italic);
-            label11.Location = new Point(46, 239);
+            label11.Font = new Font("Century Gothic", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label11.Location = new Point(46, 492);
             label11.Name = "label11";
-            label11.Size = new Size(1050, 36);
+            label11.Size = new Size(1060, 37);
             label11.TabIndex = 9;
             label11.Text = "To put out a notice regarding something important, go to notice section";
             // 
             // label10
             // 
             label10.AutoSize = true;
-            label10.Font = new Font("Century Gothic", 14.25F, FontStyle.Italic);
-            label10.Location = new Point(45, 193);
+            label10.Font = new Font("Century Gothic", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label10.Location = new Point(45, 446);
             label10.Name = "label10";
-            label10.Size = new Size(1070, 36);
+            label10.Size = new Size(1072, 37);
             label10.TabIndex = 8;
             label10.Text = "Check up on what's happening with the village, in the complaints section";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Century Gothic", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.Location = new Point(120, 102);
-            label9.Name = "label9";
-            label9.Size = new Size(486, 47);
-            label9.TabIndex = 7;
-            label9.Text = "Welcome Back, Admin!";
             // 
             // label8
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Century Gothic", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.Location = new Point(120, 337);
+            label8.Location = new Point(120, 590);
             label8.Name = "label8";
             label8.Size = new Size(384, 87);
             label8.TabIndex = 6;
@@ -123,7 +124,7 @@
             // 
             lblNoticeCount.AutoSize = true;
             lblNoticeCount.Font = new Font("Century Gothic", 15.75F);
-            lblNoticeCount.Location = new Point(702, 630);
+            lblNoticeCount.Location = new Point(702, 883);
             lblNoticeCount.Name = "lblNoticeCount";
             lblNoticeCount.Size = new Size(112, 39);
             lblNoticeCount.TabIndex = 5;
@@ -133,7 +134,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Century Gothic", 20.25F, FontStyle.Bold);
-            label6.Location = new Point(120, 622);
+            label6.Location = new Point(120, 875);
             label6.Name = "label6";
             label6.Size = new Size(282, 47);
             label6.TabIndex = 4;
@@ -143,7 +144,7 @@
             // 
             lblResolvedComp.AutoSize = true;
             lblResolvedComp.Font = new Font("Century Gothic", 15.75F);
-            lblResolvedComp.Location = new Point(702, 550);
+            lblResolvedComp.Location = new Point(702, 803);
             lblResolvedComp.Name = "lblResolvedComp";
             lblResolvedComp.Size = new Size(112, 39);
             lblResolvedComp.TabIndex = 3;
@@ -153,17 +154,17 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Century Gothic", 20.25F, FontStyle.Bold);
-            label4.Location = new Point(120, 546);
+            label4.Location = new Point(120, 799);
             label4.Name = "label4";
-            label4.Size = new Size(551, 47);
+            label4.Size = new Size(360, 47);
             label4.TabIndex = 2;
-            label4.Text = "Total Complaints Resolved:";
+            label4.Text = "Total Complaints:";
             // 
             // lblResident
             // 
             lblResident.AutoSize = true;
             lblResident.Font = new Font("Century Gothic", 15.75F);
-            lblResident.Location = new Point(702, 470);
+            lblResident.Location = new Point(702, 723);
             lblResident.Name = "lblResident";
             lblResident.Size = new Size(112, 39);
             lblResident.TabIndex = 1;
@@ -173,11 +174,11 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 20.25F, FontStyle.Bold);
-            label2.Location = new Point(120, 470);
+            label2.Location = new Point(120, 723);
             label2.Name = "label2";
-            label2.Size = new Size(320, 47);
+            label2.Size = new Size(345, 47);
             label2.TabIndex = 0;
-            label2.Text = "Total Residents:";
+            label2.Text = "Total Population:";
             // 
             // label1
             // 
@@ -314,6 +315,7 @@
             Text = "AdminPanel";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             backmenu.ResumeLayout(false);
             backmenu.PerformLayout();
             ResumeLayout(false);
@@ -340,8 +342,8 @@
         private Label lblResident;
         private Label label2;
         private Label label10;
-        private Label label9;
         private Label label8;
         private Label label11;
+        private PictureBox pictureBox1;
     }
 }
